@@ -242,6 +242,38 @@ h4 {
   letter-spacing: 0%;
 }
 
+.title {
+  color: rgb(6, 5, 37);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -3%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.main_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 12px 12px 30px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: -2%;
+}
+.main_btn img {
+  padding: 12px 11px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.main_btn:hover {
+  color: rgb(255, 255, 255);
+}
+
 header .header_top {
   display: flex;
   justify-content: space-between;
@@ -400,38 +432,6 @@ header .to_call:hover {
 
 .hero {
   margin: 28px 0 0 0;
-}
-
-.title {
-  color: rgb(6, 5, 37);
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 110%;
-  letter-spacing: -3%;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.main_btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 12px 12px 12px 30px;
-  border-radius: 100px;
-  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
-  color: rgb(255, 255, 255);
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 125%;
-  letter-spacing: -2%;
-}
-.main_btn img {
-  padding: 12px 11px;
-  background: rgb(255, 255, 255);
-  border-radius: 50%;
-}
-.main_btn:hover {
-  color: rgb(255, 255, 255);
 }
 
 .discount {
