@@ -209,6 +209,110 @@ body {
   margin-bottom: 50px;
 }
 
+.main_btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 12px 12px 30px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: -2%;
+}
+.main_btn img {
+  padding: 12px 11px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+}
+.main_btn:hover {
+  color: rgb(255, 255, 255);
+}
+
+.discount {
+  border-radius: 45px 45px 0px 0px;
+  background: url(../images/zigzak.png), rgb(46, 53, 72);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 100px 0;
+}
+.discount .discount_title {
+  color: rgb(255, 255, 255);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -3%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.discount .discount_item {
+  flex: 0 0 auto;
+  width: calc(33.33% - 18px);
+  padding: 38px;
+  background: url(../images/percent_img.png), #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 20px;
+}
+.discount .discount_block {
+  display: flex;
+  justify-content: space-between;
+}
+.discount .discount_topic {
+  max-width: 182px;
+  margin: 0 auto 40px auto;
+  color: rgb(6, 5, 37);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: center;
+}
+
+.payment_option {
+  background: rgb(46, 53, 72);
+}
+.payment_option .payment_option_wrapper {
+  background: rgb(240, 243, 248);
+  border-radius: 45px 45px 0px 0px;
+  padding: 100px 0;
+}
+.payment_option .payment_option_block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.payment_option .payment_item {
+  padding: 28px;
+  flex: 0 0 auto;
+  width: calc(33.33% - 18px);
+  border-radius: 20px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  background: rgb(255, 255, 255);
+}
+.payment_option .payment_img {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 38px;
+}
+.payment_option .circle_icon {
+  background: rgb(240, 243, 248);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.payment_option .payment_name {
+  color: rgb(6, 5, 37);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+
 .partner {
   border-radius: 45px 45px 0px 0px;
   background: rgb(240, 243, 248);
@@ -268,24 +372,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
-}
-.partner .manager_btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 12px 12px 12px 30px;
-  border-radius: 100px;
-  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
-  color: rgb(255, 255, 255);
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 125%;
-  letter-spacing: -2%;
-}
-.partner .manager_btn img {
-  padding: 12px 11px;
-  background: rgb(255, 255, 255);
-  border-radius: 50%;
 }
 .partner .partner_item {
   -webkit-user-select: none;
@@ -353,7 +439,10 @@ body {
 
 .question {
   border-radius: 45px 45px 0px 0px;
-  background: rgb(46, 53, 72);
+  background: url(../images/zigzak.png), rgb(46, 53, 72);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   padding: 100px 0;
 }
 .question .question_block {
