@@ -192,11 +192,99 @@ html::-webkit-scrollbar-thumb {
 
 body {
   font-family: "Manrope";
-  background-color: rgb(233, 233, 233);
+  background: #f0f3f8;
 }
 
 .wrapper {
   overflow: hidden;
+}
+
+.contact {
+  padding: 93px 0 0px 0;
+  border-radius: 45px 45px 0px 0px;
+}
+.contact .contact_title {
+  color: rgb(6, 5, 37);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -3%;
+  text-align: center;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid rgb(214, 223, 237);
+}
+.contact .contact_number {
+  text-align: center;
+  margin-bottom: 14px;
+}
+.contact .contact_number a {
+  color: rgb(6, 5, 37);
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 110%;
+}
+.contact .contact_work_time {
+  color: rgb(138, 138, 160);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -1%;
+  text-align: center;
+  margin-bottom: 38px;
+}
+.contact .footer_socials {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+.contact .footer_socials .social_item img {
+  width: 66px;
+  height: 66px;
+}
+.contact .contact_map_block {
+  display: flex;
+  justify-content: space-between;
+  padding: 52px 0 100px 0;
+  border-top: 1px solid rgb(214, 223, 237);
+  border-bottom: 1px solid rgb(214, 223, 237);
+  position: relative;
+}
+.contact .contact_map_block::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  width: 1px;
+  height: 100%;
+  background-color: rgb(214, 223, 237);
+}
+.contact .map_item {
+  padding: 4px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  background: rgb(255, 255, 255);
+  overflow: hidden;
+}
+.contact .map_location {
+  color: rgb(6, 5, 37);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 145%;
+  letter-spacing: -1%;
+}
+.contact .map_top {
+  padding: 28px;
+  border-radius: 18px;
+  background: rgb(240, 243, 248);
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 4px;
 }
 
 footer {
