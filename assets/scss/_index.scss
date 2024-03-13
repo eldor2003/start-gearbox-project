@@ -1,3 +1,149 @@
+// partner
+.partner {
+	border-radius: 45px 45px 0px 0px;
+	background: rgb(240, 243, 248);
+	padding: 0 0 100px 0;
+	position: relative;
+	.manager_block {
+		display: flex;
+		justify-content: space-between;
+		gap: 45px;
+		border-radius: 20px;
+		margin-bottom: 100px;
+		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+		position: absolute;
+		top: -270px;
+		z-index: 12;
+		background-color: #fff;
+	}
+	.partner_wrapper {
+		padding-top: 400px;
+	}
+	.manager_left {
+		padding: 38px 0 38px 38px;
+	}
+	.manager_name {
+		color: rgb(6, 5, 37);
+		font-size: 56px;
+		font-weight: 700;
+		line-height: 110%;
+		letter-spacing: -2%;
+		margin-bottom: 2px;
+	}
+	.about_manager {
+		color: rgb(6, 5, 37);
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 145%;
+		letter-spacing: -1%;
+		padding-bottom: 28px;
+		max-width: 330px;
+	}
+	.manager_description {
+		color: rgb(6, 5, 37);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 140%;
+		max-width: 500px;
+		padding-top: 28px;
+		border-top: 1px solid rgb(234, 234, 234);
+		margin-bottom: 20px;
+	}
+	.partner_row {
+		display: flex;
+		gap: 12px;
+	}
+	.partner_block {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+	.manager_btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		padding: 12px 12px 12px 30px;
+		border-radius: 100px;
+		background: linear-gradient(
+			135deg,
+			rgb(219, 42, 29) 0%,
+			rgb(219, 42, 29) 100%
+		);
+		color: rgb(255, 255, 255);
+		font-size: 19px;
+		font-weight: 700;
+		line-height: 125%;
+		letter-spacing: -2%;
+		img {
+			padding: 12px 11px;
+			background: rgb(255, 255, 255);
+			border-radius: 50%;
+		}
+	}
+	.partner_item {
+		user-select: none;
+		display: flex;
+		align-items: center;
+		gap: 13px;
+		min-width: 295px;
+		padding: 26px;
+		border-radius: 18px;
+		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+		background: rgb(255, 255, 255);
+	}
+	.partner_logo_name {
+		color: rgb(195, 207, 227);
+		font-size: 22px;
+		font-weight: 800;
+		line-height: 145%;
+		letter-spacing: 2%;
+	}
+}
+
+// employees
+.employees {
+	padding: 100px 0 370px 0;
+	border-radius: 45px 45px 0px 0px;
+	background: rgb(255, 255, 255);
+	.employee_block {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	.employee_item {
+		border-radius: 20px;
+		padding: 4px;
+		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+		background: rgb(240, 243, 248);
+	}
+	.employ_img {
+		margin-bottom: 4px;
+	}
+	.employ_body {
+		padding: 28px;
+		border-radius: 18px;
+		background: rgb(255, 255, 255);
+	}
+	.employ_name {
+		color: rgb(6, 5, 37);
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 120%;
+		letter-spacing: -2%;
+		padding-bottom: 18px;
+		margin-bottom: 19px;
+		border-bottom: 1px solid rgb(234, 234, 234);
+	}
+	.employ_job {
+		color: rgb(6, 5, 37);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 120%;
+		letter-spacing: -2%;
+	}
+}
+
 // question
 .question {
 	border-radius: 45px 45px 0px 0px;
