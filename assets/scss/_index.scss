@@ -122,24 +122,145 @@ header{
 		align-items: center;
 		justify-content: space-between;
 		border-bottom: 1px solid #D6DFED;
-		padding: 15px;
+		padding: 15px 0;
+		nav{
+			position: relative;
+		}
 	}
-	.nav_link{
+	.nav_item{
 		border-radius: 100px;
 		background-color: #FFF;
-		padding: 9px 14.5px;
+		padding: 9px 6.5px 9px 14.5px;
 		font-size: 16px;
 		font-weight: 400;
 		color: #060525;
 		margin: 0 9px 0 0;
 		border: 1px solid #FFF;
 		transition: .3s all ease-out;
+		display: inline-block;
 		&:last-child{
 			margin: 0;
 		}
 		&:hover{
 			border-color: #D6DFED;
 			background-color: #F0F3F8;
+			.menus_list{
+				transform: none;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&.active{
+			border-color: #D6DFED;
+			background-color: #F0F3F8;
+			.menus_list{
+				transform: none;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		a{
+			color: #060525;
+		}
+		.open_menu{
+			width: 25px;
+			height: 22px;
+			padding: 8px 0px;
+			vertical-align: middle;
+			cursor: pointer;
+		}
+		.menus_list{
+			position: absolute;
+			left: 0;
+			top: calc(100% + 18px);
+			border: 1px solid #D6DFED;
+			border-radius: 20px;
+			background-color: #FFF;
+			transform: translateY(20px);
+			width: 1160px;
+			opacity: 0;
+			visibility: hidden;
+			z-index: 2;
+			transition: .3s transform ease-out, .3s visibility ease-out, .1s opacity ease;
+			.menu{
+				max-width: 693px;
+				width: 100%;
+				padding: 18px;
+				border-right: 1px solid #D6DFED;
+				border-radius: 20px;
+			}
+		}
+	}
+	.menus_list li{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 18px 0;
+		position: relative;
+		&:first-child{
+			padding: 0 0 18px 0;
+			.inner_menu{
+				top: -18px;
+			}
+		}
+		&:last-child{
+			padding: 18px 0 0 0;
+			&::after{
+				display: none;
+			}
+		}
+		img:first-child{
+			width: 88px;
+			height: 48px;
+			border-radius: 8px;
+		}
+		.open_inner{
+			cursor: pointer;
+		}
+		div{
+			display: flex;
+			align-items: center;
+			gap: 18px;
+		}
+		.inner_menu{
+			position: absolute;
+			right: -36px;
+			top: 0;
+			transform: translate(90%, 0);
+			transition: .3s all ease-out;
+			opacity: 0;
+			visibility: hidden;
+			li{
+				padding: 30px 0;
+				&:last-child{
+					&::after{
+						display: block;
+					}
+				}
+			}
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			width: 100%;
+			height: 1px;
+			left: 0;
+			bottom: 0;
+			background-color: #EAEAEA;
+		}
+		&:hover{
+			.inner_menu{
+				transform: translate(100%, 0);
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+		&.active{
+			.inner_menu{
+				transform: translate(100%, 0);
+				opacity: 1;
+				visibility: visible;
+			}
 		}
 	}
 	.to_call{

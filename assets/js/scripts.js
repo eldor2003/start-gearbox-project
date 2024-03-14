@@ -43,4 +43,13 @@ $(document).ready(function () {
 			delay: 1800,
 		},
 	});
+
+	$('.open_menu').click(function(){
+		$(this).parent().toggleClass('active')
+	})
+
+	$('.open_inner').click(function(){
+		$(this).parent().toggleClass('active')
+	})
+
 });
