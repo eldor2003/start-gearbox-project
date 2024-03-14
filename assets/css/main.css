@@ -279,12 +279,16 @@ header .header_top {
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
-  border-bottom: 1px solid #D6DFED;
+  border-bottom: 1px solid #d6dfed;
 }
-header .address, header .social, header .phone_number {
+header .address,
+header .social,
+header .phone_number {
   position: relative;
 }
-header .address::after, header .social::after, header .phone_number::after {
+header .address::after,
+header .social::after,
+header .phone_number::after {
   position: absolute;
   content: "";
   width: 1px;
@@ -292,7 +296,7 @@ header .address::after, header .social::after, header .phone_number::after {
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
-  background-color: #D6DFED;
+  background-color: #d6dfed;
 }
 header .brand_logo {
   width: 190px;
@@ -329,7 +333,7 @@ header .address span {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px dashed #D6DFED;
+  border: 1px dashed #d6dfed;
   border-radius: 50%;
 }
 header .address span img {
@@ -361,7 +365,7 @@ header .social::before {
   top: 50%;
   border-radius: 50%;
   transform: translate(0, -50%);
-  background-color: #00D655;
+  background-color: #00d655;
 }
 header .phone_number {
   display: flex;
@@ -374,7 +378,7 @@ header .phone_number img {
   height: 54px;
   padding: 8px;
   border-radius: 50%;
-  border: 1px dashed #D6DFED;
+  border: 1px dashed #d6dfed;
 }
 header .phone_number div {
   display: flex;
@@ -388,32 +392,32 @@ header .phone_number span {
 header .phone_number p {
   font-size: 12px;
   font-weight: 400;
-  color: #9CADC9;
+  color: #9cadc9;
 }
 header .header_bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #D6DFED;
+  border-bottom: 1px solid #d6dfed;
   padding: 15px;
 }
 header .nav_link {
   border-radius: 100px;
-  background-color: #FFF;
+  background-color: #fff;
   padding: 9px 14.5px;
   font-size: 16px;
   font-weight: 400;
   color: #060525;
   margin: 0 9px 0 0;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   transition: 0.3s all ease-out;
 }
 header .nav_link:last-child {
   margin: 0;
 }
 header .nav_link:hover {
-  border-color: #D6DFED;
-  background-color: #F0F3F8;
+  border-color: #d6dfed;
+  background-color: #f0f3f8;
 }
 header .to_call {
   display: flex;
@@ -421,7 +425,7 @@ header .to_call {
   gap: 6px;
   border-radius: 100px;
   font-size: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 10px 10px 10px 20px;
   background: linear-gradient(135deg, rgb(219, 42, 29), rgb(219, 42, 29) 100%);
   transition: 0.3s all ease-out;
@@ -432,6 +436,349 @@ header .to_call:hover {
 
 .hero {
   margin: 28px 0 0 0;
+}
+
+.faq {
+  padding: 100px 0;
+  border-radius: 45px 45px 0px 0px;
+  background: rgb(240, 243, 248);
+}
+.faq .faq_block {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+.faq .faq_item_wrapper {
+  flex: 0 0 auto;
+  width: calc(50% - 14px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.faq .faq_item {
+  border-radius: 14px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  background: rgb(255, 255, 255);
+}
+.faq .faq_arrow {
+  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 0.4s;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.faq .faq_arrow.active {
+  transform: rotate(360deg);
+}
+.faq .faq_head {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 16px 0 28px;
+  padding: 16px 0px 16px 0px;
+}
+.faq .faq_head.active {
+  border-bottom: 1px solid rgb(234, 234, 234);
+}
+.faq .faq_body {
+  padding: 18px 28px 23px 28px;
+}
+.faq .faq_desc {
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 500px;
+}
+
+.quiz {
+  padding: 100px 0;
+  border-radius: 45px;
+  background: rgb(255, 255, 255);
+}
+.quiz .quiz_block {
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: url("../images/big_zigzak.png"), rgb(240, 243, 248);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  transition: all ease-in 0.1s;
+}
+.quiz .quiz_block.active {
+  background: url(../images/quiz_active_img.png) no-repeat;
+  background-position: bottom;
+}
+.quiz .quiz_details {
+  padding: 48px;
+}
+.quiz .quiz_title {
+  color: rgb(6, 5, 37);
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 105%;
+  letter-spacing: -2%;
+  margin-bottom: 48px;
+  max-width: 460px;
+}
+.quiz .quiz_wrapper {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  width: 570px;
+  height: 100%;
+  border-radius: 20px;
+  background: url("../images/quiz_zigzak.png"), rgb(46, 53, 72);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  right: -100%;
+  transition: all ease 0.3s;
+}
+.quiz .quiz_wrapper.active {
+  right: 0;
+}
+.quiz .quiz_number {
+  padding: 26px 26px 26px 28px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: 2%;
+}
+.quiz .quiz_progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 0;
+  margin-bottom: 28px;
+}
+.quiz .quiz_progress::-webkit-progress-value {
+  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+.quiz .quiz_progress::-webkit-progress-bar {
+  background-color: rgb(255, 255, 255);
+}
+.quiz .quiz_swiper {
+  width: 100%;
+  padding-left: 28px;
+  z-index: 15;
+}
+.quiz .progress_question {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: left;
+  margin-bottom: 28px;
+}
+.quiz .varaint_block {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.quiz .varaint_block .variant_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.quiz .varaint_block .variant_item span {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+.quiz .varaint_block .variant_item input {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgb(46, 53, 72);
+  border: 1px solid rgb(255, 255, 255);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.quiz .varaint_block .variant_item input.checkbox:checked:after {
+  width: 10px;
+  height: 10px;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  position: relative;
+  background: url(../images/icons/quiz_true_icon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+}
+.quiz .varaint_block .variant_item input:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 0px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  position: relative;
+  background: rgb(255, 255, 255);
+  content: "";
+  display: inline-block;
+  visibility: visible;
+}
+.quiz .quiz_buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+}
+.quiz .center {
+  text-align: center;
+}
+.quiz .quiz_left_btn.swiper-button-disabled {
+  opacity: 0.5;
+}
+.quiz .quiz_left_btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 1px solid rgb(219, 42, 29);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.quiz .quiz_form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  display: none;
+  padding: 0 48px 0 20px;
+}
+.quiz .quiz_form input {
+  width: 100%;
+  height: 56px;
+  outline: none;
+  padding-left: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%;
+  border-radius: 12px;
+  background: rgb(255, 255, 255);
+}
+.quiz .quiz_form input::-moz-placeholder {
+  color: rgb(192, 192, 192);
+  font-size: 16px;
+}
+.quiz .quiz_form input::placeholder {
+  color: rgb(192, 192, 192);
+  font-size: 16px;
+}
+.quiz .quiz_form button {
+  padding: 20px 0;
+  display: block;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: -2%;
+  border-radius: 100px;
+  margin-bottom: 6px;
+  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
+}
+.quiz .quiz_form .form_rule {
+  max-width: 391px;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 155%;
+  text-align: center;
+  color: rgb(154, 162, 183);
+}
+.quiz .quiz_form .form_rule a {
+  font-weight: 600;
+  color: #fff;
+}
+
+.repair {
+  padding: 100px 0;
+}
+.repair .repair_table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid rgb(234, 234, 234);
+}
+.repair .repair_table td {
+  border: 1px solid rgb(234, 234, 234);
+}
+.repair .repair_table thead {
+  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
+}
+.repair .repair_table thead th {
+  vertical-align: middle;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -2%;
+  padding: 28px 0 28px 20px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid rgb(234, 67, 55);
+  min-width: 197px;
+}
+.repair .repair_table thead th:last-child {
+  border-radius: 0px 20px 0px 0px;
+}
+.repair .repair_table thead th:first-child {
+  border-left: 1px solid transparent;
+  border-radius: 20px 0px 0px 0px;
+}
+.repair .repair_table tbody {
+  border-radius: 14px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  background: rgb(255, 255, 255);
+}
+.repair .repair_table tbody td {
+  vertical-align: middle;
+  padding: 30px 0 30px 20px;
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+.repair .repair_table tbody tr:last-child td:last-child {
+  border-radius: 0px 0px 14px 0px;
+}
+.repair .repair_table tbody tr:last-child td:first-child {
+  border-radius: 0px 0px 0px 14px;
 }
 
 .discount {
@@ -519,7 +866,6 @@ header .to_call:hover {
 .partner {
   border-radius: 45px 45px 0px 0px;
   background: rgb(240, 243, 248);
-  padding: 0 0 100px 0;
   position: relative;
 }
 .partner .manager_block {
@@ -575,6 +921,13 @@ header .to_call:hover {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+.partner .partner_swiper {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.partner .partner_row3 {
+  padding-bottom: 100px;
 }
 .partner .partner_item {
   -webkit-user-select: none;
