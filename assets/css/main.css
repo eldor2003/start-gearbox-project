@@ -193,10 +193,53 @@ html::-webkit-scrollbar-thumb {
 body {
   font-family: "Manrope";
   background: #f0f3f8;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -2%;
+  color: #060525;
 }
 
 .wrapper {
   overflow: hidden;
+}
+
+h1 {
+  font-size: 58px;
+  letter-spacing: -3%;
+}
+
+h2 {
+  font-size: 56px;
+  letter-spacing: -3%;
+}
+
+h3 {
+  font-size: 38px;
+  letter-spacing: -2%;
+}
+
+h4 {
+  font-size: 24px;
+  letter-spacing: -2%;
+}
+
+.text_1 {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0%;
+}
+
+.text_2 {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0%;
+}
+
+.text_3 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0%;
 }
 
 .title {
@@ -229,6 +272,166 @@ body {
 }
 .main_btn:hover {
   color: rgb(255, 255, 255);
+}
+
+header .header_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid #D6DFED;
+}
+header .address, header .social, header .phone_number {
+  position: relative;
+}
+header .address::after, header .social::after, header .phone_number::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 56px;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: #D6DFED;
+}
+header .brand_logo {
+  width: 190px;
+  height: 78px;
+  border: none;
+  flex: 0 0 auto;
+}
+header .brand_logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .address {
+  padding: 0 21px 0 28px;
+  margin: 0 0 0 106px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+  text-wrap: nowrap;
+}
+header .address a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #060525;
+}
+header .address span {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #D6DFED;
+  border-radius: 50%;
+}
+header .address span img {
+  width: 15px;
+  height: 20px;
+}
+header .social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 28px 0 42px;
+  text-wrap: nowrap;
+}
+header .social a {
+  display: flex;
+}
+header .social img {
+  width: 40px;
+  height: 40px;
+}
+header .social::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  left: 28px;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+  background-color: #00D655;
+}
+header .phone_number {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 0 0 28px;
+}
+header .phone_number img {
+  width: 54px;
+  height: 54px;
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px dashed #D6DFED;
+}
+header .phone_number div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+header .phone_number span {
+  font-size: 20px;
+  color: #060525;
+}
+header .phone_number p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9CADC9;
+}
+header .header_bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #D6DFED;
+  padding: 15px;
+}
+header .nav_link {
+  border-radius: 100px;
+  background-color: #FFF;
+  padding: 9px 14.5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #060525;
+  margin: 0 9px 0 0;
+  border: 1px solid #FFF;
+  transition: 0.3s all ease-out;
+}
+header .nav_link:last-child {
+  margin: 0;
+}
+header .nav_link:hover {
+  border-color: #D6DFED;
+  background-color: #F0F3F8;
+}
+header .to_call {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 100px;
+  font-size: 16px;
+  color: #FFFFFF;
+  padding: 10px 10px 10px 20px;
+  background: linear-gradient(135deg, rgb(219, 42, 29), rgb(219, 42, 29) 100%);
+  transition: 0.3s all ease-out;
+}
+header .to_call:hover {
+  background: linear-gradient(135deg, rgb(250, 80, 68), rgb(255, 90, 78) 100%);
+}
+
+.hero {
+  margin: 28px 0 0 0;
 }
 
 .discount {
