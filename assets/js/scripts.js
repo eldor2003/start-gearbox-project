@@ -124,4 +124,13 @@ $(document).ready(function () {
 			.find(".faq_head")
 			.removeClass("active");
 	});
+
+	$('.open_menu').click(function(){
+		$(this).parent().toggleClass('active')
+	})
+
+	$('.open_inner').click(function(){
+		$(this).parent().toggleClass('active')
+	})
+
 });

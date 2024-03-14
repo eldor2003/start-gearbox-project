@@ -181,7 +181,6 @@ body {
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 100%;
-	letter-spacing: -2%;
 	color: #060525;
 }
 
@@ -190,18 +189,22 @@ body {
 }
 h1{
 	font-size: 58px;
+	font-weight: 700;
 	letter-spacing: -3%;
 }
 h2{
 	font-size: 56px;
+	font-weight: 700;
 	letter-spacing: -3%;
 }
 h3{
 	font-size: 38px;
+	font-weight: 700;
 	letter-spacing: -2%;
 }
 h4{
 	font-size: 24px;
+	font-weight: 700;
 	letter-spacing: -2%;
 }
 .text_1{
@@ -246,6 +249,7 @@ h4{
 	font-weight: 700;
 	line-height: 125%;
 	letter-spacing: -2%;
+	cursor: pointer;
 	img {
 		padding: 12px 11px;
 		background: rgb(255, 255, 255);
@@ -254,4 +258,7 @@ h4{
 	&:hover {
 		color: rgb(255, 255, 255);
 	}
+}
+button{
+	cursor: pointer;
 }
