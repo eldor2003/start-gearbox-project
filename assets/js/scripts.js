@@ -173,7 +173,7 @@ $(document).ready(function () {
 					spaceBetween: 20,
 				},
 				1201: {
-					slidesPerView: 3.5,
+					slidesPerView: 3.4,
 					spaceBetween: 28,
 				},
 				1601: {
@@ -187,6 +187,50 @@ $(document).ready(function () {
 			},
 		});
 	}
+	// otziv swiper
+	if ($(".otziv_swiper").length > 0) {
+		const otziv_swiper = new Swiper(".otziv_swiper", {
+			// Default parameters
+			loop: true,
+			centeredSlides: true,
+			autoplay: {
+				delay: 2000,
+			},
+			navigation: {
+				nextEl: ".gallery_next",
+				prevEl: ".gallery_prev",
+			},
+
+			// Responsive breakpoints
+			breakpoints: {
+				320: {
+					slidesPerView: 1.8,
+					spaceBetween: 15,
+				},
+				577: {
+					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+				767: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				993: {
+					slidesPerView: 2.5,
+					spaceBetween: 20,
+				},
+				1401: {
+					slidesPerView: 2.4,
+					spaceBetween: 28,
+				},
+				1601: {
+					slidesPerView: 3,
+					spaceBetween: 28,
+				},
+			},
+		});
+	}
+
 	$(".open_ul").click(function () {
 		$(this).toggleClass("active");
 		$(this).parent().siblings("ul").toggleClass("active");

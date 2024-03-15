@@ -413,40 +413,41 @@ header {
 	background-color: #ffffff;
 	border-radius: 45px 45px 0px 0px;
 	padding: 100px 0;
-	.section_top{
+	.section_top {
 		display: flex;
 		align-items: flex-end;
 		gap: 28px;
 		margin: 0 0 58px 0;
-		.section_title, .section_desc{
+		.section_title,
+		.section_desc {
 			width: calc(50% - 14px);
 		}
-		.section_title{
+		.section_title {
 			line-height: 110%;
 		}
-		.section_desc{
+		.section_desc {
 			font-size: 16px;
 			font-weight: 400;
 			line-height: 145%;
 			letter-spacing: 0%;
 		}
 	}
-	.services_cards{
+	.services_cards {
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-start;
 		justify-content: flex-start;
 		gap: 28px;
 	}
-	.service_item{
+	.service_item {
 		width: calc(50% - 14px);
 		overflow: hidden;
-		background-color: #FBFBFB;
+		background-color: #fbfbfb;
 		border-radius: 20px;
 	}
-	.service_top{
+	.service_top {
 		border-radius: 20px;
-		background-color: #F0F3F8;
+		background-color: #f0f3f8;
 		background-image: url(../images/service_zigzak.png);
 		background-repeat: no-repeat;
 		background-position: center;
@@ -454,85 +455,219 @@ header {
 		overflow: hidden;
 		position: relative;
 		height: 242px;
-		.service_img{
+		.service_img {
 			position: absolute;
 			bottom: -226px;
 			left: -92px;
 			width: 120%;
 			height: auto;
 		}
-		.open_ul{
+		.open_ul {
 			position: absolute;
 			right: 28px;
 			bottom: 28px;
 			cursor: pointer;
 			border-radius: 50%;
-			transition: .3s transform ease;
-			&.active{
+			transition: 0.3s transform ease;
+			&.active {
 				transform: rotate(90deg);
-				rect{
-				fill: transparent;
-				stroke: #DB2A1D;
-				stroke-width: 3px;
+				rect {
+					fill: transparent;
+					stroke: #db2a1d;
+					stroke-width: 3px;
 				}
-				path{
-					fill: #DB2A1D;
+				path {
+					fill: #db2a1d;
 				}
 			}
 		}
 	}
-	.services_list{
+	.services_list {
 		height: 0;
-		transition: .3s all ease;
+		transition: 0.3s all ease;
 		border-radius: 0 0 20px 20px;
-		&.active{
+		&.active {
 			height: auto;
 		}
-		li{
+		li {
 			padding: 28px 25px 25px 28px;
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			position: relative;
-			&::after{
+			&::after {
 				position: absolute;
-				content: '';
+				content: "";
 				width: 100%;
 				height: 1px;
 				left: 0;
 				bottom: 0;
-				background-color: #F0F3F8;
+				background-color: #f0f3f8;
 			}
 		}
-		.service_title{
+		.service_title {
 			font-size: 24px;
 			font-weight: 700;
 			line-height: 120%;
 			letter-spacing: -2%;
 		}
-		div:has(.price){
+		div:has(.price) {
 			display: flex;
 			align-items: center;
 			gap: 24px;
 		}
-		.price{
+		.price {
 			font-size: 14px;
 			font-weight: 400;
 			line-height: 120%;
 			text-align: center;
 			width: 62px;
 		}
-		.main_btn{
+		.main_btn {
 			justify-content: center;
 			padding: 13px 24px;
 			font-size: 16px;
 			font-weight: 600;
 			letter-spacing: 0%;
 		}
-		li:has(.price){
+		li:has(.price) {
 			padding: 18px 28px;
-			.service_title{
+			.service_title {
 				font-size: 16px;
+			}
+		}
+	}
+}
+
+// otziv_diagnostic
+#otziv_diagnostic.diagnostic {
+	.diagnostic_logo {
+		left: -50px;
+		bottom: -235px;
+		img {
+			opacity: 0.2;
+		}
+	}
+	.diagnostic_bg {
+		right: unset;
+		left: 28%;
+	}
+}
+// otziv
+.otziv {
+	padding: 100px 0;
+	border-radius: 45px 45px 0px 0px;
+	background: rgb(240, 243, 248);
+	.otziv_title {
+		max-width: 690px;
+		margin: 0 auto 48px auto;
+	}
+	.otziv_rate_block {
+		display: flex;
+		align-items: center;
+		gap: 28px;
+		flex-wrap: wrap;
+		margin-bottom: 80px;
+	}
+	.rate_item {
+		padding: 28px;
+		flex: 1;
+		border-radius: 20px;
+		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+		background: rgb(255, 255, 255);
+	}
+	.rate_logo {
+		text-align: center;
+		padding-bottom: 28px;
+		margin-bottom: 28px;
+		border-bottom: 1px solid rgb(234, 234, 234);
+	}
+	.rate_number {
+		color: rgb(6, 5, 37);
+		font-size: 22px;
+		font-weight: 500;
+		line-height: 105%;
+		text-align: center;
+		margin-bottom: 18px;
+	}
+	.star_block {
+		display: flex;
+		justify-content: center;
+	}
+	.otziv_swiper_item {
+		border-radius: 20px;
+		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+		background: rgb(255, 255, 255);
+		padding: 28px;
+	}
+	.otziv_top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-bottom: 28px;
+		margin-bottom: 28px;
+		border-bottom: 1px solid rgb(234, 234, 234);
+	}
+	.otziv_profile {
+		display: flex;
+		align-items: center;
+		gap: 28px;
+	}
+	.avatar_name {
+		color: rgb(6, 5, 37);
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 125%;
+		margin-bottom: 10px;
+	}
+	.stars_block {
+		display: flex;
+	}
+	.otziv_description {
+		color: rgb(6, 5, 37);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 145%;
+		margin-bottom: 18px;
+	}
+	.otziv_btn {
+		display: flex;
+		gap: 6px;
+		align-items: center;
+		span {
+			color: rgb(156, 173, 201);
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 145%;
+		}
+	}
+	.swiper-slide-next,
+	.swiper-slide-prev {
+		.otziv_swiper_item {
+			position: relative;
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					90deg,
+					rgb(240, 243, 248),
+					rgba(240, 243, 248, 0.5) 49%,
+					rgba(240, 243, 248, 0) 100%
+				);
+				z-index: 5;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	.swiper-slide-next {
+		.otziv_swiper_item {
+			&::after {
+				right: 0;
+				left: unset;
+				transform: rotate(180deg);
 			}
 		}
 	}
@@ -540,6 +675,12 @@ header {
 
 // car_service
 .car_service {
+	background: rgb(46, 53, 72);
+	.car_service_wrapper {
+		border-radius: 45px 45px 0px 0px;
+		padding: 100px 0 265px 0;
+		background: rgb(255, 255, 255);
+	}
 	.car_service_block {
 		display: flex;
 		gap: 28px;
@@ -557,7 +698,6 @@ header {
 		padding: 28px;
 		border-radius: 20px;
 		background: rgb(240, 243, 248);
-		background: rgba(35, 68, 125, 0.653);
 	}
 	.square_block {
 		display: flex;
@@ -619,8 +759,40 @@ header {
 	}
 }
 
+// award
+.award {
+	border-radius: 45px 45px 0 0;
+	background: url(../images/zigzak.png), rgb(46, 53, 72);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	padding: 100px 0;
+	.award_title {
+		color: rgb(255, 255, 255);
+		font-size: 56px;
+		font-weight: 700;
+		line-height: 110%;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	.award_desc {
+		color: rgb(255, 255, 255);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 155%;
+		text-align: center;
+		max-width: 625px;
+		margin: 0 auto 23px auto;
+	}
+	.award_block {
+		display: flex;
+		gap: 28px;
+	}
+}
+
 // diagnostic
 .diagnostic {
+	position: relative;
 	.diagnostic_block {
 		position: relative;
 		display: flex;
@@ -628,6 +800,12 @@ header {
 		justify-content: space-between;
 		border-radius: 20px;
 		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+		// position: absolute;
+		// top: -185px;
+		transform: translate(0, -185px);
+		margin-bottom: -185px;
+		z-index: 555;
+		background: rgb(255, 255, 255);
 	}
 	.diagnostic_bg {
 		position: absolute;
@@ -676,6 +854,7 @@ header {
 
 // gallery
 .gallery {
+	padding-top: 100px;
 	.gallery_title {
 		max-width: 650px;
 		margin: 0 auto;
@@ -683,33 +862,7 @@ header {
 	.gallery_block {
 		position: relative;
 	}
-	.gallery_nav {
-		width: 48px;
-		height: 48px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border-radius: 50%;
-		/* Akcent */
-		background: linear-gradient(
-			135deg,
-			rgb(219, 42, 29) 0%,
-			rgb(219, 42, 29) 100%
-		);
-	}
-	.gallery_navs {
-		user-select: none;
-		position: absolute;
-		padding: 0 28px;
-		top: 0;
-		bottom: 0;
-		margin: auto;
-		width: 100%;
-		display: flex;
-		align-items: center;
-		z-index: 12;
-		justify-content: space-between;
-	}
+
 	.blur1 {
 		left: 0;
 	}
