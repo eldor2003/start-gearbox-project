@@ -187,4 +187,9 @@ $(document).ready(function () {
 			},
 		});
 	}
+	$(".open_ul").click(function () {
+		$(this).toggleClass("active");
+		$(this).parent().siblings("ul").toggleClass("active");
+		$(this).parent().parent().siblings().find("*").removeClass("active");
+	});
 });
