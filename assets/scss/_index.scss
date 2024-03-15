@@ -299,6 +299,7 @@ header {
 		background-image: url(../images/hero_back.png);
 		background-size: 89%;
 		background-position: 57% -46%;
+		background-repeat: no-repeat;
 		margin: 0 0 28px 0;
 	}
 	.hero_left {
@@ -319,77 +320,7 @@ header {
 				margin: 0;
 			}
 		}
-	}
-	.consultation {
-		border-radius: 20px;
-		background-color: #2e3548;
-		padding: 48px 48px 62px 48px;
-		text-align: center;
-		position: relative;
-		overflow: hidden;
-		z-index: 1;
-		h3 {
-			font-size: 32px;
-			line-height: 115%;
-			letter-spacing: -2%;
-			color: #ffffff;
-			margin: 0 0 18px 0;
-		}
-		.text_2 {
-			color: #9aa2b7;
-			font-weight: 400;
-			line-height: 135%;
-			margin: 0 21px 25px 21px;
-		}
-		input,
-		button {
-			width: 100%;
-			font-family: Manrope;
-			border: none;
-			outline: none;
-		}
-		input {
-			border-radius: 12px;
-			background-color: #ffffff;
-			font-size: 16px;
-			font-weight: 500;
-			margin: 0 0 12px 0;
-			padding: 16px 20px;
-		}
-		button {
-			justify-content: center;
-			font-size: 20px;
-			padding: 19px 12px;
-			margin: 0 0 19px 0;
-		}
-		.consult_desc {
-			font-size: 12px;
-			font-weight: 400;
-			line-height: 160%;
-			letter-spacing: 0%;
-			color: #9aa2b7;
-			padding: 0 4px;
-			a {
-				font-weight: 600;
-				color: #ffffff;
-				text-decoration: underline;
-			}
-		}
-		&::after {
-			position: absolute;
-			content: "";
-			left: -451px;
-			bottom: 113px;
-			z-index: -1;
-			width: 300%;
-			height: 80%;
-			background-image: url(../images/zigzak.png);
-			background-size: 100%;
-			background-repeat: no-repeat;
-			background-position: left center;
-			transform: rotate(-35deg);
-		}
-	}
+	}	
 	.hero_row {
 		display: flex;
 		gap: 28px;
@@ -408,6 +339,102 @@ header {
 			font-weight: 600;
 			line-height: 130%;
 		}
+	}
+}
+.consultation {
+	flex: 0 0 auto;
+	width: 467px;
+	border-radius: 20px;
+	background-color: #2e3548;
+	padding: 48px 48px 62px 48px;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	h3 {
+		font-size: 32px;
+		line-height: 115%;
+		letter-spacing: -2px;
+		color: #ffffff;
+		margin: 0 0 18px 0;
+	}
+	.text_2 {
+		color: #9aa2b7;
+		font-weight: 400;
+		line-height: 135%;
+		margin: 0 21px 25px 21px;
+	}
+	input,
+	button {
+		width: 100%;
+		font-family: Manrope;
+		border: none;
+		outline: none;
+	}
+	input {
+		border-radius: 12px;
+		background-color: #ffffff;
+		font-size: 16px;
+		font-weight: 500;
+		margin: 0 0 12px 0;
+		padding: 16px 20px;
+	}
+	button {
+		justify-content: center;
+		font-size: 20px;
+		padding: 19px 12px;
+		margin: 0 0 19px 0;
+	}
+	.consult_desc {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 160%;
+		letter-spacing: 0%;
+		color: #9aa2b7;
+		padding: 0 4px;
+		a {
+			font-weight: 600;
+			color: #ffffff;
+			text-decoration: underline;
+		}
+	}
+	&::after {
+		position: absolute;
+		content: "";
+		left: -451px;
+		bottom: 113px;
+		z-index: -1;
+		width: 300%;
+		height: 80%;
+		background-image: url(../images/zigzak.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: left center;
+		transform: rotate(-35deg);
+	}
+}
+.cta{
+	display: flex;
+	border-radius: 20px;
+	background-color: #F0F3F8;
+	.cta_left{
+		padding: 28px;
+	}
+	.cta_title{
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 115%;
+		letter-spacing: -2px;
+		a{
+			color: #DB2A1D;
+			text-decoration: underline;
+		}
+	}
+	.cta_desc{
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 145%;
+		letter-spacing: -1px;
 	}
 }
 // SERVICES
@@ -438,6 +465,7 @@ header {
 		align-items: flex-start;
 		justify-content: flex-start;
 		gap: 28px;
+		margin: 0 0 80px 0;
 	}
 	.service_col{
 		width: calc(50% - 14px);
@@ -491,6 +519,9 @@ header {
 			}
 		}
 	}
+	.cta .cta_title{
+
+	}
 }
 .services_list{
 	height: 0;
@@ -519,7 +550,7 @@ header {
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 120%;
-		letter-spacing: -2%;
+		letter-spacing: -2px;
 	}
 	div:has(.price){
 		display: flex;
@@ -738,7 +769,7 @@ body:has(.modal_back.active){
 		font-size: 42px;
 		font-weight: 700;
 		line-height: 105%;
-		letter-spacing: -2%;
+		letter-spacing: -2px;
 		margin-bottom: 48px;
 		max-width: 460px;
 	}
@@ -765,7 +796,7 @@ body:has(.modal_back.active){
 		font-size: 14px;
 		font-weight: 700;
 		line-height: 115%;
-		letter-spacing: 2%;
+		letter-spacing: 2px;
 	}
 	.quiz_progress {
 		width: 100%;
@@ -795,7 +826,7 @@ body:has(.modal_back.active){
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 120%;
-		letter-spacing: -2%;
+		letter-spacing: -2px;
 		text-align: left;
 		margin-bottom: 28px;
 	}
@@ -813,7 +844,7 @@ body:has(.modal_back.active){
 				font-size: 16px;
 				font-weight: 500;
 				line-height: 120%;
-				letter-spacing: -2%;
+				letter-spacing: -2px;
 			}
 			input {
 				width: 22px;
@@ -920,7 +951,7 @@ body:has(.modal_back.active){
 			font-size: 19px;
 			font-weight: 700;
 			line-height: 125%;
-			letter-spacing: -2%;
+			letter-spacing: -2px;
 			border-radius: 100px;
 			margin-bottom: 6px;
 			background: linear-gradient(
@@ -967,7 +998,7 @@ body:has(.modal_back.active){
 				font-size: 18px;
 				font-weight: 700;
 				line-height: 120%;
-				letter-spacing: -2%;
+				letter-spacing: -2px;
 				padding: 28px 0 28px 20px;
 				border-top: 1px solid transparent;
 				border-bottom: 1px solid transparent;
@@ -993,7 +1024,7 @@ body:has(.modal_back.active){
 				font-size: 16px;
 				font-weight: 400;
 				line-height: 120%;
-				letter-spacing: -2%;
+				letter-spacing: -2px;
 			}
 			tr:last-child {
 				td {
@@ -1022,7 +1053,7 @@ body:has(.modal_back.active){
 		font-size: 56px;
 		font-weight: 700;
 		line-height: 110%;
-		letter-spacing: -3%;
+		letter-spacing: -3px;
 		text-align: center;
 		margin-bottom: 50px;
 	}
@@ -1047,7 +1078,7 @@ body:has(.modal_back.active){
 		font-size: 30px;
 		font-weight: 500;
 		line-height: 120%;
-		letter-spacing: -2%;
+		letter-spacing: -2px;
 		text-align: center;
 	}
 }
@@ -1089,7 +1120,7 @@ body:has(.modal_back.active){
 		font-size: 24px;
 		font-weight: 500;
 		line-height: 120%;
-		letter-spacing: -2%;
+		letter-spacing: -2px;
 	}
 }
 
@@ -1121,7 +1152,7 @@ body:has(.modal_back.active){
 		font-size: 56px;
 		font-weight: 700;
 		line-height: 110%;
-		letter-spacing: -2%;
+		letter-spacing: -2px;
 		margin-bottom: 2px;
 	}
 	.about_manager {
@@ -1129,7 +1160,7 @@ body:has(.modal_back.active){
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 145%;
-		letter-spacing: -1%;
+		letter-spacing: -1px;
 		padding-bottom: 28px;
 		max-width: 330px;
 	}
@@ -1175,7 +1206,7 @@ body:has(.modal_back.active){
 		font-size: 22px;
 		font-weight: 800;
 		line-height: 145%;
-		letter-spacing: 2%;
+		letter-spacing: 2px;
 	}
 }
 
@@ -1209,7 +1240,7 @@ body:has(.modal_back.active){
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 120%;
-		letter-spacing: -2%;
+		letter-spacing: -2px;
 		padding-bottom: 18px;
 		margin-bottom: 19px;
 		border-bottom: 1px solid rgb(234, 234, 234);
@@ -1219,7 +1250,7 @@ body:has(.modal_back.active){
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 120%;
-		letter-spacing: -2%;
+		letter-spacing: -2px;
 	}
 }
 
@@ -1251,7 +1282,7 @@ body:has(.modal_back.active){
 		font-size: 52px;
 		font-weight: 700;
 		line-height: 110%;
-		letter-spacing: -3%;
+		letter-spacing: -3px;
 		margin-bottom: 18px;
 	}
 	.question_desc {
@@ -1259,7 +1290,7 @@ body:has(.modal_back.active){
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 145%;
-		letter-spacing: -1%;
+		letter-spacing: -1px;
 		max-width: 320px;
 	}
 
@@ -1331,7 +1362,7 @@ body:has(.modal_back.active){
 			font-size: 22px;
 			font-weight: 700;
 			line-height: 125%;
-			letter-spacing: -2%;
+			letter-spacing: -2px;
 			border-radius: 100px;
 			border: none;
 			background: linear-gradient(
@@ -1371,7 +1402,7 @@ body:has(.modal_back.active){
 		font-size: 56px;
 		font-weight: 700;
 		line-height: 110%;
-		letter-spacing: -3%;
+		letter-spacing: -3px;
 		text-align: center;
 		padding-bottom: 48px;
 		margin-bottom: 48px;
@@ -1392,7 +1423,7 @@ body:has(.modal_back.active){
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 150%;
-		letter-spacing: -1%;
+		letter-spacing: -1px;
 		text-align: center;
 		margin-bottom: 38px;
 	}
@@ -1438,7 +1469,7 @@ body:has(.modal_back.active){
 		font-size: 22px;
 		font-weight: 400;
 		line-height: 145%;
-		letter-spacing: -1%;
+		letter-spacing: -1px;
 	}
 	.map_top {
 		padding: 28px;
@@ -1484,7 +1515,7 @@ footer {
 		font-size: 16px;
 		font-weight: 600;
 		line-height: 145%;
-		letter-spacing: 2%;
+		letter-spacing: 2px;
 		text-transform: uppercase;
 		margin-bottom: 14px;
 	}
