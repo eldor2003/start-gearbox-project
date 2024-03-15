@@ -788,6 +788,15 @@ body:has(.modal_back.active){
 			line-height: 140%;
 			padding: 0 40px 0 0;
 		}
+		.why_top{
+			display: flex;
+			align-items: center;
+			gap: 28px;
+			margin: 0 0 28px 0;
+			.why_title{
+				padding: 0;
+			}
+		}
 	}
 }
 // faq

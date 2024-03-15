@@ -1051,6 +1051,15 @@ body:has(.modal_back.active) {
   line-height: 140%;
   padding: 0 40px 0 0;
 }
+.why .why_item .why_top {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0 0 28px 0;
+}
+.why .why_item .why_top .why_title {
+  padding: 0;
+}
 
 .faq {
   padding: 100px 0;
