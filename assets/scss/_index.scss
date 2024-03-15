@@ -414,6 +414,305 @@ header {
 	border-radius: 45px 45px 0px 0px;
 }
 
+// car_service
+.car_service {
+	.car_service_block {
+		display: flex;
+		gap: 28px;
+		align-items: start;
+		flex-wrap: wrap;
+	}
+	.car_item_wrapper {
+		flex: 0 0 auto;
+		width: calc(33.33% - 20px);
+		display: flex;
+		flex-direction: column;
+		gap: 28px;
+	}
+	.car_service_item {
+		padding: 28px;
+		border-radius: 20px;
+		background: rgb(240, 243, 248);
+		background: rgba(35, 68, 125, 0.653);
+	}
+	.square_block {
+		display: flex;
+		gap: 4px;
+		justify-content: end;
+		span {
+			width: 14px;
+			height: 14px;
+			border: 1px solid rgb(214, 223, 237);
+			border-radius: 2px;
+			&.active {
+				background: rgb(255, 255, 255);
+			}
+		}
+	}
+	.square_number_img {
+		width: 140px;
+		height: 140px;
+		background: linear-gradient(
+			180deg,
+			rgb(255, 255, 255),
+			rgba(255, 255, 255, 0) 100%
+		);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 18px;
+	}
+	.car_service_name {
+		color: rgb(6, 5, 37);
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 120%;
+		letter-spacing: -2%;
+		margin-bottom: 18px;
+	}
+	.car_service_desc {
+		color: rgb(6, 5, 37);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 140%;
+		max-width: 300px;
+		margin-bottom: 18px;
+	}
+	.car_service_bottom {
+		border-top: 1px solid rgb(214, 223, 237);
+		padding-top: 18px;
+		color: rgb(6, 5, 37);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 140%;
+		a {
+			color: rgb(6, 5, 37);
+			font-size: 16px;
+			line-height: 140%;
+			font-weight: 600;
+		}
+	}
+}
+
+// diagnostic
+.diagnostic {
+	.diagnostic_block {
+		position: relative;
+		display: flex;
+		overflow: hidden;
+		justify-content: space-between;
+		border-radius: 20px;
+		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+	}
+	.diagnostic_bg {
+		position: absolute;
+		bottom: -153px;
+		z-index: -1;
+		right: 110px;
+	}
+	.diagnostic_details {
+		position: relative;
+		padding: 28px 0 135px 28px;
+		overflow: hidden;
+		border-radius: 20px;
+	}
+	.diasnotic_title {
+		color: rgb(6, 5, 37);
+		font-size: 38px;
+		font-weight: 700;
+		line-height: 110%;
+		letter-spacing: -2%;
+		margin-bottom: 18px;
+		max-width: 500px;
+	}
+	.diagnostic_desc {
+		color: rgb(6, 5, 37);
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 145%;
+		max-width: 302px;
+	}
+	.diagnostic_logo {
+		position: absolute;
+		bottom: -178px;
+		left: -53px;
+		z-index: 0;
+	}
+	.diagnostic_form_block {
+		border-radius: 20px;
+		width: 566px;
+		display: flex;
+		align-items: center;
+		background: url(../images/quiz_zigzak.png), rgb(46, 53, 72);
+		background-position: 100%;
+		background-repeat: no-repeat;
+	}
+}
+
+// gallery
+.gallery {
+	.gallery_title {
+		max-width: 650px;
+		margin: 0 auto;
+	}
+	.gallery_block {
+		position: relative;
+	}
+	.gallery_nav {
+		width: 48px;
+		height: 48px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		/* Akcent */
+		background: linear-gradient(
+			135deg,
+			rgb(219, 42, 29) 0%,
+			rgb(219, 42, 29) 100%
+		);
+	}
+	.gallery_navs {
+		user-select: none;
+		position: absolute;
+		padding: 0 28px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		z-index: 12;
+		justify-content: space-between;
+	}
+	.blur1 {
+		left: 0;
+	}
+	.blur2 {
+		right: 0;
+		z-index: 2;
+		transform: rotate(180deg);
+	}
+	.swiper_blur {
+		position: absolute;
+		top: 0;
+		z-index: 3;
+		width: 294px;
+		height: 100%;
+		background: linear-gradient(
+			90deg,
+			rgb(240, 243, 248),
+			rgba(240, 243, 248, 0.5) 49%,
+			rgba(240, 243, 248, 0) 100%
+		);
+	}
+}
+
+// bmw section
+.bmw {
+	padding: 100px 0;
+	border-radius: 45px 45px 0px 0px;
+	background: rgb(255, 255, 255);
+	.bmw_top {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		margin-bottom: 48px;
+	}
+	.bmw_title {
+		color: rgb(6, 5, 37);
+		font-size: 56px;
+		font-weight: 700;
+		line-height: 110%;
+		letter-spacing: -3%;
+		max-width: 650px;
+	}
+	.bmw_top_desc {
+		color: rgb(6, 5, 37);
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 140%;
+		max-width: 368px;
+	}
+	.bmw_block {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 28px;
+	}
+	.bmw_item {
+		flex: 0 0 auto;
+		width: calc(33.33% - 19px);
+		border-radius: 20px;
+		background: rgb(240, 243, 248);
+		padding: 28px 37px 38px 28px;
+		&.bmw_item_last {
+			flex: 1;
+			position: relative;
+			background: rgb(46, 53, 72);
+			.main_icon {
+				background: rgb(255, 255, 255);
+			}
+			.bmw_item_desc {
+				color: #fff;
+			}
+			.bmw_logo {
+				position: absolute;
+				bottom: -3px;
+				right: 0;
+				img {
+					width: 350px;
+				}
+			}
+		}
+	}
+	.bmw_icon {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 35px;
+		.main_icon {
+			background: rgb(46, 53, 72);
+			border-radius: 50%;
+			width: 78px;
+			height: 78px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.plus_img {
+			position: absolute;
+			bottom: -2px;
+			right: -11px;
+			width: 32px;
+			background: linear-gradient(
+				135deg,
+				rgb(219, 42, 29) 0%,
+				rgb(219, 42, 29) 100%
+			);
+			height: 32px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+			img {
+				width: 13.17px;
+				height: 13.23px;
+				object-fit: cover;
+			}
+		}
+	}
+	.bmw_item_desc {
+		color: rgb(6, 5, 37);
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 120%;
+		letter-spacing: -2%;
+		max-width: 300px;
+	}
+}
+
 // faq
 .faq {
 	padding: 100px 0;
@@ -660,57 +959,6 @@ header {
 		width: 48px;
 		height: 48px;
 		border-radius: 50%;
-	}
-	.quiz_form {
-		display: flex;
-		flex-direction: column;
-		gap: 12px;
-		display: none;
-		padding: 0 48px 0 20px;
-		input {
-			width: 100%;
-			height: 56px;
-			outline: none;
-			padding-left: 20px;
-			font-size: 16px;
-			font-weight: 400;
-			line-height: 100%;
-			border-radius: 12px;
-			background: rgb(255, 255, 255);
-			&::placeholder {
-				color: rgb(192, 192, 192);
-				font-size: 16px;
-			}
-		}
-		button {
-			padding: 20px 0;
-			display: block;
-			text-align: center;
-			color: rgb(255, 255, 255);
-			font-size: 19px;
-			font-weight: 700;
-			line-height: 125%;
-			letter-spacing: -2%;
-			border-radius: 100px;
-			margin-bottom: 6px;
-			background: linear-gradient(
-				135deg,
-				rgb(219, 42, 29) 0%,
-				rgb(219, 42, 29) 100%
-			);
-		}
-		.form_rule {
-			max-width: 391px;
-			margin: 0 auto;
-			font-size: 12px;
-			line-height: 155%;
-			text-align: center;
-			color: rgb(154, 162, 183);
-			a {
-				font-weight: 600;
-				color: #fff;
-			}
-		}
 	}
 }
 
