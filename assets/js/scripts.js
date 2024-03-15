@@ -137,7 +137,21 @@ $(document).ready(function () {
 		$(this).toggleClass('active')
 		$(this).parent().siblings('ul').toggleClass('active')
 		$(this).parent().parent().siblings().find('*').removeClass('active')
+		$(this).parent().parent().parent().siblings().find('*').removeClass('active')
 	})
 
+	$('.service_item .main_btn').click(function(){
+		$('.modal_back').addClass('active')
+		$('.service_modal').addClass('active')
+	})
+	$('.close_modal').click(function(){
+		$('.modal_back').removeClass('active')
+		$('.service_modal').removeClass('active')
+	})
+	$('.modal_back').click(function(){
+		$(this).removeClass('active')
+		$('.service_modal').removeClass('active')
+	})
+	
 
 });

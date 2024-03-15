@@ -691,13 +691,17 @@ header .to_call:hover {
 }
 .services .services_cards {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 28px;
 }
-.services .service_item {
+.services .service_col {
   width: calc(50% - 14px);
+  display: flex;
+  gap: 28px;
+  flex-direction: column;
+}
+.services .service_item {
   overflow: hidden;
   background-color: #FBFBFB;
   border-radius: 20px;
@@ -712,13 +716,17 @@ header .to_call:hover {
   overflow: hidden;
   position: relative;
   height: 242px;
+  z-index: 1;
 }
 .services .service_top .service_img {
   position: absolute;
-  bottom: -226px;
-  left: -92px;
-  width: 120%;
-  height: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 22px;
+  overflow: hidden;
 }
 .services .service_top .open_ul {
   position: absolute;
@@ -739,22 +747,23 @@ header .to_call:hover {
 .services .service_top .open_ul.active path {
   fill: #DB2A1D;
 }
-.services .services_list {
+
+.services_list {
   height: 0;
   transition: 0.3s all ease;
   border-radius: 0 0 20px 20px;
 }
-.services .services_list.active {
+.services_list.active {
   height: auto;
 }
-.services .services_list li {
+.services_list li {
   padding: 28px 25px 25px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
-.services .services_list li::after {
+.services_list li::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -763,36 +772,136 @@ header .to_call:hover {
   bottom: 0;
   background-color: #F0F3F8;
 }
-.services .services_list .service_title {
+.services_list .service_title {
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
   letter-spacing: -2%;
 }
-.services .services_list div:has(.price) {
+.services_list div:has(.price) {
   display: flex;
   align-items: center;
   gap: 24px;
+  position: relative;
 }
-.services .services_list .price {
+.services_list div:has(.price)::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 40px;
+  background-color: #F0F3F8;
+  left: -28px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.services_list .price {
   font-size: 14px;
   font-weight: 400;
   line-height: 120%;
   text-align: center;
   width: 62px;
 }
-.services .services_list .main_btn {
+.services_list .main_btn {
   justify-content: center;
   padding: 13px 24px;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 0%;
 }
-.services .services_list li:has(.price) {
+.services_list li:has(.price) {
   padding: 18px 28px;
 }
-.services .services_list li:has(.price) .service_title {
+.services_list li:has(.price) .service_title {
   font-size: 16px;
+}
+
+body:has(.modal_back.active) {
+  overflow: hidden;
+}
+
+.modal_back {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #2E3548;
+  opacity: 0;
+  transition: 0.2s all ease;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+.modal_back.active {
+  visibility: visible;
+  opacity: 0.3;
+}
+
+.service_modal {
+  max-width: 764px;
+  width: 100%;
+  position: fixed;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFF;
+  border-radius: 20px;
+  z-index: 3;
+  padding: 28px 38px;
+  opacity: 0;
+  visibility: hidden;
+  scale: 0.9;
+  transition: 0.3s all ease;
+}
+.service_modal.active {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+  scale: 1;
+}
+.service_modal .close_modal {
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  cursor: pointer;
+}
+.service_modal .services_list {
+  position: relative;
+  height: auto;
+}
+.service_modal .service_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 28px 0;
+  margin: 0 0 28px 0;
+  border-bottom: 1px solid #D6DFED;
+}
+.service_modal .service_header svg {
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+.service_modal .service_option {
+  padding: 28px 0;
+  border-top: 1px solid #D6DFED;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 120%;
+}
+.service_modal .service_option:last-child {
+  border-bottom: 1px solid #D6DFED;
+}
+.service_modal .services_list {
+  border-radius: 20px;
+  background-color: #F0F3F8;
+  padding: 0 28px;
+  margin: 0 0 28px 0;
+}
+.service_modal .services_list li:has(.price) {
+  padding: 18px 0;
 }
 
 .faq {
