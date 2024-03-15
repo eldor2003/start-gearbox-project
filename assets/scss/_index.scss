@@ -1,5 +1,6 @@
 // HEADER
 header {
+	background: #f0f3f8;
 	.header_top {
 		display: flex;
 		justify-content: space-between;
@@ -290,7 +291,8 @@ header {
 }
 // HERO
 .hero {
-	margin: 28px 0 100px 0;
+	background: #f0f3f8;
+	padding: 28px 0 100px 0;
 	.hero_card {
 		background-color: #ffffff;
 		border-radius: 20px;
@@ -519,8 +521,20 @@ header {
 			}
 		}
 	}
+	.cta{
+		background-image: url(../images/cta1.png);
+		background-repeat: no-repeat;
+		background-position: 50% 169px;
+		background-size: 38%;
+	}
 	.cta .cta_title{
-
+		margin: 0 0 115px 0;
+	}
+	.cta .cta_desc{
+		width: 238px;
+	}
+	.consultation{
+		padding: 48px;
 	}
 }
 .services_list{
