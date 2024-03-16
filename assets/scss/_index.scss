@@ -193,7 +193,7 @@ header {
 				border-radius: 20px;
 			}
 		}
-		&:has(img){
+		&:has(img) {
 			padding: 9px 6.5px 9px 14.5px;
 		}
 	}
@@ -696,14 +696,14 @@ body:has(.modal_back.active) {
 		padding: 18px 0;
 	}
 	.services_list li::after,
-	.services_list div:has(.price)::after{
-		background-color: #D6DFED;
+	.services_list div:has(.price)::after {
+		background-color: #d6dfed;
 	}
-	.services_list li:last-child::after{
+	.services_list li:last-child::after {
 		display: none;
 	}
 }
-.call_modal{
+.call_modal {
 	opacity: 0;
 	visibility: hidden;
 	scale: 0.9;
@@ -721,23 +721,23 @@ body:has(.modal_back.active) {
 		top: 50%;
 		scale: 1;
 	}
-	&::after{
+	&::after {
 		position: absolute;
-		content: '';
+		content: "";
 		width: 160px;
 		height: 160px;
 		top: -80px;
 		right: -80px;
 		border-radius: 50%;
-		background-color: #3A4259;
+		background-color: #3a4259;
 		z-index: 1;
 	}
-	.close_modal2{
+	.close_modal2 {
 		position: absolute;
 		right: 15px;
 		top: 15px;
 		z-index: 2;
-		scale: .7;
+		scale: 0.7;
 		cursor: pointer;
 	}
 }
@@ -1091,18 +1091,18 @@ body:has(.modal_back.active) {
 	}
 }
 
-// bmw section
-.bmw {
+// mulfunction section
+.mulfunction {
 	padding: 100px 0;
 	border-radius: 45px 45px 0px 0px;
 	background: rgb(255, 255, 255);
-	.bmw_top {
+	.mulfunction_top {
 		display: flex;
 		align-items: end;
 		justify-content: space-between;
 		margin-bottom: 48px;
 	}
-	.bmw_title {
+	.mulfunction_title {
 		color: rgb(6, 5, 37);
 		font-size: 56px;
 		font-weight: 700;
@@ -1110,33 +1110,33 @@ body:has(.modal_back.active) {
 		letter-spacing: -3%;
 		max-width: 650px;
 	}
-	.bmw_top_desc {
+	.mulfunction_top_desc {
 		color: rgb(6, 5, 37);
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 140%;
 		max-width: 368px;
 	}
-	.bmw_block {
+	.mulfunction_block {
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
 		gap: 28px;
 	}
-	.bmw_item {
+	.mulfunction_item {
 		flex: 0 0 auto;
 		width: calc(33.33% - 19px);
 		border-radius: 20px;
 		background: rgb(240, 243, 248);
 		padding: 28px 37px 38px 28px;
-		&.bmw_item_last {
+		&.mulfunction_item_last {
 			flex: 1;
 			position: relative;
 			background: rgb(46, 53, 72);
 			.main_icon {
 				background: rgb(255, 255, 255);
 			}
-			.bmw_item_desc {
+			.multifunction_item_desc {
 				color: #fff;
 			}
 			.bmw_logo {
@@ -1149,7 +1149,7 @@ body:has(.modal_back.active) {
 			}
 		}
 	}
-	.bmw_icon {
+	.mulfunction_icon {
 		position: relative;
 		display: inline-block;
 		margin-bottom: 35px;
@@ -1185,7 +1185,7 @@ body:has(.modal_back.active) {
 			}
 		}
 	}
-	.bmw_item_desc {
+	.multifunction_item_desc {
 		color: rgb(6, 5, 37);
 		font-size: 24px;
 		font-weight: 500;
@@ -1545,7 +1545,7 @@ body:has(.modal_back.active) {
 }
 
 // bmw section
-.bmw {
+.mulfunction {
 	padding: 100px 0;
 	border-radius: 45px 45px 0px 0px;
 	background: rgb(255, 255, 255);
@@ -2214,12 +2214,12 @@ body:has(.modal_back.active) {
 	}
 }
 
-// partner
-.partner {
+// workers
+.workers {
 	border-radius: 45px 45px 0px 0px;
 	background: rgb(240, 243, 248);
 	position: relative;
-	.manager_block {
+	.workers_block {
 		display: flex;
 		justify-content: space-between;
 		gap: 45px;

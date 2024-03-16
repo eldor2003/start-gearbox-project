@@ -7,9 +7,10 @@ $(document).ready(function () {
 			centeredSlides: true,
 			spaceBetween: 12,
 			loop: true,
+			speed: 1500,
 			allowTouchMove: false,
 			autoplay: {
-				delay: 1000,
+				delay: 1500,
 			},
 		});
 	}
@@ -18,10 +19,11 @@ $(document).ready(function () {
 			// Default parameters
 			slidesPerView: 4,
 			spaceBetween: 12,
+			speed: 2000,
 			loop: true,
 			allowTouchMove: false,
 			autoplay: {
-				delay: 1500,
+				delay: 2000,
 			},
 		});
 	}
@@ -32,9 +34,10 @@ $(document).ready(function () {
 			spaceBetween: 12,
 			centeredSlides: true,
 			loop: true,
+			speed: 2500,
 			allowTouchMove: false,
 			autoplay: {
-				delay: 1800,
+				delay: 2500,
 			},
 		});
 	}
