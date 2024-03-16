@@ -342,10 +342,12 @@ button {
 .gallery_navs {
 	user-select: none;
 	.gallery_prev {
+		cursor: pointer;
 		position: absolute;
 		left: 28px;
 	}
 	.gallery_next {
+		cursor: pointer;
 		right: 28px;
 	}
 }

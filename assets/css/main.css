@@ -287,7 +287,7 @@ button {
   display: none;
   padding: 0 48px 0 20px;
 }
-.quiz_form#diagnostic_form {
+.quiz_form#diagnostic_form, .quiz_form#diagnostic_form2 {
   display: flex;
   padding: 0 48px;
   width: 100%;
@@ -360,10 +360,12 @@ button {
           user-select: none;
 }
 .gallery_navs .gallery_prev {
+  cursor: pointer;
   position: absolute;
   left: 28px;
 }
 .gallery_navs .gallery_next {
+  cursor: pointer;
   right: 28px;
 }
 
@@ -625,7 +627,6 @@ header .to_call {
   font-size: 16px;
   color: #ffffff;
   padding: 10px 10px 10px 20px;
-  cursor: pointer;
   background: linear-gradient(135deg, rgb(219, 42, 29), rgb(219, 42, 29) 100%);
   transition: 0.3s all ease-out;
 }
@@ -701,7 +702,7 @@ header .to_call:hover {
 .consultation h3 {
   font-size: 32px;
   line-height: 115%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   color: #ffffff;
   margin: 0 0 18px 0;
 }
@@ -772,17 +773,17 @@ header .to_call:hover {
   font-size: 36px;
   font-weight: 700;
   line-height: 115%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
 }
 .cta .cta_title a {
-  color: #DB2A1D;
+  color: #db2a1d;
   text-decoration: underline;
 }
 .cta .cta_desc {
   font-size: 18px;
   font-weight: 400;
   line-height: 145%;
-  letter-spacing: 0;
+  letter-spacing: -1px;
 }
 
 .services {
@@ -912,7 +913,7 @@ header .to_call:hover {
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
 }
 .services_list div:has(.price) {
   display: flex;
@@ -1039,60 +1040,839 @@ body:has(.modal_back.active) {
 .service_modal .services_list li:has(.price) {
   padding: 18px 0;
 }
-.service_modal .services_list li::after,
-.service_modal .services_list div:has(.price)::after {
-  background-color: #D6DFED;
+
+#otziv_diagnostic.diagnostic .diagnostic_logo {
+  left: -50px;
+  bottom: -235px;
+}
+#otziv_diagnostic.diagnostic .diagnostic_logo img {
+  opacity: 0.2;
+}
+#otziv_diagnostic.diagnostic .diagnostic_bg {
+  right: unset;
+  left: 28%;
 }
 
-.call_modal {
-  background-image: url(../images/call_modal.png);
-  background-size: 100%;
+.otziv {
+  padding: 100px 0;
+  border-radius: 45px 45px 0px 0px;
+  background: rgb(240, 243, 248);
+}
+.otziv .otziv_title {
+  max-width: 690px;
+  margin: 0 auto 48px auto;
+}
+.otziv .otziv_rate_block {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+.otziv .rate_item {
+  padding: 28px;
+  flex: 1;
+  border-radius: 20px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  background: rgb(255, 255, 255);
+}
+.otziv .rate_logo {
+  text-align: center;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgb(234, 234, 234);
+}
+.otziv .rate_number {
+  color: rgb(6, 5, 37);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 105%;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.otziv .star_block {
+  display: flex;
+  justify-content: center;
+}
+.otziv .otziv_swiper_item {
+  border-radius: 20px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  background: rgb(255, 255, 255);
+  padding: 28px;
+}
+.otziv .otziv_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgb(234, 234, 234);
+}
+.otziv .otziv_profile {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.otziv .avatar_name {
+  color: rgb(6, 5, 37);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 125%;
+  margin-bottom: 10px;
+}
+.otziv .stars_block {
+  display: flex;
+}
+.otziv .otziv_description {
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 145%;
+  margin-bottom: 18px;
+}
+.otziv .otziv_btn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.otziv .otziv_btn span {
+  color: rgb(156, 173, 201);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 145%;
+}
+.otziv .swiper-slide-next .otziv_swiper_item,
+.otziv .swiper-slide-prev .otziv_swiper_item {
+  position: relative;
+}
+.otziv .swiper-slide-next .otziv_swiper_item::after,
+.otziv .swiper-slide-prev .otziv_swiper_item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(240, 243, 248), rgba(240, 243, 248, 0.5) 49%, rgba(240, 243, 248, 0) 100%);
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.otziv .swiper-slide-next .otziv_swiper_item::after {
+  right: 0;
+  left: unset;
+  transform: rotate(180deg);
+}
+
+.car_service {
+  background: rgb(46, 53, 72);
+}
+.car_service .car_service_wrapper {
+  border-radius: 45px 45px 0px 0px;
+  padding: 100px 0 265px 0;
+  background: rgb(255, 255, 255);
+}
+.car_service .car_service_block {
+  display: flex;
+  gap: 28px;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.car_service .car_item_wrapper {
+  flex: 0 0 auto;
+  width: calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.car_service .car_service_item {
+  padding: 28px;
+  border-radius: 20px;
+  background: rgb(240, 243, 248);
+}
+.car_service .square_block {
+  display: flex;
+  gap: 4px;
+  justify-content: end;
+}
+.car_service .square_block span {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgb(214, 223, 237);
+  border-radius: 2px;
+}
+.car_service .square_block span.active {
+  background: rgb(255, 255, 255);
+}
+.car_service .square_number_img {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.car_service .car_service_name {
+  color: rgb(6, 5, 37);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -2%;
+  margin-bottom: 18px;
+}
+.car_service .car_service_desc {
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 300px;
+  margin-bottom: 18px;
+}
+.car_service .car_service_bottom {
+  border-top: 1px solid rgb(214, 223, 237);
+  padding-top: 18px;
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.car_service .car_service_bottom a {
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+.award {
+  border-radius: 45px 45px 0 0;
+  background: url(../images/zigzak.png), rgb(46, 53, 72);
   background-repeat: no-repeat;
-  position: fixed;
-  top: 46%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  opacity: 0;
-  visibility: hidden;
-  scale: 0.9;
-  transition: 0.3s all ease;
+  background-position: center;
+  background-size: contain;
+  padding: 100px 0;
+}
+.award .award_title {
+  color: rgb(255, 255, 255);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 110%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.award .award_desc {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 155%;
+  text-align: center;
+  max-width: 625px;
+  margin: 0 auto 23px auto;
+}
+.award .award_block {
+  display: flex;
+  gap: 28px;
+}
+
+.diagnostic {
+  position: relative;
+}
+.diagnostic .diagnostic_block {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  transform: translate(0, -185px);
+  margin-bottom: -185px;
+  z-index: 555;
+  background: rgb(255, 255, 255);
+}
+.diagnostic .diagnostic_bg {
+  position: absolute;
+  bottom: -153px;
+  z-index: -1;
+  right: 110px;
+}
+.diagnostic .diagnostic_details {
+  position: relative;
+  padding: 28px 0 135px 28px;
   overflow: hidden;
   border-radius: 20px;
 }
-.call_modal .close_modal2 {
+.diagnostic .diasnotic_title {
+  color: rgb(6, 5, 37);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -2%;
+  margin-bottom: 18px;
+  max-width: 500px;
+}
+.diagnostic .diagnostic_desc {
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 145%;
+  max-width: 302px;
+}
+.diagnostic .diagnostic_logo {
   position: absolute;
-  right: 14px;
-  top: 14px;
-  cursor: pointer;
-  z-index: 3;
-  scale: 0.7;
+  bottom: -178px;
+  left: -53px;
+  z-index: 0;
 }
-.call_modal .consultation {
-  background: transparent;
+.diagnostic .diagnostic_form_block {
+  border-radius: 20px;
+  width: 566px;
+  display: flex;
+  align-items: center;
+  background: url(../images/quiz_zigzak.png), rgb(46, 53, 72);
+  background-position: 100%;
+  background-repeat: no-repeat;
 }
-.call_modal .consultation::after {
-  display: none;
+
+.gallery {
+  padding-top: 100px;
 }
-.call_modal.active {
-  opacity: 1;
-  visibility: visible;
-  top: 50%;
-  scale: 1;
+.gallery .gallery_title {
+  max-width: 650px;
+  margin: 0 auto;
 }
-.call_modal::after {
-  position: absolute;
-  content: "";
-  right: -80px;
-  top: -80px;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  background-color: #3A4259;
+.gallery .gallery_block {
+  position: relative;
+}
+.gallery .blur1 {
+  left: 0;
+}
+.gallery .blur2 {
+  right: 0;
   z-index: 2;
+  transform: rotate(180deg);
 }
-.call_modal .text_2 {
-  margin: 0 0 25px 0;
+.gallery .swiper_blur {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 294px;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(240, 243, 248), rgba(240, 243, 248, 0.5) 49%, rgba(240, 243, 248, 0) 100%);
+}
+
+.bmw {
+  padding: 100px 0;
+  border-radius: 45px 45px 0px 0px;
+  background: rgb(255, 255, 255);
+}
+.bmw .bmw_top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.bmw .bmw_title {
+  color: rgb(6, 5, 37);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -3%;
+  max-width: 650px;
+}
+.bmw .bmw_top_desc {
+  color: rgb(6, 5, 37);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 368px;
+}
+.bmw .bmw_block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+.bmw .bmw_item {
+  flex: 0 0 auto;
+  width: calc(33.33% - 19px);
+  border-radius: 20px;
+  background: rgb(240, 243, 248);
+  padding: 28px 37px 38px 28px;
+}
+.bmw .bmw_item.bmw_item_last {
+  flex: 1;
+  position: relative;
+  background: rgb(46, 53, 72);
+}
+.bmw .bmw_item.bmw_item_last .main_icon {
+  background: rgb(255, 255, 255);
+}
+.bmw .bmw_item.bmw_item_last .bmw_item_desc {
+  color: #fff;
+}
+.bmw .bmw_item.bmw_item_last .bmw_logo {
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+}
+.bmw .bmw_item.bmw_item_last .bmw_logo img {
+  width: 350px;
+}
+.bmw .bmw_icon {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.bmw .bmw_icon .main_icon {
+  background: rgb(46, 53, 72);
+  border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bmw .bmw_icon .plus_img {
+  position: absolute;
+  bottom: -2px;
+  right: -11px;
+  width: 32px;
+  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.bmw .bmw_icon .plus_img img {
+  width: 13.17px;
+  height: 13.23px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bmw .bmw_item_desc {
+  color: rgb(6, 5, 37);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -2%;
+  max-width: 300px;
+}
+
+#otziv_diagnostic.diagnostic .diagnostic_logo {
+  left: -50px;
+  bottom: -235px;
+}
+#otziv_diagnostic.diagnostic .diagnostic_logo img {
+  opacity: 0.2;
+}
+#otziv_diagnostic.diagnostic .diagnostic_bg {
+  right: unset;
+  left: 28%;
+}
+
+.otziv {
+  padding: 100px 0;
+  border-radius: 45px 45px 0px 0px;
+  background: rgb(240, 243, 248);
+}
+.otziv .otziv_title {
+  max-width: 690px;
+  margin: 0 auto 48px auto;
+}
+.otziv .otziv_rate_block {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+.otziv .rate_item {
+  padding: 28px;
+  flex: 1;
+  border-radius: 20px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  background: rgb(255, 255, 255);
+}
+.otziv .rate_logo {
+  text-align: center;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgb(234, 234, 234);
+}
+.otziv .rate_number {
+  color: rgb(6, 5, 37);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 105%;
+  text-align: center;
+  margin-bottom: 18px;
+}
+.otziv .star_block {
+  display: flex;
+  justify-content: center;
+}
+.otziv .otziv_swiper_item {
+  border-radius: 20px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  background: rgb(255, 255, 255);
+  padding: 28px;
+}
+.otziv .otziv_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgb(234, 234, 234);
+}
+.otziv .otziv_profile {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+.otziv .avatar_name {
+  color: rgb(6, 5, 37);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 125%;
+  margin-bottom: 10px;
+}
+.otziv .stars_block {
+  display: flex;
+}
+.otziv .otziv_description {
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 145%;
+  margin-bottom: 18px;
+}
+.otziv .otziv_btn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.otziv .otziv_btn span {
+  color: rgb(156, 173, 201);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 145%;
+}
+.otziv .swiper-slide-next .otziv_swiper_item,
+.otziv .swiper-slide-prev .otziv_swiper_item {
+  position: relative;
+}
+.otziv .swiper-slide-next .otziv_swiper_item::after,
+.otziv .swiper-slide-prev .otziv_swiper_item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(240, 243, 248), rgba(240, 243, 248, 0.5) 49%, rgba(240, 243, 248, 0) 100%);
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.otziv .swiper-slide-next .otziv_swiper_item::after {
+  right: 0;
+  left: unset;
+  transform: rotate(180deg);
+}
+
+.car_service {
+  background: rgb(46, 53, 72);
+}
+.car_service .car_service_wrapper {
+  border-radius: 45px 45px 0px 0px;
+  padding: 100px 0 265px 0;
+  background: rgb(255, 255, 255);
+}
+.car_service .car_service_block {
+  display: flex;
+  gap: 28px;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.car_service .car_item_wrapper {
+  flex: 0 0 auto;
+  width: calc(33.33% - 20px);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.car_service .car_service_item {
+  padding: 28px;
+  border-radius: 20px;
+  background: rgb(240, 243, 248);
+}
+.car_service .square_block {
+  display: flex;
+  gap: 4px;
+  justify-content: end;
+}
+.car_service .square_block span {
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgb(214, 223, 237);
+  border-radius: 2px;
+}
+.car_service .square_block span.active {
+  background: rgb(255, 255, 255);
+}
+.car_service .square_number_img {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.car_service .car_service_name {
+  color: rgb(6, 5, 37);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -2%;
+  margin-bottom: 18px;
+}
+.car_service .car_service_desc {
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 300px;
+  margin-bottom: 18px;
+}
+.car_service .car_service_bottom {
+  border-top: 1px solid rgb(214, 223, 237);
+  padding-top: 18px;
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.car_service .car_service_bottom a {
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+.award {
+  border-radius: 45px 45px 0 0;
+  background: url(../images/zigzak.png), rgb(46, 53, 72);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 100px 0;
+}
+.award .award_title {
+  color: rgb(255, 255, 255);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 110%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.award .award_desc {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 155%;
+  text-align: center;
+  max-width: 625px;
+  margin: 0 auto 23px auto;
+}
+.award .award_block {
+  display: flex;
+  gap: 28px;
+}
+
+.diagnostic {
+  position: relative;
+}
+.diagnostic .diagnostic_block {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  border-radius: 20px;
+  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
+  transform: translate(0, -185px);
+  margin-bottom: -185px;
+  z-index: 555;
+  background: rgb(255, 255, 255);
+}
+.diagnostic .diagnostic_bg {
+  position: absolute;
+  bottom: -153px;
+  z-index: -1;
+  right: 110px;
+}
+.diagnostic .diagnostic_details {
+  position: relative;
+  padding: 28px 0 135px 28px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.diagnostic .diasnotic_title {
+  color: rgb(6, 5, 37);
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -2%;
+  margin-bottom: 18px;
+  max-width: 500px;
+}
+.diagnostic .diagnostic_desc {
+  color: rgb(6, 5, 37);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 145%;
+  max-width: 302px;
+}
+.diagnostic .diagnostic_logo {
+  position: absolute;
+  bottom: -178px;
+  left: -53px;
+  z-index: 0;
+}
+.diagnostic .diagnostic_form_block {
+  border-radius: 20px;
+  width: 566px;
+  display: flex;
+  align-items: center;
+  background: url(../images/quiz_zigzak.png), rgb(46, 53, 72);
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+
+.gallery {
+  padding-top: 100px;
+}
+.gallery .gallery_title {
+  max-width: 650px;
+  margin: 0 auto;
+}
+.gallery .gallery_block {
+  position: relative;
+}
+.gallery .blur1 {
+  left: 0;
+}
+.gallery .blur2 {
+  right: 0;
+  z-index: 2;
+  transform: rotate(180deg);
+}
+.gallery .swiper_blur {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  width: 294px;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(240, 243, 248), rgba(240, 243, 248, 0.5) 49%, rgba(240, 243, 248, 0) 100%);
+}
+
+.bmw {
+  padding: 100px 0;
+  border-radius: 45px 45px 0px 0px;
+  background: rgb(255, 255, 255);
+}
+.bmw .bmw_top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.bmw .bmw_title {
+  color: rgb(6, 5, 37);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -3%;
+  max-width: 650px;
+}
+.bmw .bmw_top_desc {
+  color: rgb(6, 5, 37);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 368px;
+}
+.bmw .bmw_block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+.bmw .bmw_item {
+  flex: 0 0 auto;
+  width: calc(33.33% - 19px);
+  border-radius: 20px;
+  background: rgb(240, 243, 248);
+  padding: 28px 37px 38px 28px;
+}
+.bmw .bmw_item.bmw_item_last {
+  flex: 1;
+  position: relative;
+  background: rgb(46, 53, 72);
+}
+.bmw .bmw_item.bmw_item_last .main_icon {
+  background: rgb(255, 255, 255);
+}
+.bmw .bmw_item.bmw_item_last .bmw_item_desc {
+  color: #fff;
+}
+.bmw .bmw_item.bmw_item_last .bmw_logo {
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+}
+.bmw .bmw_item.bmw_item_last .bmw_logo img {
+  width: 350px;
+}
+.bmw .bmw_icon {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.bmw .bmw_icon .main_icon {
+  background: rgb(46, 53, 72);
+  border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bmw .bmw_icon .plus_img {
+  position: absolute;
+  bottom: -2px;
+  right: -11px;
+  width: 32px;
+  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.bmw .bmw_icon .plus_img img {
+  width: 13.17px;
+  height: 13.23px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bmw .bmw_item_desc {
+  color: rgb(6, 5, 37);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -2%;
+  max-width: 300px;
 }
 
 .stamps {
@@ -1185,7 +1965,7 @@ body:has(.modal_back.active) {
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   padding: 38px 0 18px 0;
 }
 .why .why_item .why_desc {
@@ -1295,7 +2075,7 @@ body:has(.modal_back.active) {
   font-size: 42px;
   font-weight: 700;
   line-height: 105%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   margin-bottom: 48px;
   max-width: 460px;
 }
@@ -1348,7 +2128,7 @@ body:has(.modal_back.active) {
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   text-align: left;
   margin-bottom: 28px;
 }
@@ -1368,7 +2148,7 @@ body:has(.modal_back.active) {
   font-size: 16px;
   font-weight: 500;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
 }
 .quiz .varaint_block .variant_item input {
   width: 22px;
@@ -1474,7 +2254,7 @@ body:has(.modal_back.active) {
   font-size: 19px;
   font-weight: 700;
   line-height: 125%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   border-radius: 100px;
   margin-bottom: 6px;
   background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
@@ -1512,7 +2292,7 @@ body:has(.modal_back.active) {
   font-size: 18px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   padding: 28px 0 28px 20px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -1538,7 +2318,7 @@ body:has(.modal_back.active) {
   font-size: 16px;
   font-weight: 400;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
 }
 .repair .repair_table tbody tr:last-child td:last-child {
   border-radius: 0px 0px 14px 0px;
@@ -1560,7 +2340,7 @@ body:has(.modal_back.active) {
   font-size: 56px;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: 0;
+  letter-spacing: -3px;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -1585,7 +2365,7 @@ body:has(.modal_back.active) {
   font-size: 30px;
   font-weight: 500;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   text-align: center;
 }
 
@@ -1626,7 +2406,7 @@ body:has(.modal_back.active) {
   font-size: 24px;
   font-weight: 500;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
 }
 
 .partner {
@@ -1657,7 +2437,7 @@ body:has(.modal_back.active) {
   font-size: 56px;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   margin-bottom: 2px;
 }
 .partner .about_manager {
@@ -1665,7 +2445,7 @@ body:has(.modal_back.active) {
   font-size: 18px;
   font-weight: 500;
   line-height: 145%;
-  letter-spacing: 0;
+  letter-spacing: -1px;
   padding-bottom: 28px;
   max-width: 330px;
 }
@@ -1746,7 +2526,7 @@ body:has(.modal_back.active) {
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   padding-bottom: 18px;
   margin-bottom: 19px;
   border-bottom: 1px solid rgb(234, 234, 234);
@@ -1756,7 +2536,7 @@ body:has(.modal_back.active) {
   font-size: 16px;
   font-weight: 400;
   line-height: 120%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
 }
 
 .question {
@@ -1787,7 +2567,7 @@ body:has(.modal_back.active) {
   font-size: 52px;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: 0;
+  letter-spacing: -3px;
   margin-bottom: 18px;
 }
 .question .question_desc {
@@ -1795,7 +2575,7 @@ body:has(.modal_back.active) {
   font-size: 18px;
   font-weight: 400;
   line-height: 145%;
-  letter-spacing: 0;
+  letter-spacing: -1px;
   max-width: 320px;
 }
 .question .question_circle {
@@ -1871,7 +2651,7 @@ body:has(.modal_back.active) {
   font-size: 22px;
   font-weight: 700;
   line-height: 125%;
-  letter-spacing: 0;
+  letter-spacing: -2px;
   border-radius: 100px;
   border: none;
   background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
@@ -1906,7 +2686,7 @@ body:has(.modal_back.active) {
   font-size: 56px;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: 0;
+  letter-spacing: -3px;
   text-align: center;
   padding-bottom: 48px;
   margin-bottom: 48px;
@@ -1927,7 +2707,7 @@ body:has(.modal_back.active) {
   font-size: 14px;
   font-weight: 400;
   line-height: 150%;
-  letter-spacing: 0;
+  letter-spacing: -1px;
   text-align: center;
   margin-bottom: 38px;
 }
@@ -1973,7 +2753,7 @@ body:has(.modal_back.active) {
   font-size: 22px;
   font-weight: 400;
   line-height: 145%;
-  letter-spacing: 0;
+  letter-spacing: -1px;
 }
 .contact .map_top {
   padding: 28px;
