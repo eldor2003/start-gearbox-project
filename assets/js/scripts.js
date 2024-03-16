@@ -125,9 +125,9 @@ $(document).ready(function () {
 			.removeClass("active");
 	});
 
-	$('.open_menu').click(function(){
-		$(this).parent().toggleClass('active')
-	})
+	$(".open_menu").click(function () {
+		$(this).parent().toggleClass("active");
+	});
 
 	$('.open_inner').click(function(){
 		$(this).parent().toggleClass('active')
