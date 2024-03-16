@@ -623,6 +623,7 @@ header .to_call {
   font-size: 16px;
   color: #ffffff;
   padding: 10px 10px 10px 20px;
+  cursor: pointer;
   background: linear-gradient(135deg, rgb(219, 42, 29), rgb(219, 42, 29) 100%);
   transition: 0.3s all ease-out;
 }
