@@ -274,6 +274,7 @@ header {
 		font-size: 16px;
 		color: #ffffff;
 		padding: 10px 10px 10px 20px;
+		cursor: pointer;
 		background: linear-gradient(
 			135deg,
 			rgb(219, 42, 29),
@@ -356,7 +357,7 @@ header {
 	h3 {
 		font-size: 32px;
 		line-height: 115%;
-		letter-spacing: -2px;
+		letter-spacing: 0;
 		color: #ffffff;
 		margin: 0 0 18px 0;
 	}
@@ -426,9 +427,9 @@ header {
 		font-size: 36px;
 		font-weight: 700;
 		line-height: 115%;
-		letter-spacing: -2px;
-		a {
-			color: #db2a1d;
+		letter-spacing: 0;
+		a{
+			color: #DB2A1D;
 			text-decoration: underline;
 		}
 	}
@@ -436,7 +437,7 @@ header {
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 145%;
-		letter-spacing: -1px;
+		letter-spacing: 0;
 	}
 }
 // SERVICES
@@ -565,7 +566,7 @@ header {
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 120%;
-		letter-spacing: -2px;
+		letter-spacing: 0;
 	}
 	div:has(.price) {
 		display: flex;
@@ -689,910 +690,61 @@ body:has(.modal_back.active) {
 	.services_list li:has(.price) {
 		padding: 18px 0;
 	}
-}
-
-// otziv_diagnostic
-#otziv_diagnostic.diagnostic {
-	.diagnostic_logo {
-		left: -50px;
-		bottom: -235px;
-		img {
-			opacity: 0.2;
-		}
-	}
-	.diagnostic_bg {
-		right: unset;
-		left: 28%;
+	.services_list li::after,
+	.services_list div:has(.price)::after{
+		background-color: #D6DFED;
 	}
 }
-// otziv
-.otziv {
-	padding: 100px 0;
-	border-radius: 45px 45px 0px 0px;
-	background: rgb(240, 243, 248);
-	.otziv_title {
-		max-width: 690px;
-		margin: 0 auto 48px auto;
-	}
-	.otziv_rate_block {
-		display: flex;
-		align-items: center;
-		gap: 28px;
-		flex-wrap: wrap;
-		margin-bottom: 80px;
-	}
-	.rate_item {
-		padding: 28px;
-		flex: 1;
-		border-radius: 20px;
-		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
-		background: rgb(255, 255, 255);
-	}
-	.rate_logo {
-		text-align: center;
-		padding-bottom: 28px;
-		margin-bottom: 28px;
-		border-bottom: 1px solid rgb(234, 234, 234);
-	}
-	.rate_number {
-		color: rgb(6, 5, 37);
-		font-size: 22px;
-		font-weight: 500;
-		line-height: 105%;
-		text-align: center;
-		margin-bottom: 18px;
-	}
-	.star_block {
-		display: flex;
-		justify-content: center;
-	}
-	.otziv_swiper_item {
-		border-radius: 20px;
-		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
-		background: rgb(255, 255, 255);
-		padding: 28px;
-	}
-	.otziv_top {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding-bottom: 28px;
-		margin-bottom: 28px;
-		border-bottom: 1px solid rgb(234, 234, 234);
-	}
-	.otziv_profile {
-		display: flex;
-		align-items: center;
-		gap: 28px;
-	}
-	.avatar_name {
-		color: rgb(6, 5, 37);
-		font-size: 24px;
-		font-weight: 700;
-		line-height: 125%;
-		margin-bottom: 10px;
-	}
-	.stars_block {
-		display: flex;
-	}
-	.otziv_description {
-		color: rgb(6, 5, 37);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 145%;
-		margin-bottom: 18px;
-	}
-	.otziv_btn {
-		display: flex;
-		gap: 6px;
-		align-items: center;
-		span {
-			color: rgb(156, 173, 201);
-			font-size: 16px;
-			font-weight: 600;
-			line-height: 145%;
-		}
-	}
-	.swiper-slide-next,
-	.swiper-slide-prev {
-		.otziv_swiper_item {
-			position: relative;
-			&::after {
-				content: "";
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(
-					90deg,
-					rgb(240, 243, 248),
-					rgba(240, 243, 248, 0.5) 49%,
-					rgba(240, 243, 248, 0) 100%
-				);
-				z-index: 5;
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-		}
-	}
-	.swiper-slide-next {
-		.otziv_swiper_item {
-			&::after {
-				right: 0;
-				left: unset;
-				transform: rotate(180deg);
-			}
-		}
-	}
-}
-
-// car_service
-.car_service {
-	background: rgb(46, 53, 72);
-	.car_service_wrapper {
-		border-radius: 45px 45px 0px 0px;
-		padding: 100px 0 265px 0;
-		background: rgb(255, 255, 255);
-	}
-	.car_service_block {
-		display: flex;
-		gap: 28px;
-		align-items: start;
-		flex-wrap: wrap;
-	}
-	.car_item_wrapper {
-		flex: 0 0 auto;
-		width: calc(33.33% - 20px);
-		display: flex;
-		flex-direction: column;
-		gap: 28px;
-	}
-	.car_service_item {
-		padding: 28px;
-		border-radius: 20px;
-		background: rgb(240, 243, 248);
-	}
-	.square_block {
-		display: flex;
-		gap: 4px;
-		justify-content: end;
-		span {
-			width: 14px;
-			height: 14px;
-			border: 1px solid rgb(214, 223, 237);
-			border-radius: 2px;
-			&.active {
-				background: rgb(255, 255, 255);
-			}
-		}
-	}
-	.square_number_img {
-		width: 140px;
-		height: 140px;
-		background: linear-gradient(
-			180deg,
-			rgb(255, 255, 255),
-			rgba(255, 255, 255, 0) 100%
-		);
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 18px;
-	}
-	.car_service_name {
-		color: rgb(6, 5, 37);
-		font-size: 24px;
-		font-weight: 700;
-		line-height: 120%;
-		letter-spacing: -2%;
-		margin-bottom: 18px;
-	}
-	.car_service_desc {
-		color: rgb(6, 5, 37);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 140%;
-		max-width: 300px;
-		margin-bottom: 18px;
-	}
-	.car_service_bottom {
-		border-top: 1px solid rgb(214, 223, 237);
-		padding-top: 18px;
-		color: rgb(6, 5, 37);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 140%;
-		a {
-			color: rgb(6, 5, 37);
-			font-size: 16px;
-			line-height: 140%;
-			font-weight: 600;
-		}
-	}
-}
-
-// award
-.award {
-	border-radius: 45px 45px 0 0;
-	background: url(../images/zigzak.png), rgb(46, 53, 72);
+.call_modal{
+	background-image: url(../images/call_modal.png);
+	background-size: 100%;
 	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	padding: 100px 0;
-	.award_title {
-		color: rgb(255, 255, 255);
-		font-size: 56px;
-		font-weight: 700;
-		line-height: 110%;
-		margin-bottom: 20px;
-		text-align: center;
-	}
-	.award_desc {
-		color: rgb(255, 255, 255);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 155%;
-		text-align: center;
-		max-width: 625px;
-		margin: 0 auto 23px auto;
-	}
-	.award_block {
-		display: flex;
-		gap: 28px;
-	}
-}
-
-// diagnostic
-.diagnostic {
-	position: relative;
-	.diagnostic_block {
-		position: relative;
-		display: flex;
-		overflow: hidden;
-		justify-content: space-between;
-		border-radius: 20px;
-		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
-		// position: absolute;
-		// top: -185px;
-		transform: translate(0, -185px);
-		margin-bottom: -185px;
-		z-index: 555;
-		background: rgb(255, 255, 255);
-	}
-	.diagnostic_bg {
+	position: fixed;
+	top: 46%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 3;
+	opacity: 0;
+	visibility: hidden;
+	scale: .9;
+	transition: .3s all ease;
+	overflow: hidden;
+	border-radius: 20px;
+	.close_modal2{
 		position: absolute;
-		bottom: -153px;
-		z-index: -1;
-		right: 110px;
-	}
-	.diagnostic_details {
-		position: relative;
-		padding: 28px 0 135px 28px;
-		overflow: hidden;
-		border-radius: 20px;
-	}
-	.diasnotic_title {
-		color: rgb(6, 5, 37);
-		font-size: 38px;
-		font-weight: 700;
-		line-height: 110%;
-		letter-spacing: -2%;
-		margin-bottom: 18px;
-		max-width: 500px;
-	}
-	.diagnostic_desc {
-		color: rgb(6, 5, 37);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 145%;
-		max-width: 302px;
-	}
-	.diagnostic_logo {
-		position: absolute;
-		bottom: -178px;
-		left: -53px;
-		z-index: 0;
-	}
-	.diagnostic_form_block {
-		border-radius: 20px;
-		width: 566px;
-		display: flex;
-		align-items: center;
-		background: url(../images/quiz_zigzak.png), rgb(46, 53, 72);
-		background-position: 100%;
-		background-repeat: no-repeat;
-	}
-}
-
-// gallery
-.gallery {
-	padding-top: 100px;
-	.gallery_title {
-		max-width: 650px;
-		margin: 0 auto;
-	}
-	.gallery_block {
-		position: relative;
-	}
-
-	.blur1 {
-		left: 0;
-	}
-	.blur2 {
-		right: 0;
-		z-index: 2;
-		transform: rotate(180deg);
-	}
-	.swiper_blur {
-		position: absolute;
-		top: 0;
+		right: 14px;
+		top: 14px;
+		cursor: pointer;
 		z-index: 3;
-		width: 294px;
-		height: 100%;
-		background: linear-gradient(
-			90deg,
-			rgb(240, 243, 248),
-			rgba(240, 243, 248, 0.5) 49%,
-			rgba(240, 243, 248, 0) 100%
-		);
+		scale: .7;
 	}
-}
-
-// bmw section
-.bmw {
-	padding: 100px 0;
-	border-radius: 45px 45px 0px 0px;
-	background: rgb(255, 255, 255);
-	.bmw_top {
-		display: flex;
-		align-items: end;
-		justify-content: space-between;
-		margin-bottom: 48px;
+	.consultation{
+		background: transparent;
 	}
-	.bmw_title {
-		color: rgb(6, 5, 37);
-		font-size: 56px;
-		font-weight: 700;
-		line-height: 110%;
-		letter-spacing: -3%;
-		max-width: 650px;
+	.consultation::after{
+		display: none;
 	}
-	.bmw_top_desc {
-		color: rgb(6, 5, 37);
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 140%;
-		max-width: 368px;
+	&.active{
+		opacity: 1;
+		visibility: visible;
+		top: 50%;
+		scale: 1;
 	}
-	.bmw_block {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		gap: 28px;
-	}
-	.bmw_item {
-		flex: 0 0 auto;
-		width: calc(33.33% - 19px);
-		border-radius: 20px;
-		background: rgb(240, 243, 248);
-		padding: 28px 37px 38px 28px;
-		&.bmw_item_last {
-			flex: 1;
-			position: relative;
-			background: rgb(46, 53, 72);
-			.main_icon {
-				background: rgb(255, 255, 255);
-			}
-			.bmw_item_desc {
-				color: #fff;
-			}
-			.bmw_logo {
-				position: absolute;
-				bottom: -3px;
-				right: 0;
-				img {
-					width: 350px;
-				}
-			}
-		}
-	}
-	.bmw_icon {
-		position: relative;
-		display: inline-block;
-		margin-bottom: 35px;
-		.main_icon {
-			background: rgb(46, 53, 72);
-			border-radius: 50%;
-			width: 78px;
-			height: 78px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.plus_img {
-			position: absolute;
-			bottom: -2px;
-			right: -11px;
-			width: 32px;
-			background: linear-gradient(
-				135deg,
-				rgb(219, 42, 29) 0%,
-				rgb(219, 42, 29) 100%
-			);
-			height: 32px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border-radius: 50%;
-			img {
-				width: 13.17px;
-				height: 13.23px;
-				object-fit: cover;
-			}
-		}
-	}
-	.bmw_item_desc {
-		color: rgb(6, 5, 37);
-		font-size: 24px;
-		font-weight: 500;
-		line-height: 120%;
-		letter-spacing: -2%;
-		max-width: 300px;
-	}
-}
-
-// otziv_diagnostic
-#otziv_diagnostic.diagnostic {
-	.diagnostic_logo {
-		left: -50px;
-		bottom: -235px;
-		img {
-			opacity: 0.2;
-		}
-	}
-	.diagnostic_bg {
-		right: unset;
-		left: 28%;
-	}
-}
-// otziv
-.otziv {
-	padding: 100px 0;
-	border-radius: 45px 45px 0px 0px;
-	background: rgb(240, 243, 248);
-	.otziv_title {
-		max-width: 690px;
-		margin: 0 auto 48px auto;
-	}
-	.otziv_rate_block {
-		display: flex;
-		align-items: center;
-		gap: 28px;
-		flex-wrap: wrap;
-		margin-bottom: 80px;
-	}
-	.rate_item {
-		padding: 28px;
-		flex: 1;
-		border-radius: 20px;
-		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
-		background: rgb(255, 255, 255);
-	}
-	.rate_logo {
-		text-align: center;
-		padding-bottom: 28px;
-		margin-bottom: 28px;
-		border-bottom: 1px solid rgb(234, 234, 234);
-	}
-	.rate_number {
-		color: rgb(6, 5, 37);
-		font-size: 22px;
-		font-weight: 500;
-		line-height: 105%;
-		text-align: center;
-		margin-bottom: 18px;
-	}
-	.star_block {
-		display: flex;
-		justify-content: center;
-	}
-	.otziv_swiper_item {
-		border-radius: 20px;
-		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
-		background: rgb(255, 255, 255);
-		padding: 28px;
-	}
-	.otziv_top {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding-bottom: 28px;
-		margin-bottom: 28px;
-		border-bottom: 1px solid rgb(234, 234, 234);
-	}
-	.otziv_profile {
-		display: flex;
-		align-items: center;
-		gap: 28px;
-	}
-	.avatar_name {
-		color: rgb(6, 5, 37);
-		font-size: 24px;
-		font-weight: 700;
-		line-height: 125%;
-		margin-bottom: 10px;
-	}
-	.stars_block {
-		display: flex;
-	}
-	.otziv_description {
-		color: rgb(6, 5, 37);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 145%;
-		margin-bottom: 18px;
-	}
-	.otziv_btn {
-		display: flex;
-		gap: 6px;
-		align-items: center;
-		span {
-			color: rgb(156, 173, 201);
-			font-size: 16px;
-			font-weight: 600;
-			line-height: 145%;
-		}
-	}
-	.swiper-slide-next,
-	.swiper-slide-prev {
-		.otziv_swiper_item {
-			position: relative;
-			&::after {
-				content: "";
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(
-					90deg,
-					rgb(240, 243, 248),
-					rgba(240, 243, 248, 0.5) 49%,
-					rgba(240, 243, 248, 0) 100%
-				);
-				z-index: 5;
-				position: absolute;
-				top: 0;
-				left: 0;
-			}
-		}
-	}
-	.swiper-slide-next {
-		.otziv_swiper_item {
-			&::after {
-				right: 0;
-				left: unset;
-				transform: rotate(180deg);
-			}
-		}
-	}
-}
-
-// car_service
-.car_service {
-	background: rgb(46, 53, 72);
-	.car_service_wrapper {
-		border-radius: 45px 45px 0px 0px;
-		padding: 100px 0 265px 0;
-		background: rgb(255, 255, 255);
-	}
-	.car_service_block {
-		display: flex;
-		gap: 28px;
-		align-items: start;
-		flex-wrap: wrap;
-	}
-	.car_item_wrapper {
-		flex: 0 0 auto;
-		width: calc(33.33% - 20px);
-		display: flex;
-		flex-direction: column;
-		gap: 28px;
-	}
-	.car_service_item {
-		padding: 28px;
-		border-radius: 20px;
-		background: rgb(240, 243, 248);
-	}
-	.square_block {
-		display: flex;
-		gap: 4px;
-		justify-content: end;
-		span {
-			width: 14px;
-			height: 14px;
-			border: 1px solid rgb(214, 223, 237);
-			border-radius: 2px;
-			&.active {
-				background: rgb(255, 255, 255);
-			}
-		}
-	}
-	.square_number_img {
-		width: 140px;
-		height: 140px;
-		background: linear-gradient(
-			180deg,
-			rgb(255, 255, 255),
-			rgba(255, 255, 255, 0) 100%
-		);
+	&::after{
+		position: absolute;
+		content: '';
+		right: -80px;
+		top: -80px;
+		width: 160px;
+		height: 160px;
 		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 18px;
-	}
-	.car_service_name {
-		color: rgb(6, 5, 37);
-		font-size: 24px;
-		font-weight: 700;
-		line-height: 120%;
-		letter-spacing: -2%;
-		margin-bottom: 18px;
-	}
-	.car_service_desc {
-		color: rgb(6, 5, 37);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 140%;
-		max-width: 300px;
-		margin-bottom: 18px;
-	}
-	.car_service_bottom {
-		border-top: 1px solid rgb(214, 223, 237);
-		padding-top: 18px;
-		color: rgb(6, 5, 37);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 140%;
-		a {
-			color: rgb(6, 5, 37);
-			font-size: 16px;
-			line-height: 140%;
-			font-weight: 600;
-		}
-	}
-}
-
-// award
-.award {
-	border-radius: 45px 45px 0 0;
-	background: url(../images/zigzak.png), rgb(46, 53, 72);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	padding: 100px 0;
-	.award_title {
-		color: rgb(255, 255, 255);
-		font-size: 56px;
-		font-weight: 700;
-		line-height: 110%;
-		margin-bottom: 20px;
-		text-align: center;
-	}
-	.award_desc {
-		color: rgb(255, 255, 255);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 155%;
-		text-align: center;
-		max-width: 625px;
-		margin: 0 auto 23px auto;
-	}
-	.award_block {
-		display: flex;
-		gap: 28px;
-	}
-}
-
-// diagnostic
-.diagnostic {
-	position: relative;
-	.diagnostic_block {
-		position: relative;
-		display: flex;
-		overflow: hidden;
-		justify-content: space-between;
-		border-radius: 20px;
-		box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
-		// position: absolute;
-		// top: -185px;
-		transform: translate(0, -185px);
-		margin-bottom: -185px;
-		z-index: 555;
-		background: rgb(255, 255, 255);
-	}
-	.diagnostic_bg {
-		position: absolute;
-		bottom: -153px;
-		z-index: -1;
-		right: 110px;
-	}
-	.diagnostic_details {
-		position: relative;
-		padding: 28px 0 135px 28px;
-		overflow: hidden;
-		border-radius: 20px;
-	}
-	.diasnotic_title {
-		color: rgb(6, 5, 37);
-		font-size: 38px;
-		font-weight: 700;
-		line-height: 110%;
-		letter-spacing: -2%;
-		margin-bottom: 18px;
-		max-width: 500px;
-	}
-	.diagnostic_desc {
-		color: rgb(6, 5, 37);
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 145%;
-		max-width: 302px;
-	}
-	.diagnostic_logo {
-		position: absolute;
-		bottom: -178px;
-		left: -53px;
-		z-index: 0;
-	}
-	.diagnostic_form_block {
-		border-radius: 20px;
-		width: 566px;
-		display: flex;
-		align-items: center;
-		background: url(../images/quiz_zigzak.png), rgb(46, 53, 72);
-		background-position: 100%;
-		background-repeat: no-repeat;
-	}
-}
-
-// gallery
-.gallery {
-	padding-top: 100px;
-	.gallery_title {
-		max-width: 650px;
-		margin: 0 auto;
-	}
-	.gallery_block {
-		position: relative;
-	}
-
-	.blur1 {
-		left: 0;
-	}
-	.blur2 {
-		right: 0;
+		background-color: #3A4259;
 		z-index: 2;
-		transform: rotate(180deg);
 	}
-	.swiper_blur {
-		position: absolute;
-		top: 0;
-		z-index: 3;
-		width: 294px;
-		height: 100%;
-		background: linear-gradient(
-			90deg,
-			rgb(240, 243, 248),
-			rgba(240, 243, 248, 0.5) 49%,
-			rgba(240, 243, 248, 0) 100%
-		);
+	.text_2{
+		margin: 0 0 25px 0;
 	}
 }
-
-// bmw section
-.bmw {
-	padding: 100px 0;
-	border-radius: 45px 45px 0px 0px;
-	background: rgb(255, 255, 255);
-	.bmw_top {
-		display: flex;
-		align-items: end;
-		justify-content: space-between;
-		margin-bottom: 48px;
-	}
-	.bmw_title {
-		color: rgb(6, 5, 37);
-		font-size: 56px;
-		font-weight: 700;
-		line-height: 110%;
-		letter-spacing: -3%;
-		max-width: 650px;
-	}
-	.bmw_top_desc {
-		color: rgb(6, 5, 37);
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 140%;
-		max-width: 368px;
-	}
-	.bmw_block {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		gap: 28px;
-	}
-	.bmw_item {
-		flex: 0 0 auto;
-		width: calc(33.33% - 19px);
-		border-radius: 20px;
-		background: rgb(240, 243, 248);
-		padding: 28px 37px 38px 28px;
-		&.bmw_item_last {
-			flex: 1;
-			position: relative;
-			background: rgb(46, 53, 72);
-			.main_icon {
-				background: rgb(255, 255, 255);
-			}
-			.bmw_item_desc {
-				color: #fff;
-			}
-			.bmw_logo {
-				position: absolute;
-				bottom: -3px;
-				right: 0;
-				img {
-					width: 350px;
-				}
-			}
-		}
-	}
-	.bmw_icon {
-		position: relative;
-		display: inline-block;
-		margin-bottom: 35px;
-		.main_icon {
-			background: rgb(46, 53, 72);
-			border-radius: 50%;
-			width: 78px;
-			height: 78px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.plus_img {
-			position: absolute;
-			bottom: -2px;
-			right: -11px;
-			width: 32px;
-			background: linear-gradient(
-				135deg,
-				rgb(219, 42, 29) 0%,
-				rgb(219, 42, 29) 100%
-			);
-			height: 32px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			border-radius: 50%;
-			img {
-				width: 13.17px;
-				height: 13.23px;
-				object-fit: cover;
-			}
-		}
-	}
-	.bmw_item_desc {
-		color: rgb(6, 5, 37);
-		font-size: 24px;
-		font-weight: 500;
-		line-height: 120%;
-		letter-spacing: -2%;
-		max-width: 300px;
-	}
-}
-
 // STAMPS
 .stamps {
 	padding: 100px 0;
@@ -1682,7 +834,7 @@ body:has(.modal_back.active) {
 			font-size: 24px;
 			font-weight: 700;
 			line-height: 120%;
-			letter-spacing: -2px;
+			letter-spacing: 0;
 			padding: 38px 0 18px 0;
 		}
 		.why_desc {
@@ -1796,7 +948,7 @@ body:has(.modal_back.active) {
 		font-size: 42px;
 		font-weight: 700;
 		line-height: 105%;
-		letter-spacing: -2px;
+		letter-spacing: 0;
 		margin-bottom: 48px;
 		max-width: 460px;
 	}
@@ -1853,7 +1005,7 @@ body:has(.modal_back.active) {
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 120%;
-		letter-spacing: -2px;
+		letter-spacing: 0;
 		text-align: left;
 		margin-bottom: 28px;
 	}
@@ -1871,7 +1023,7 @@ body:has(.modal_back.active) {
 				font-size: 16px;
 				font-weight: 500;
 				line-height: 120%;
-				letter-spacing: -2px;
+				letter-spacing: 0;
 			}
 			input {
 				width: 22px;
@@ -1978,7 +1130,7 @@ body:has(.modal_back.active) {
 			font-size: 19px;
 			font-weight: 700;
 			line-height: 125%;
-			letter-spacing: -2px;
+			letter-spacing: 0;
 			border-radius: 100px;
 			margin-bottom: 6px;
 			background: linear-gradient(
@@ -2025,7 +1177,7 @@ body:has(.modal_back.active) {
 				font-size: 18px;
 				font-weight: 700;
 				line-height: 120%;
-				letter-spacing: -2px;
+				letter-spacing: 0;
 				padding: 28px 0 28px 20px;
 				border-top: 1px solid transparent;
 				border-bottom: 1px solid transparent;
@@ -2051,7 +1203,7 @@ body:has(.modal_back.active) {
 				font-size: 16px;
 				font-weight: 400;
 				line-height: 120%;
-				letter-spacing: -2px;
+				letter-spacing: 0;
 			}
 			tr:last-child {
 				td {
@@ -2080,7 +1232,7 @@ body:has(.modal_back.active) {
 		font-size: 56px;
 		font-weight: 700;
 		line-height: 110%;
-		letter-spacing: -3px;
+		letter-spacing: 0;
 		text-align: center;
 		margin-bottom: 50px;
 	}
@@ -2105,7 +1257,7 @@ body:has(.modal_back.active) {
 		font-size: 30px;
 		font-weight: 500;
 		line-height: 120%;
-		letter-spacing: -2px;
+		letter-spacing: 0;
 		text-align: center;
 	}
 }
@@ -2147,7 +1299,7 @@ body:has(.modal_back.active) {
 		font-size: 24px;
 		font-weight: 500;
 		line-height: 120%;
-		letter-spacing: -2px;
+		letter-spacing: 0;
 	}
 }
 
@@ -2179,7 +1331,7 @@ body:has(.modal_back.active) {
 		font-size: 56px;
 		font-weight: 700;
 		line-height: 110%;
-		letter-spacing: -2px;
+		letter-spacing: 0;
 		margin-bottom: 2px;
 	}
 	.about_manager {
@@ -2187,7 +1339,7 @@ body:has(.modal_back.active) {
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 145%;
-		letter-spacing: -1px;
+		letter-spacing: 0;
 		padding-bottom: 28px;
 		max-width: 330px;
 	}
@@ -2267,7 +1419,7 @@ body:has(.modal_back.active) {
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 120%;
-		letter-spacing: -2px;
+		letter-spacing: 0;
 		padding-bottom: 18px;
 		margin-bottom: 19px;
 		border-bottom: 1px solid rgb(234, 234, 234);
@@ -2277,7 +1429,7 @@ body:has(.modal_back.active) {
 		font-size: 16px;
 		font-weight: 400;
 		line-height: 120%;
-		letter-spacing: -2px;
+		letter-spacing: 0;
 	}
 }
 
@@ -2309,7 +1461,7 @@ body:has(.modal_back.active) {
 		font-size: 52px;
 		font-weight: 700;
 		line-height: 110%;
-		letter-spacing: -3px;
+		letter-spacing: 0;
 		margin-bottom: 18px;
 	}
 	.question_desc {
@@ -2317,7 +1469,7 @@ body:has(.modal_back.active) {
 		font-size: 18px;
 		font-weight: 400;
 		line-height: 145%;
-		letter-spacing: -1px;
+		letter-spacing: 0;
 		max-width: 320px;
 	}
 
@@ -2389,7 +1541,7 @@ body:has(.modal_back.active) {
 			font-size: 22px;
 			font-weight: 700;
 			line-height: 125%;
-			letter-spacing: -2px;
+			letter-spacing: 0;
 			border-radius: 100px;
 			border: none;
 			background: linear-gradient(
@@ -2429,7 +1581,7 @@ body:has(.modal_back.active) {
 		font-size: 56px;
 		font-weight: 700;
 		line-height: 110%;
-		letter-spacing: -3px;
+		letter-spacing: 0;
 		text-align: center;
 		padding-bottom: 48px;
 		margin-bottom: 48px;
@@ -2450,7 +1602,7 @@ body:has(.modal_back.active) {
 		font-size: 14px;
 		font-weight: 400;
 		line-height: 150%;
-		letter-spacing: -1px;
+		letter-spacing: 0;
 		text-align: center;
 		margin-bottom: 38px;
 	}
@@ -2496,7 +1648,7 @@ body:has(.modal_back.active) {
 		font-size: 22px;
 		font-weight: 400;
 		line-height: 145%;
-		letter-spacing: -1px;
+		letter-spacing: 0;
 	}
 	.map_top {
 		padding: 28px;
