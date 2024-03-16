@@ -143,14 +143,21 @@ $(document).ready(function () {
 	$('.service_item .main_btn').click(function(){
 		$('.modal_back').addClass('active')
 		$('.service_modal').addClass('active')
+		$('.call_modal').removeClass('active')
 	})
-	$('.close_modal').click(function(){
+	$('.close_modal, .close_modal2').click(function(){
 		$('.modal_back').removeClass('active')
-		$('.service_modal').removeClass('active')
+		$('.service_modal, .call_modal').removeClass('active')
 	})
 	$('.modal_back').click(function(){
 		$(this).removeClass('active')
+		$('.service_modal , .call_modal').removeClass('active')
+	})
+
+	$('.to_call').click(function(){
 		$('.service_modal').removeClass('active')
+		$('.call_modal').addClass('active')
+		$('.modal_back').addClass('active')
 	})
 	
 

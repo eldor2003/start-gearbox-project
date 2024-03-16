@@ -539,6 +539,7 @@ header .to_call {
   font-size: 16px;
   color: #ffffff;
   padding: 10px 10px 10px 20px;
+  cursor: pointer;
   background: linear-gradient(135deg, rgb(219, 42, 29), rgb(219, 42, 29) 100%);
   transition: 0.3s all ease-out;
 }
@@ -614,7 +615,7 @@ header .to_call:hover {
 .consultation h3 {
   font-size: 32px;
   line-height: 115%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   color: #ffffff;
   margin: 0 0 18px 0;
 }
@@ -685,7 +686,7 @@ header .to_call:hover {
   font-size: 36px;
   font-weight: 700;
   line-height: 115%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
 }
 .cta .cta_title a {
   color: #DB2A1D;
@@ -695,7 +696,7 @@ header .to_call:hover {
   font-size: 18px;
   font-weight: 400;
   line-height: 145%;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 
 .services {
@@ -824,7 +825,7 @@ header .to_call:hover {
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
 }
 .services_list div:has(.price) {
   display: flex;
@@ -951,6 +952,61 @@ body:has(.modal_back.active) {
 .service_modal .services_list li:has(.price) {
   padding: 18px 0;
 }
+.service_modal .services_list li::after,
+.service_modal .services_list div:has(.price)::after {
+  background-color: #D6DFED;
+}
+
+.call_modal {
+  background-image: url(../images/call_modal.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  scale: 0.9;
+  transition: 0.3s all ease;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.call_modal .close_modal2 {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  cursor: pointer;
+  z-index: 3;
+  scale: 0.7;
+}
+.call_modal .consultation {
+  background: transparent;
+}
+.call_modal .consultation::after {
+  display: none;
+}
+.call_modal.active {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+  scale: 1;
+}
+.call_modal::after {
+  position: absolute;
+  content: "";
+  right: -80px;
+  top: -80px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #3A4259;
+  z-index: 2;
+}
+.call_modal .text_2 {
+  margin: 0 0 25px 0;
+}
 
 .stamps {
   padding: 100px 0;
@@ -1042,7 +1098,7 @@ body:has(.modal_back.active) {
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   padding: 38px 0 18px 0;
 }
 .why .why_item .why_desc {
@@ -1152,7 +1208,7 @@ body:has(.modal_back.active) {
   font-size: 42px;
   font-weight: 700;
   line-height: 105%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   margin-bottom: 48px;
   max-width: 460px;
 }
@@ -1205,7 +1261,7 @@ body:has(.modal_back.active) {
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   text-align: left;
   margin-bottom: 28px;
 }
@@ -1225,7 +1281,7 @@ body:has(.modal_back.active) {
   font-size: 16px;
   font-weight: 500;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
 }
 .quiz .varaint_block .variant_item input {
   width: 22px;
@@ -1331,7 +1387,7 @@ body:has(.modal_back.active) {
   font-size: 19px;
   font-weight: 700;
   line-height: 125%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   border-radius: 100px;
   margin-bottom: 6px;
   background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
@@ -1369,7 +1425,7 @@ body:has(.modal_back.active) {
   font-size: 18px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   padding: 28px 0 28px 20px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -1395,7 +1451,7 @@ body:has(.modal_back.active) {
   font-size: 16px;
   font-weight: 400;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
 }
 .repair .repair_table tbody tr:last-child td:last-child {
   border-radius: 0px 0px 14px 0px;
@@ -1417,7 +1473,7 @@ body:has(.modal_back.active) {
   font-size: 56px;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: -3px;
+  letter-spacing: 0;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -1442,7 +1498,7 @@ body:has(.modal_back.active) {
   font-size: 30px;
   font-weight: 500;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   text-align: center;
 }
 
@@ -1483,7 +1539,7 @@ body:has(.modal_back.active) {
   font-size: 24px;
   font-weight: 500;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
 }
 
 .partner {
@@ -1514,7 +1570,7 @@ body:has(.modal_back.active) {
   font-size: 56px;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   margin-bottom: 2px;
 }
 .partner .about_manager {
@@ -1522,7 +1578,7 @@ body:has(.modal_back.active) {
   font-size: 18px;
   font-weight: 500;
   line-height: 145%;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   padding-bottom: 28px;
   max-width: 330px;
 }
@@ -1603,7 +1659,7 @@ body:has(.modal_back.active) {
   font-size: 24px;
   font-weight: 700;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   padding-bottom: 18px;
   margin-bottom: 19px;
   border-bottom: 1px solid rgb(234, 234, 234);
@@ -1613,7 +1669,7 @@ body:has(.modal_back.active) {
   font-size: 16px;
   font-weight: 400;
   line-height: 120%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
 }
 
 .question {
@@ -1644,7 +1700,7 @@ body:has(.modal_back.active) {
   font-size: 52px;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: -3px;
+  letter-spacing: 0;
   margin-bottom: 18px;
 }
 .question .question_desc {
@@ -1652,7 +1708,7 @@ body:has(.modal_back.active) {
   font-size: 18px;
   font-weight: 400;
   line-height: 145%;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   max-width: 320px;
 }
 .question .question_circle {
@@ -1728,7 +1784,7 @@ body:has(.modal_back.active) {
   font-size: 22px;
   font-weight: 700;
   line-height: 125%;
-  letter-spacing: -2px;
+  letter-spacing: 0;
   border-radius: 100px;
   border: none;
   background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
@@ -1763,7 +1819,7 @@ body:has(.modal_back.active) {
   font-size: 56px;
   font-weight: 700;
   line-height: 110%;
-  letter-spacing: -3px;
+  letter-spacing: 0;
   text-align: center;
   padding-bottom: 48px;
   margin-bottom: 48px;
@@ -1784,7 +1840,7 @@ body:has(.modal_back.active) {
   font-size: 14px;
   font-weight: 400;
   line-height: 150%;
-  letter-spacing: -1px;
+  letter-spacing: 0;
   text-align: center;
   margin-bottom: 38px;
 }
@@ -1830,7 +1886,7 @@ body:has(.modal_back.active) {
   font-size: 22px;
   font-weight: 400;
   line-height: 145%;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 .contact .map_top {
   padding: 28px;
