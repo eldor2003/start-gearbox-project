@@ -189,22 +189,18 @@ body {
 h1 {
 	font-size: 58px;
 	font-weight: 700;
-	letter-spacing: -3px;
 }
 h2 {
 	font-size: 56px;
 	font-weight: 700;
-	letter-spacing: -3px;
 }
 h3 {
 	font-size: 38px;
 	font-weight: 700;
-	letter-spacing: -2px;
 }
 h4 {
 	font-size: 24px;
 	font-weight: 700;
-	letter-spacing: -2px;
 }
 .text_1 {
 	font-size: 18px;
@@ -266,7 +262,8 @@ button {
 	flex-direction: column;
 	gap: 12px;
 	display: none;
-	&#diagnostic_form {
+	&#diagnostic_form,
+	&#diagnostic_form2 {
 		display: flex;
 		padding: 0 48px;
 		width: 100%;
@@ -341,10 +338,12 @@ button {
 .gallery_navs {
 	user-select: none;
 	.gallery_prev {
+		cursor: pointer;
 		position: absolute;
 		left: 28px;
 	}
 	.gallery_next {
+		cursor: pointer;
 		right: 28px;
 	}
 }
