@@ -235,7 +235,13 @@ $(document).ready(function () {
 		$(this).toggleClass("active");
 		$(this).parent().siblings("ul").toggleClass("active");
 		$(this).parent().parent().siblings().find("*").removeClass("active");
-		$(this).parent().parent().parent().siblings().find("*").removeClass("active");
+		$(this)
+			.parent()
+			.parent()
+			.parent()
+			.siblings()
+			.find("*")
+			.removeClass("active");
 	});
 
 	$(".service_item .main_btn").click(function () {
@@ -256,5 +262,13 @@ $(document).ready(function () {
 		$(".service_modal").removeClass("active");
 		$(".call_modal").addClass("active");
 		$(".modal_back").addClass("active");
+	});
+	// tel mask
+	const element = document.querySelectorAll(".form_actions input[type='tel']");
+	element.forEach((item) => {
+		const maskOptions = {
+			mask: "+{7} 000-000-0000",
+		};
+		const mask = IMask(item, maskOptions);
 	});
 });
