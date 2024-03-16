@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap : https://eldorjon-start-gearbox-project.netlify.app/sitemap.xml
