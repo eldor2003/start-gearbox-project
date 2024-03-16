@@ -501,7 +501,7 @@ header .header_bottom nav {
 header .nav_item {
   border-radius: 100px;
   background-color: #fff;
-  padding: 9px 6.5px 9px 14.5px;
+  padding: 9px 14.5px;
   font-size: 16px;
   font-weight: 400;
   color: #060525;
@@ -552,6 +552,9 @@ header .nav_item .menus_list .menu {
   padding: 18px;
   border-right: 1px solid #d6dfed;
   border-radius: 20px;
+}
+header .nav_item:has(img) {
+  padding: 9px 6.5px 9px 14.5px;
 }
 header .menus_list li {
   display: flex;
@@ -1035,6 +1038,13 @@ body:has(.modal_back.active) {
 }
 .service_modal .services_list li:has(.price) {
   padding: 18px 0;
+}
+.service_modal .services_list li::after,
+.service_modal .services_list div:has(.price)::after {
+  background-color: #D6DFED;
+}
+.service_modal .services_list li:last-child::after {
+  display: none;
 }
 
 .call_modal {
