@@ -261,7 +261,6 @@ h4 {
   font-size: 19px;
   font-weight: 700;
   line-height: 125%;
-  letter-spacing: -2px;
   cursor: pointer;
 }
 .main_btn img {
@@ -1036,6 +1035,45 @@ body:has(.modal_back.active) {
 }
 .service_modal .services_list li:has(.price) {
   padding: 18px 0;
+}
+
+.call_modal {
+  opacity: 0;
+  visibility: hidden;
+  scale: 0.9;
+  transition: 0.3s all ease;
+  position: fixed;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  z-index: 3;
+  overflow: hidden;
+}
+.call_modal.active {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+  scale: 1;
+}
+.call_modal::after {
+  position: absolute;
+  content: "";
+  width: 160px;
+  height: 160px;
+  top: -80px;
+  right: -80px;
+  border-radius: 50%;
+  background-color: #3A4259;
+  z-index: 1;
+}
+.call_modal .close_modal2 {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 2;
+  scale: 0.7;
+  cursor: pointer;
 }
 
 #otziv_diagnostic.diagnostic .diagnostic_logo {

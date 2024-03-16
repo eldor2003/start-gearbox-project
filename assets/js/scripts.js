@@ -125,47 +125,6 @@ $(document).ready(function () {
 			.removeClass("active");
 	});
 
-	$(".open_menu").click(function () {
-		$(this).parent().toggleClass("active");
-	});
-
-	$(".open_inner").click(function () {
-		$(this).parent().toggleClass("active");
-	});
-
-	$(".open_ul").click(function () {
-		$(this).toggleClass("active");
-		$(this).parent().siblings("ul").toggleClass("active");
-		$(this).parent().parent().siblings().find("*").removeClass("active");
-		$(this)
-			.parent()
-			.parent()
-			.parent()
-			.siblings()
-			.find("*")
-			.removeClass("active");
-	});
-
-	$(".service_item .main_btn").click(function () {
-		$(".modal_back").addClass("active");
-		$(".service_modal").addClass("active");
-		$(".call_modal").removeClass("active");
-	});
-	$(".close_modal, .close_modal2").click(function () {
-		$(".modal_back").removeClass("active");
-		$(".service_modal, .call_modal").removeClass("active");
-	});
-	$(".modal_back").click(function () {
-		$(this).removeClass("active");
-		$(".service_modal , .call_modal").removeClass("active");
-	});
-
-	$(".to_call").click(function () {
-		$(".service_modal").removeClass("active");
-		$(".call_modal").addClass("active");
-		$(".modal_back").addClass("active");
-	});
-
 	// gallery swiper
 	if ($(".gallery_swiper").length > 0) {
 		const gallery_swiper = new Swiper(".gallery_swiper", {
@@ -263,36 +222,39 @@ $(document).ready(function () {
 			},
 		});
 	}
+
+	$(".open_menu").click(function () {
+		$(this).parent().toggleClass("active");
+	});
+
+	$(".open_inner").click(function () {
+		$(this).parent().toggleClass("active");
+	});
+
 	$(".open_ul").click(function () {
 		$(this).toggleClass("active");
 		$(this).parent().siblings("ul").toggleClass("active");
 		$(this).parent().parent().siblings().find("*").removeClass("active");
-		$(this)
-			.parent()
-			.parent()
-			.parent()
-			.siblings()
-			.find("*")
-			.removeClass("active");
+		$(this).parent().parent().parent().siblings().find("*").removeClass("active");
 	});
 
-	$('.service_item .main_btn').click(function(){
-		$('.modal_back').addClass('active')
-		$('.service_modal').addClass('active')
-		$('.call_modal').removeClass('active')
-	})
-	$('.close_modal, .close_modal2').click(function(){
-		$('.modal_back').removeClass('active')
-		$('.service_modal, .call_modal').removeClass('active')
-	})
-	$('.modal_back').click(function(){
-		$(this).removeClass('active')
-		$('.service_modal , .call_modal').removeClass('active')
-	})
+	$(".service_item .main_btn").click(function () {
+		$(".modal_back").addClass("active");
+		$(".service_modal").addClass("active");
+		$(".call_modal").removeClass("active");
+	});
+	$(".close_modal, .close_modal2").click(function () {
+		$(".modal_back").removeClass("active");
+		$(".service_modal, .call_modal").removeClass("active");
+	});
+	$(".modal_back").click(function () {
+		$(this).removeClass("active");
+		$(".service_modal , .call_modal").removeClass("active");
+	});
 
-	$('.to_call').click(function(){
-		$('.service_modal').removeClass('active')
-		$('.call_modal').addClass('active')
-		$('.modal_back').addClass('active')
-	})
+	$(".to_call").click(function () {
+		$(".service_modal").removeClass("active");
+		$(".call_modal").addClass("active");
+		$(".modal_back").addClass("active");
+	});
 });
