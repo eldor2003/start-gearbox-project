@@ -689,7 +689,7 @@ header .to_call:hover {
 
 .consultation {
   flex: 0 0 auto;
-  width: 467px;
+  width: 461px;
   border-radius: 20px;
   background-color: #2e3548;
   padding: 48px 48px 62px 48px;
@@ -868,6 +868,45 @@ header .to_call:hover {
 .services .service_top .open_ul.active path {
   fill: #db2a1d;
 }
+.services .services_cards2 {
+  gap: 0;
+}
+.services .services_cards2 .service_col {
+  gap: 0;
+}
+.services .services_cards2 .service_col:first-child .service_top {
+  padding-right: 14px;
+}
+.services .services_cards2 .service_col:last-child .service_top {
+  padding-left: 14px;
+}
+.services .services_cards2 .service_item {
+  background: transparent;
+  border-radius: 0;
+}
+.services .services_cards2 .service_item .service_top {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0;
+  height: auto;
+  padding: 28px 0;
+  border-top: 1px solid #EAEAEA;
+}
+.services .services_cards2 .service_item .service_top div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.services .services_cards2 .service_item .service_top .open_ul {
+  position: relative;
+  bottom: auto;
+  right: auto;
+}
+.services .services_cards2 .service_item:last-child .service_top {
+  border-bottom: 1px solid #EAEAEA;
+}
 .services .cta {
   background-image: url(../images/cta1.png);
   background-repeat: no-repeat;
@@ -884,16 +923,8 @@ header .to_call:hover {
   padding: 48px;
 }
 
-.services_list {
-  height: 0;
-  transition: 0.3s all ease;
-  border-radius: 0 0 20px 20px;
-}
-.services_list.active {
-  height: auto;
-}
 .services_list li {
-  padding: 28px 25px 25px 28px;
+  padding: 18px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -909,7 +940,7 @@ header .to_call:hover {
   background-color: #f0f3f8;
 }
 .services_list .service_title {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
   line-height: 120%;
   letter-spacing: -2%;
@@ -944,11 +975,35 @@ header .to_call:hover {
   font-weight: 600;
   letter-spacing: 0%;
 }
-.services_list li:has(.price) {
-  padding: 18px 28px;
+
+.open_service_list {
+  padding: 28px 25px 25px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
-.services_list li:has(.price) .service_title {
-  font-size: 16px;
+.open_service_list::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: #f0f3f8;
+}
+.open_service_list .service_title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+.open_service_list img {
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.open_service_list img.active {
+  rotate: 45deg;
 }
 
 body:has(.modal_back.active) {

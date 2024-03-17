@@ -233,19 +233,22 @@ $(document).ready(function () {
 	$(".open_inner").click(function () {
 		$(this).parent().toggleClass("active");
 	});
+	$('.service_bottom, .open_service_list + .services_list').slideToggle(0)
 
 	$(".open_ul").click(function () {
+
+		$('.services_cards').find("*").not(this).removeClass("active");
+		$(this).parent().parent().siblings().find(".service_bottom, .open_service_list + .services_list").slideUp(300)
+		$(this).parent().parent().parent().siblings().find(".service_bottom, .open_service_list + .services_list").slideUp(300)
 		$(this).toggleClass("active");
-		$(this).parent().siblings("ul").toggleClass("active");
-		$(this).parent().parent().siblings().find("*").removeClass("active");
-		$(this)
-			.parent()
-			.parent()
-			.parent()
-			.siblings()
-			.find("*")
-			.removeClass("active");
+		$(this).parent().siblings(".service_bottom").slideToggle(300)
+
 	});
+
+	$('.open_service_list img').click(function(){
+		$(this).toggleClass('active')
+		$(this).parent().next().slideToggle(300)
+	})
 
 	$(".service_item .main_btn").click(function () {
 		$(".modal_back").addClass("active");

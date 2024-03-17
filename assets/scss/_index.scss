@@ -349,7 +349,7 @@ header {
 }
 .consultation {
 	flex: 0 0 auto;
-	width: 467px;
+	width: 461px;
 	border-radius: 20px;
 	background-color: #2e3548;
 	padding: 48px 48px 62px 48px;
@@ -528,6 +528,51 @@ header {
 			}
 		}
 	}
+	.services_cards2{
+		gap: 0;
+		.service_col{
+			gap: 0;
+			&:first-child{
+				.service_top{
+					padding-right: 14px;
+				}
+			}
+			&:last-child{
+				.service_top{
+					padding-left: 14px;
+				}
+			}
+		}
+		.service_item{
+			background: transparent;
+			border-radius: 0;
+			.service_top{
+				background: transparent;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				border-radius: 0;
+				height: auto;
+				padding: 28px 0;
+				border-top: 1px solid #EAEAEA;
+				div{
+					display: flex;
+					align-items: center;
+					gap: 18px;
+				}
+				.open_ul{
+					position: relative;
+					bottom: auto;
+					right: auto;
+				}
+			}
+			&:last-child{
+				.service_top{
+					border-bottom: 1px solid #EAEAEA;
+				}
+			}
+		}
+	}
 	.cta {
 		background-image: url(../images/cta1.png);
 		background-repeat: no-repeat;
@@ -545,14 +590,8 @@ header {
 	}
 }
 .services_list {
-	height: 0;
-	transition: 0.3s all ease;
-	border-radius: 0 0 20px 20px;
-	&.active {
-		height: auto;
-	}
 	li {
-		padding: 28px 25px 25px 28px;
+		padding: 18px 28px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -568,7 +607,7 @@ header {
 		}
 	}
 	.service_title {
-		font-size: 24px;
+		font-size: 16px;
 		font-weight: 700;
 		line-height: 120%;
 		letter-spacing: -2%;
@@ -603,10 +642,33 @@ header {
 		font-weight: 600;
 		letter-spacing: 0%;
 	}
-	li:has(.price) {
-		padding: 18px 28px;
-		.service_title {
-			font-size: 16px;
+}
+.open_service_list{
+	padding: 28px 25px 25px 28px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	&::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 1px;
+		left: 0;
+		bottom: 0;
+		background-color: #f0f3f8;
+	}
+	.service_title {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 120%;
+		letter-spacing: -2%;
+	}
+	img{
+		cursor: pointer;
+		transition: .3s all ease;
+		&.active{
+			rotate: 45deg;
 		}
 	}
 }
