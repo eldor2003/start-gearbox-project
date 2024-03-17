@@ -492,12 +492,17 @@ header {
 		background-color: #f0f3f8;
 		background-image: url(../images/service_zigzak.png);
 		background-repeat: no-repeat;
-		background-position: center;
+		background-position: left top;
+		background-size: 214%;
 		padding: 28px;
 		overflow: hidden;
 		position: relative;
 		height: 242px;
 		z-index: 1;
+		transition: 0.3s all ease;
+		&:hover{
+			background-color: #FFF;
+		}
 		.service_img {
 			position: absolute;
 			top: 0;
@@ -1741,6 +1746,13 @@ body:has(.modal_back.active) {
 			flex-direction: column;
 			gap: 23px;
 			align-items: center;
+			transition: .3s all ease;
+			&:hover{
+				background-color: #F0F3F8;
+				.stamp_img{
+					background-color: #FFF;
+				}
+			}
 		}
 		.stamp_img {
 			display: flex;
@@ -1752,6 +1764,7 @@ body:has(.modal_back.active) {
 			border: 2px dashed #d7dfec;
 			background-color: #f0f3f8;
 			padding: 44.5px 0;
+			transition: .3s all ease;
 			img {
 				object-fit: cover;
 			}
