@@ -1,52 +1,12 @@
 $(document).ready(function () {
-	// partner swiper
-	if ($(".partner_row1").length > 0) {
-		const partner_row1 = new Swiper(".partner_row1", {
-			// Default parameters
-			slidesPerView: 4,
-			centeredSlides: true,
-			spaceBetween: 12,
-			loop: true,
-			speed: 1500,
-			allowTouchMove: false,
-			autoplay: {
-				delay: 1500,
-			},
-		});
-	}
-	if ($(".partner_row2").length > 0) {
-		const partner_row2 = new Swiper(".partner_row2", {
-			// Default parameters
-			slidesPerView: 4,
-			spaceBetween: 12,
-			speed: 2000,
-			loop: true,
-			allowTouchMove: false,
-			autoplay: {
-				delay: 2000,
-			},
-		});
-	}
-	if ($(".partner_row3").length > 0) {
-		const partner_row3 = new Swiper(".partner_row3", {
-			// Default parameters
-			slidesPerView: 4,
-			spaceBetween: 12,
-			centeredSlides: true,
-			loop: true,
-			speed: 2500,
-			allowTouchMove: false,
-			autoplay: {
-				delay: 2500,
-			},
-		});
-	}
+
 	// quiz opener
 	$("#quiz_open").on("click", function (e) {
 		e.preventDefault();
 		$(".quiz_wrapper").addClass("active");
 		$(".quiz_block").addClass("active");
 	});
+
 	// quiz swiper
 	if ($(".quiz_swiper").length > 0) {
 		const quiz_swiper = new Swiper(".quiz_swiper", {
@@ -233,6 +193,7 @@ $(document).ready(function () {
 	$(".open_inner").click(function () {
 		$(this).parent().toggleClass("active");
 	});
+
 	$('.service_bottom, .open_service_list + .services_list').slideToggle(0)
 
 	$(".open_ul").click(function () {
@@ -255,10 +216,12 @@ $(document).ready(function () {
 		$(".service_modal").addClass("active");
 		$(".call_modal").removeClass("active");
 	});
+
 	$(".close_modal, .close_modal2").click(function () {
 		$(".modal_back").removeClass("active");
 		$(".service_modal, .call_modal").removeClass("active");
 	});
+
 	$(".modal_back").click(function () {
 		$(this).removeClass("active");
 		$(".service_modal , .call_modal").removeClass("active");
@@ -269,6 +232,7 @@ $(document).ready(function () {
 		$(".call_modal").addClass("active");
 		$(".modal_back").addClass("active");
 	});
+
 	// tel mask
 	const element = document.querySelectorAll(".form_actions input[type='tel']");
 	element.forEach((item) => {
@@ -277,4 +241,44 @@ $(document).ready(function () {
 		};
 		const mask = IMask(item, maskOptions);
 	});
+
+	$('.otziv_btn').click(function(){
+		$(this).siblings('.otziv_description').toggleClass('show')
+	})
+
+	$('.navigation a:not(:has(svg))').click(function(){
+		$(this).toggleClass('active')
+		$(this).siblings().removeClass('active')
+	})
+
+	
+	if($('.swiper_block').length > 0){
+		var swiper = new Swiper(".swiper_block .mySwiper", {
+			spaceBetween: 18,
+			slidesPerView: 4,
+			freeMode: true,
+			watchSlidesProgress: true,
+		  });
+		  var swiper2 = new Swiper(".swiper_block .mySwiper2", {
+			spaceBetween: 10,
+			navigation: {
+			  nextEl: ".swiper_block .gallery_next",
+			  prevEl: ".swiper_block .gallery_prev",
+			},
+			thumbs: {
+			  swiper: swiper,
+			},
+		  });
+	}
+
+	if($('.work_swiper').length > 0){
+		var swiper = new Swiper(".work_swiper", {
+			spaceBetween: 28,
+			slidesPerView: 3,
+			navigation: {
+				nextEl: ".news_row .gallery_next",
+				prevEl: ".news_row .gallery_prev",
+			},
+		});
+	}
 });

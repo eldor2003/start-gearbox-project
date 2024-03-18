@@ -1,189 +1,3 @@
-html,
-body,
-div,
-span,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-abbr,
-address,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-samp,
-small,
-strong,
-sub,
-sup,
-var,
-b,
-i,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-body {
-  line-height: 1;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-nav ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: " ";
-  content: none;
-}
-
-.container-fluid {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  margin: 0;
-  padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  text-decoration: none;
-  display: inline-block;
-}
-
-/* change colours to suit your needs */
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none;
-}
-
-/* change colours to suit your needs */
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-ul {
-  list-style: none;
-}
-
-/* change border colour to suit your needs */
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #cccccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-input,
-select {
-  vertical-align: middle;
-}
-
-html::-webkit-scrollbar {
-  background-color: #000;
-  width: 5px;
-}
-html::-webkit-scrollbar-thumb {
-  background-color: #9e8c89;
-  width: 3px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -250,6 +64,33 @@ h4 {
   margin-bottom: 50px;
 }
 
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
 .main_btn {
   display: inline-flex;
   align-items: center;
@@ -261,6 +102,7 @@ h4 {
   font-size: 19px;
   font-weight: 700;
   line-height: 125%;
+  transition: 0.3s all ease;
   cursor: pointer;
 }
 .main_btn img {
@@ -270,10 +112,23 @@ h4 {
 }
 .main_btn:hover {
   color: rgb(255, 255, 255);
+  background: linear-gradient(135deg, rgb(250, 80, 68), rgb(255, 90, 78) 100%);
 }
 
 button {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, textarea, select, button {
+  font-family: "Manrope";
+}
+
+ul {
+  list-style: none;
 }
 
 .quiz_form {
@@ -297,6 +152,7 @@ button {
   line-height: 100%;
   border-radius: 12px;
   background: rgb(255, 255, 255);
+  border: none;
 }
 .quiz_form input::-moz-placeholder {
   color: rgb(192, 192, 192);
@@ -364,6 +220,22 @@ button {
   right: 28px;
 }
 
+@keyframes anim1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes anim2 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 header {
   background: #f0f3f8;
 }
@@ -786,6 +658,9 @@ header .to_call:hover {
 }
 
 .services {
+  background-color: #F0F3F8;
+}
+.services .service_wrap {
   background-color: #ffffff;
   border-radius: 45px 45px 0px 0px;
   padding: 100px 0;
@@ -855,6 +730,7 @@ header .to_call:hover {
   overflow: hidden;
 }
 .services .service_top .open_ul {
+  flex: 0 0 auto;
   position: absolute;
   right: 28px;
   bottom: 28px;
@@ -1010,6 +886,12 @@ header .to_call:hover {
 .open_service_list img.active {
   rotate: 45deg;
 }
+.open_service_list + .services_list {
+  border-radius: 20px;
+  background-color: #f0f3f8;
+  padding: 0 28px;
+  margin: 28px 0 0;
+}
 
 body:has(.modal_back.active) {
   overflow: hidden;
@@ -1146,22 +1028,13 @@ body:has(.modal_back.active) {
   cursor: pointer;
 }
 
-#otziv_diagnostic.diagnostic .diagnostic_logo {
-  left: -50px;
-  bottom: -235px;
-}
-#otziv_diagnostic.diagnostic .diagnostic_logo img {
-  opacity: 0.2;
-}
-#otziv_diagnostic.diagnostic .diagnostic_bg {
-  right: unset;
-  left: 28%;
-}
-
 .otziv {
   padding: 100px 0;
   border-radius: 45px 45px 0px 0px;
   background: rgb(240, 243, 248);
+}
+.otziv .otziv_swiper {
+  overflow: visible;
 }
 .otziv .otziv_title {
   max-width: 690px;
@@ -1234,430 +1107,21 @@ body:has(.modal_back.active) {
   font-weight: 400;
   line-height: 145%;
   margin-bottom: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  transition: 0.3s all ease;
+}
+.otziv .otziv_description.show {
+  -webkit-line-clamp: initial;
 }
 .otziv .otziv_btn {
   display: flex;
   gap: 6px;
   align-items: center;
-}
-.otziv .otziv_btn span {
-  color: rgb(156, 173, 201);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 145%;
-}
-.otziv .swiper-slide-next .otziv_swiper_item,
-.otziv .swiper-slide-prev .otziv_swiper_item {
-  position: relative;
-}
-.otziv .swiper-slide-next .otziv_swiper_item::after,
-.otziv .swiper-slide-prev .otziv_swiper_item::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, rgb(240, 243, 248), rgba(240, 243, 248, 0.5) 49%, rgba(240, 243, 248, 0) 100%);
-  z-index: 5;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.otziv .swiper-slide-next .otziv_swiper_item::after {
-  right: 0;
-  left: unset;
-  transform: rotate(180deg);
-}
-
-.car_service {
-  background: rgb(46, 53, 72);
-}
-.car_service .car_service_wrapper {
-  border-radius: 45px 45px 0px 0px;
-  padding: 100px 0 265px 0;
-  background: rgb(255, 255, 255);
-}
-.car_service .car_service_block {
-  display: flex;
-  gap: 28px;
-  align-items: start;
-  flex-wrap: wrap;
-}
-.car_service .car_item_wrapper {
-  flex: 0 0 auto;
-  width: calc(33.33% - 20px);
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-.car_service .car_service_item {
-  padding: 28px;
-  border-radius: 20px;
-  background: rgb(240, 243, 248);
-}
-.car_service .square_block {
-  display: flex;
-  gap: 4px;
-  justify-content: end;
-}
-.car_service .square_block span {
-  width: 14px;
-  height: 14px;
-  border: 1px solid rgb(214, 223, 237);
-  border-radius: 2px;
-}
-.car_service .square_block span.active {
-  background: rgb(255, 255, 255);
-}
-.car_service .square_number_img {
-  width: 140px;
-  height: 140px;
-  background: linear-gradient(180deg, rgb(255, 255, 255), rgba(255, 255, 255, 0) 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 18px;
-}
-.car_service .car_service_name {
-  color: rgb(6, 5, 37);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 120%;
-  letter-spacing: -2%;
-  margin-bottom: 18px;
-}
-.car_service .car_service_desc {
-  color: rgb(6, 5, 37);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 140%;
-  max-width: 300px;
-  margin-bottom: 18px;
-}
-.car_service .car_service_bottom {
-  border-top: 1px solid rgb(214, 223, 237);
-  padding-top: 18px;
-  color: rgb(6, 5, 37);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 140%;
-}
-.car_service .car_service_bottom a {
-  color: rgb(6, 5, 37);
-  font-size: 16px;
-  line-height: 140%;
-  font-weight: 600;
-}
-
-.award {
-  border-radius: 45px 45px 0 0;
-  background: url(../images/zigzak.png), rgb(46, 53, 72);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  padding: 100px 0;
-}
-.award .award_title {
-  color: rgb(255, 255, 255);
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 110%;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.award .award_desc {
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 155%;
-  text-align: center;
-  max-width: 625px;
-  margin: 0 auto 23px auto;
-}
-.award .award_block {
-  display: flex;
-  gap: 28px;
-}
-
-.diagnostic {
-  position: relative;
-}
-.diagnostic + section {
-  padding-top: 300px;
-}
-.diagnostic .diagnostic_block {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  justify-content: space-between;
-  border-radius: 20px;
-  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
-  margin-bottom: -185px;
-  z-index: 555;
-  background: rgb(255, 255, 255);
-}
-.diagnostic .diagnostic_bg {
-  position: absolute;
-  bottom: -153px;
-  z-index: -1;
-  right: 110px;
-}
-.diagnostic .diagnostic_details {
-  position: relative;
-  padding: 28px 0 135px 28px;
-  overflow: hidden;
-  border-radius: 20px;
-}
-.diagnostic .diasnotic_title {
-  color: rgb(6, 5, 37);
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 110%;
-  letter-spacing: -2%;
-  margin-bottom: 18px;
-  max-width: 500px;
-}
-.diagnostic .diagnostic_desc {
-  color: rgb(6, 5, 37);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 145%;
-  max-width: 302px;
-}
-.diagnostic .diagnostic_logo {
-  position: absolute;
-  bottom: -178px;
-  left: -53px;
-  z-index: 0;
-}
-.diagnostic .diagnostic_form_block {
-  border-radius: 20px;
-  width: 566px;
-  display: flex;
-  align-items: center;
-  background: url(../images/quiz_zigzak.png), rgb(46, 53, 72);
-  background-position: 100%;
-  background-repeat: no-repeat;
-}
-
-.gallery {
-  padding-top: 100px;
-}
-.gallery .gallery_title {
-  max-width: 650px;
-  margin: 0 auto;
-}
-.gallery .gallery_block {
-  position: relative;
-}
-.gallery .blur1 {
-  left: 0;
-}
-.gallery .blur2 {
-  right: 0;
-  z-index: 2;
-  transform: rotate(180deg);
-}
-.gallery .swiper_blur {
-  position: absolute;
-  top: 0;
-  z-index: 3;
-  width: 294px;
-  height: 100%;
-  background: linear-gradient(90deg, rgb(240, 243, 248), rgba(240, 243, 248, 0.5) 49%, rgba(240, 243, 248, 0) 100%);
-}
-
-.mulfunction {
-  padding: 100px 0;
-  border-radius: 45px 45px 0px 0px;
-  background: rgb(255, 255, 255);
-}
-.mulfunction .mulfunction_top {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  margin-bottom: 48px;
-}
-.mulfunction .mulfunction_title {
-  color: rgb(6, 5, 37);
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 110%;
-  letter-spacing: -3%;
-  max-width: 650px;
-}
-.mulfunction .mulfunction_top_desc {
-  color: rgb(6, 5, 37);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 140%;
-  max-width: 368px;
-}
-.mulfunction .mulfunction_block {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 28px;
-}
-.mulfunction .mulfunction_item {
-  flex: 0 0 auto;
-  width: calc(33.33% - 19px);
-  border-radius: 20px;
-  background: rgb(240, 243, 248);
-  padding: 28px 37px 38px 28px;
-}
-.mulfunction .mulfunction_item.mulfunction_item_last {
-  flex: 1;
-  position: relative;
-  background: rgb(46, 53, 72);
-}
-.mulfunction .mulfunction_item.mulfunction_item_last .main_icon {
-  background: rgb(255, 255, 255);
-}
-.mulfunction .mulfunction_item.mulfunction_item_last .multifunction_item_desc {
-  color: #fff;
-}
-.mulfunction .mulfunction_item.mulfunction_item_last .bmw_logo {
-  position: absolute;
-  bottom: -3px;
-  right: 0;
-}
-.mulfunction .mulfunction_item.mulfunction_item_last .bmw_logo img {
-  width: 350px;
-}
-.mulfunction .mulfunction_icon {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 35px;
-}
-.mulfunction .mulfunction_icon .main_icon {
-  background: rgb(46, 53, 72);
-  border-radius: 50%;
-  width: 78px;
-  height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.mulfunction .mulfunction_icon .plus_img {
-  position: absolute;
-  bottom: -2px;
-  right: -11px;
-  width: 32px;
-  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-.mulfunction .mulfunction_icon .plus_img img {
-  width: 13.17px;
-  height: 13.23px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.mulfunction .multifunction_item_desc {
-  color: rgb(6, 5, 37);
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 120%;
-  letter-spacing: -2%;
-  max-width: 300px;
-}
-
-#otziv_diagnostic.diagnostic .diagnostic_logo {
-  left: -50px;
-  bottom: -235px;
-}
-#otziv_diagnostic.diagnostic .diagnostic_logo img {
-  opacity: 0.2;
-}
-#otziv_diagnostic.diagnostic .diagnostic_bg {
-  right: unset;
-  left: 28%;
-}
-
-.otziv {
-  padding: 100px 0;
-  border-radius: 45px 45px 0px 0px;
-  background: rgb(240, 243, 248);
-}
-.otziv .otziv_title {
-  max-width: 690px;
-  margin: 0 auto 48px auto;
-}
-.otziv .otziv_rate_block {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  flex-wrap: wrap;
-  margin-bottom: 80px;
-}
-.otziv .rate_item {
-  padding: 28px;
-  flex: 1;
-  border-radius: 20px;
-  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
-  background: rgb(255, 255, 255);
-}
-.otziv .rate_logo {
-  text-align: center;
-  padding-bottom: 28px;
-  margin-bottom: 28px;
-  border-bottom: 1px solid rgb(234, 234, 234);
-}
-.otziv .rate_number {
-  color: rgb(6, 5, 37);
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 105%;
-  text-align: center;
-  margin-bottom: 18px;
-}
-.otziv .star_block {
-  display: flex;
-  justify-content: center;
-}
-.otziv .otziv_swiper_item {
-  border-radius: 20px;
-  box-shadow: 0px 4px 25px 0px rgba(46, 53, 72, 0.15);
-  background: rgb(255, 255, 255);
-  padding: 28px;
-}
-.otziv .otziv_top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 28px;
-  margin-bottom: 28px;
-  border-bottom: 1px solid rgb(234, 234, 234);
-}
-.otziv .otziv_profile {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-}
-.otziv .avatar_name {
-  color: rgb(6, 5, 37);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 125%;
-  margin-bottom: 10px;
-}
-.otziv .stars_block {
-  display: flex;
-}
-.otziv .otziv_description {
-  color: rgb(6, 5, 37);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 145%;
-  margin-bottom: 18px;
-}
-.otziv .otziv_btn {
-  display: flex;
-  gap: 6px;
-  align-items: center;
+  cursor: pointer;
 }
 .otziv .otziv_btn span {
   color: rgb(156, 173, 201);
@@ -1768,6 +1232,9 @@ body:has(.modal_back.active) {
 }
 
 .award {
+  background-color: #f0f3f8;
+}
+.award .award_wrap {
   border-radius: 45px 45px 0 0;
   background: url(../images/zigzak.png), rgb(46, 53, 72);
   background-repeat: no-repeat;
@@ -1799,6 +1266,9 @@ body:has(.modal_back.active) {
 
 .diagnostic {
   position: relative;
+}
+.diagnostic + section {
+  padding-top: 300px;
 }
 .diagnostic .diagnostic_block {
   position: relative;
@@ -1855,10 +1325,132 @@ body:has(.modal_back.active) {
   background-repeat: no-repeat;
 }
 
+.mulfunction {
+  background-color: #f0f3f8;
+}
+.mulfunction .mulfunction_wrap {
+  padding: 100px 0;
+  border-radius: 45px 45px 0px 0px;
+  background: rgb(255, 255, 255);
+}
+.mulfunction .mulfunction_top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.mulfunction .mulfunction_title {
+  color: rgb(6, 5, 37);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: -3%;
+  max-width: 650px;
+}
+.mulfunction .mulfunction_top_desc {
+  color: rgb(6, 5, 37);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 368px;
+}
+.mulfunction .mulfunction_block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+.mulfunction .mulfunction_item {
+  flex: 0 0 auto;
+  width: calc(33.33% - 19px);
+  border-radius: 20px;
+  background: rgb(240, 243, 248);
+  padding: 28px 37px 38px 28px;
+}
+.mulfunction .mulfunction_item.mulfunction_item_last {
+  flex: 1;
+  position: relative;
+  background: rgb(46, 53, 72);
+}
+.mulfunction .mulfunction_item.mulfunction_item_last .main_icon {
+  background: rgb(255, 255, 255);
+}
+.mulfunction .mulfunction_item.mulfunction_item_last .multifunction_item_desc {
+  color: #fff;
+}
+.mulfunction .mulfunction_item.mulfunction_item_last .bmw_logo {
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+}
+.mulfunction .mulfunction_item.mulfunction_item_last .bmw_logo img {
+  width: 350px;
+}
+.mulfunction .mulfunction_icon {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 35px;
+}
+.mulfunction .mulfunction_icon .main_icon {
+  background: rgb(46, 53, 72);
+  border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mulfunction .mulfunction_icon .plus_img {
+  position: absolute;
+  bottom: -2px;
+  right: -11px;
+  width: 32px;
+  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.mulfunction .mulfunction_icon .plus_img img {
+  width: 13.17px;
+  height: 13.23px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mulfunction .multifunction_item_desc {
+  color: rgb(6, 5, 37);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -2%;
+  max-width: 300px;
+}
+.mulfunction .bmw_item_desc {
+  color: rgb(6, 5, 37);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -2%;
+  max-width: 300px;
+}
+
+#otziv_diagnostic.diagnostic .diagnostic_logo {
+  left: -50px;
+  bottom: -235px;
+}
+#otziv_diagnostic.diagnostic .diagnostic_logo img {
+  opacity: 0.2;
+}
+#otziv_diagnostic.diagnostic .diagnostic_bg {
+  right: unset;
+  left: 28%;
+}
+
 .gallery {
   border-radius: 45px 45px 0px 0px;
   background-color: #f0f3f8;
-  padding-top: 100px;
+  padding: 100px 0;
 }
 .gallery .gallery_title {
   max-width: 650px;
@@ -1882,105 +1474,6 @@ body:has(.modal_back.active) {
   width: 294px;
   height: 100%;
   background: linear-gradient(90deg, rgb(240, 243, 248), rgba(240, 243, 248, 0.5) 49%, rgba(240, 243, 248, 0) 100%);
-}
-
-.mulfunction {
-  padding: 100px 0;
-  border-radius: 45px 45px 0px 0px;
-  background: rgb(255, 255, 255);
-}
-.mulfunction .bmw_top {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  margin-bottom: 48px;
-}
-.mulfunction .bmw_title {
-  color: rgb(6, 5, 37);
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 110%;
-  letter-spacing: -3%;
-  max-width: 650px;
-}
-.mulfunction .bmw_top_desc {
-  color: rgb(6, 5, 37);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 140%;
-  max-width: 368px;
-}
-.mulfunction .bmw_block {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 28px;
-}
-.mulfunction .bmw_item {
-  flex: 0 0 auto;
-  width: calc(33.33% - 19px);
-  border-radius: 20px;
-  background: rgb(240, 243, 248);
-  padding: 28px 37px 38px 28px;
-}
-.mulfunction .bmw_item.bmw_item_last {
-  flex: 1;
-  position: relative;
-  background: rgb(46, 53, 72);
-}
-.mulfunction .bmw_item.bmw_item_last .main_icon {
-  background: rgb(255, 255, 255);
-}
-.mulfunction .bmw_item.bmw_item_last .bmw_item_desc {
-  color: #fff;
-}
-.mulfunction .bmw_item.bmw_item_last .bmw_logo {
-  position: absolute;
-  bottom: -3px;
-  right: 0;
-}
-.mulfunction .bmw_item.bmw_item_last .bmw_logo img {
-  width: 350px;
-}
-.mulfunction .bmw_icon {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 35px;
-}
-.mulfunction .bmw_icon .main_icon {
-  background: rgb(46, 53, 72);
-  border-radius: 50%;
-  width: 78px;
-  height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.mulfunction .bmw_icon .plus_img {
-  position: absolute;
-  bottom: -2px;
-  right: -11px;
-  width: 32px;
-  background: linear-gradient(135deg, rgb(219, 42, 29) 0%, rgb(219, 42, 29) 100%);
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-.mulfunction .bmw_icon .plus_img img {
-  width: 13.17px;
-  height: 13.23px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.mulfunction .bmw_item_desc {
-  color: rgb(6, 5, 37);
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 120%;
-  letter-spacing: -2%;
-  max-width: 300px;
 }
 
 .stamps {
@@ -2044,6 +1537,9 @@ body:has(.modal_back.active) {
 }
 
 .why {
+  background-color: #F0F3F8;
+}
+.why .why_wrap {
   border-radius: 45px 45px 0px 0px;
   background-color: #ffffff;
   padding: 100px 0 80px 0;
@@ -2164,6 +1660,9 @@ body:has(.modal_back.active) {
 }
 
 .quiz {
+  background-color: #f0f3f8;
+}
+.quiz .quiz_wrap {
   padding: 100px 0;
   border-radius: 45px;
   background: rgb(255, 255, 255);
@@ -2391,6 +1890,7 @@ body:has(.modal_back.active) {
 
 .repair {
   padding: 100px 0;
+  background-color: #f0f3f8;
 }
 .repair .repair_table {
   border-collapse: collapse;
@@ -2410,6 +1910,7 @@ body:has(.modal_back.active) {
   font-weight: 700;
   line-height: 120%;
   letter-spacing: -2%;
+  text-align: left;
   padding: 28px 0 28px 20px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -2445,6 +1946,9 @@ body:has(.modal_back.active) {
 }
 
 .discount {
+  background-color: #f0f3f8;
+}
+.discount .discount_wrap {
   border-radius: 45px 45px 0px 0px;
   background: url(../images/zigzak.png), rgb(46, 53, 72);
   background-repeat: no-repeat;
@@ -2579,6 +2083,12 @@ body:has(.modal_back.active) {
 .workers .partner_row {
   display: flex;
   gap: 12px;
+  animation: anim1 20s linear infinite;
+  transition: 0.3s all ease;
+}
+.workers .partner_row2 {
+  animation: anim2 20s linear infinite;
+  transition: 0.3s all ease;
 }
 .workers .partner_block {
   display: flex;
@@ -2588,6 +2098,9 @@ body:has(.modal_back.active) {
 .workers .partner_swiper {
   flex: 0 0 auto;
   width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 .workers .partner_row3 {
   padding-bottom: 100px;
@@ -2611,9 +2124,13 @@ body:has(.modal_back.active) {
   font-weight: 800;
   line-height: 145%;
   letter-spacing: 2px;
+  text-wrap: nowrap;
 }
 
 .employees {
+  background-color: #f0f3f8;
+}
+.employees .employees_wrap {
   padding: 100px 0 370px 0;
   border-radius: 45px 45px 0px 0px;
   background: rgb(255, 255, 255);
@@ -2657,6 +2174,9 @@ body:has(.modal_back.active) {
 }
 
 .question {
+  background-color: #f0f3f8;
+}
+.question .question_wrap {
   border-radius: 45px 45px 0px 0px;
   background: url(../images/zigzak.png), rgb(46, 53, 72);
   background-repeat: no-repeat;
@@ -2884,6 +2404,7 @@ body:has(.modal_back.active) {
 
 footer {
   padding: 38px 0 60px 0;
+  background-color: #F0F3F8;
 }
 footer .footer_block {
   display: flex;
@@ -2963,83 +2484,61 @@ footer .payment_type {
   border-radius: 8px;
   background: rgb(255, 255, 255);
 }
-
-.container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    max-width: 960px;
-  }
-}
 @media (max-width: 992px) {
-  .container {
-    max-width: 720px;
-  }
-  footer .footer_block {
+  footer footer .footer_block {
     flex-wrap: wrap;
     gap: 20px 0;
   }
-  footer .footer_item {
+  footer footer .footer_item {
     max-width: 33%;
   }
-  footer .footer_bottom {
+  footer footer .footer_bottom {
     flex-wrap: wrap;
     gap: 20px 100px;
     justify-content: center;
   }
 }
 @media (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
-  footer .footer_item {
+  footer footer .footer_item {
     max-width: 45%;
   }
-  footer {
+  footer footer {
     padding: 38px 0 60px 0;
   }
-  footer .payment_types {
+  footer footer .payment_types {
     max-width: 215px;
     order: -1;
   }
 }
 @media (max-width: 576px) {
-  .container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-  footer .footer_block {
+  footer footer .footer_block {
     gap: 30px 0;
     align-items: center;
     padding-bottom: 30px;
   }
-  footer .footer_socials {
+  footer footer .footer_socials {
     justify-content: center;
   }
-  footer .footer_bottom {
+  footer footer .footer_bottom {
     gap: 20px 0;
   }
-  footer .payment_block {
+  footer footer .payment_block {
     justify-content: center;
   }
-  footer .payment_types,
-  footer .footer_bottom_desc {
+  footer footer .payment_types,
+  footer footer .footer_bottom_desc {
     text-align: center;
   }
-  footer .footer_item {
+  footer footer .footer_item {
     max-width: unset;
     text-align: center;
     width: 100%;
   }
-  footer {
+  footer footer {
     padding: 0px 0 60px 0;
     background: #f0f3f8;
   }
-  footer .footer_desc {
+  footer footer .footer_desc {
     max-width: 232px;
     margin: 0 auto 20px auto;
   }
