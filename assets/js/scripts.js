@@ -224,7 +224,7 @@ $(document).ready(function () {
 
 	$(".modal_back").click(function () {
 		$(this).removeClass("active");
-		$(".service_modal , .call_modal").removeClass("active");
+		$(".service_modal, .call_modal, .information, .online").removeClass("active");
 	});
 
 	$(".to_call").click(function () {
@@ -281,4 +281,21 @@ $(document).ready(function () {
 			},
 		});
 	}
+
+	$('.help').click(function(){
+		$(this).addClass('hidde')
+		$(".modal_back").addClass("active");
+		$('.online').addClass('active')
+	})
+	$('.close_online, .modal_back').click(function(){
+		$('.help').removeClass('hidde')
+		$('.online').removeClass('active')
+		$(".modal_back").removeClass("active");
+	})
+
+	$('.payment_type').click(function(e){
+		e.preventDefault()
+		$('.information').addClass('active')
+		$(".modal_back").addClass("active");
+	})
 });
