@@ -43,7 +43,7 @@
                         </a>
                     </div>
                     <div class="social">
-                        Мы онлайн
+                        <span>Мы онлайн</span>
                         <a href="#">
                             <img src="assets/images/icons/Telegram.svg" alt="telegram">
                         </a>
@@ -54,13 +54,21 @@
                             <img src="assets/images/icons/Viber.svg" alt="viber">
                         </a>
                     </div>
-                    <a href="tel:+73433114235" class="phone_number">
-                        <img src="assets/images/icons/phone_anim.svg" alt="phone">
-                        <div>
-                            <span>+7 (343) 311-42-35</span>
-                            <p>без выходных: с 9:00 до 21:00</p>
+                    <div class="header_right">
+                        <a href="tel:+73433114235" class="phone_number">
+                            <img class="mobile_icon" src="assets/images/icons/Phone_icon.png" alt="phone">
+                            <img class="desctop_icon" src="assets/images/icons/phone_anim.svg" alt="phone">
+                            <div>
+                                <span>+7 (343) 311-42-35</span>
+                                <p>без выходных: с 9:00 до 21:00</p>
+                            </div>
+                        </a>
+                        <div class="hamburger">
+                            <svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">	
+                                <path d="M24 0C10.74 0 0 10.74 0 24C0 37.25 10.74 48 24 48C37.25 48 48 37.25 48 24C48 10.74 37.25 0 24 0ZM35.02 34.34L12.97 34.34L12.97 30.89L35.02 30.89L35.02 34.34ZM35.02 25.72L12.97 25.72L12.97 22.27L35.02 22.27L35.02 25.72ZM35.02 17.1L12.97 17.1L12.97 13.66L35.02 13.66L35.02 17.1Z" fill="#DB2A1D" fill-opacity="1.000000"/>
+                            </svg>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="header_bottom">
                     <nav>
@@ -310,9 +318,15 @@
                         <a href="#" class="nav_item">Акции и новости</a>
                         <a href="#" class="nav_item">Контакты</a>
                     </nav>
-                    <div class="to_call">
-                        Заказать звонок
-                        <img src="assets/images/icons/tel_icon.svg" alt="phone">
+                    <div class="header_bottom_right">
+                        <div class="phone_number">
+                            <a href="tel:+73433114235">+7 (343) 311-42-35</a>
+                            <p>без выходных: с 9:00 до 21:00</p>
+                        </div>
+                        <div class="to_call">
+                            Заказать звонок
+                            <img src="assets/images/icons/tel_icon.svg" alt="phone">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -347,131 +361,133 @@
         
         <!-- footer -->
         <footer>
-        <div class="container">
-            <div class="footer_block">
-                <!-- footer_item -->
-                <div class="footer_item">
-                    <a href="#" class="footer_logo">
-                        <img src="./assets/images/footer_logo.png" alt="logo-image">
-                    </a>
-                    <p class="footer_desc">
-                        Специализированный автосервис VAG в Екатеринбурге
-                    </p>
-                    <div class="footer_socials">
-                        <!-- social_item -->
-                        <a href="#" class="social_item">
-                            <img src="./assets/images/icons/Telegram.svg" alt="telegram-image">
+            <div class="container">
+                <div class="footer_block">
+                    <!-- footer_item -->
+                    <div class="footer_item">
+                        <a href="#" class="footer_logo">
+                            <img src="./assets/images/footer_logo.png" alt="logo-image">
                         </a>
-                        <!-- social_item -->
-                        <a href="#" class="social_item">
-                            <img src="./assets/images/icons/WhatsApp.svg" alt="whatsapp-image">
-                        </a>
-                        <!-- social_item -->
-                        <a href="#" class="social_item">
-                            <img src="./assets/images/icons/Viber.svg" alt="viber-image">
-                        </a>
+                        <p class="footer_desc">
+                            Специализированный автосервис VAG в Екатеринбурге
+                        </p>
+                        <div class="footer_socials">
+                            <!-- social_item -->
+                            <a href="#" class="social_item">
+                                <img src="./assets/images/icons/Telegram.svg" alt="telegram-image">
+                            </a>
+                            <!-- social_item -->
+                            <a href="#" class="social_item">
+                                <img src="./assets/images/icons/WhatsApp.svg" alt="whatsapp-image">
+                            </a>
+                            <!-- social_item -->
+                            <a href="#" class="social_item">
+                                <img src="./assets/images/icons/Viber.svg" alt="viber-image">
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <!-- footer_item -->
-                <div class="footer_item">
-                    <p class="footer_item_name">Услуги</p>
-                    <ul class="footer_list">
-                        <li><a href="#">Техническое обслуживание</a></li>
-                        <li><a href="#">Ремонт электрооборудования</a></li>
-                        <li><a href="#">Ремонт трансмиссии</a></li>
-                        <li><a href="#">Ремонт двигателя</a></li>
-                        <li><a href="#">Диагностика</a></li>
-                        <li><a href="#">Ремонт системы охлаждения</a></li>
-                        <li><a href="#">Ремонт кондиционера</a></li>
-                        <li><a href="#">Ремонт кондиционера</a></li>
-                    </ul>
-                </div>
+                    <!-- footer_item -->
+                    <div class="footer_item">
+                        <p class="footer_item_name">Услуги</p>
+                        <ul class="footer_list">
+                            <li><a href="#">Техническое обслуживание</a></li>
+                            <li><a href="#">Ремонт электрооборудования</a></li>
+                            <li><a href="#">Ремонт трансмиссии</a></li>
+                            <li><a href="#">Ремонт двигателя</a></li>
+                            <li><a href="#">Диагностика</a></li>
+                            <li><a href="#">Ремонт системы охлаждения</a></li>
+                            <li><a href="#">Ремонт кондиционера</a></li>
+                            <li><a href="#">Ремонт кондиционера</a></li>
+                        </ul>
+                    </div>
 
-                <!-- footer_item -->
-                <div class="footer_item">
-                    <p class="footer_item_name">Компания</p>
-                    <ul class="footer_list">
-                        <li><a href="#">О компании</a></li>
-                        <li><a href="#">История Компании</a></li>
-                        <li><a href="#">Направления работы</a></li>
-                        <li><a href="#">Новости</a></li>
-                        <li><a href="#">Вакансии</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Предложить помещение</a></li>
-                    </ul>
-                </div>
-                <!-- footer_item -->
-                <div class="footer_item">
-                    <p class="footer_item_name">Контакты</p>
-                    <ul class="footer_list">
-                        <li><a href="tel:+73433114235">+7 (343) 311-42-35</a></li>
-                        <li><a href="mailto:info@yourcompany.ru">info@yourcompany.ru</a></li>
-                        <li><a href="#">г. Екатеринбург, <br>ул. Турбинная, д. 40 Г</a></li>
-                        <li><a href="#">г. Екатеринбург, ул. <br> Луганская, д. 59 к1</a></li>
-                        <li><a href="#">Принимаем звонки и заявки <br> с 9:00 до 21:00 (ежедневно)</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- footer_bottom -->
-            <div class="footer_bottom">
-                <p class="policy_title">Политика обработки данных</p>
-                <div class="payment_types">
-                    <p class="payment_desc">В наших автосервисах возможна оплата по картам</p>
-                    <div class="payment_block">
-                        <!-- payment_type -->
-                        <a href="#" class="payment_type">
-                            <img src="./assets/images/icons/mastercard.svg" alt="mastercard-image">
-                        </a>
-                        <!-- payment_type -->
-                        <a href="#" class="payment_type">
-                            <img src="./assets/images/icons/visa.svg" alt="visa-image">
-                        </a>
-                        <!-- payment_type -->
-                        <a href="#" class="payment_type">
-                            <img src="./assets/images/icons/mir.svg" alt="mir-image">
-                        </a>
-                        <!-- payment_type -->
-                        <a href="#" class="payment_type">
-                            <img src="./assets/images/icons/xalva.svg" alt="xalva-image">
-                        </a>
+                    <!-- footer_item -->
+                    <div class="footer_item">
+                        <p class="footer_item_name">Компания</p>
+                        <ul class="footer_list">
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">История Компании</a></li>
+                            <li><a href="#">Направления работы</a></li>
+                            <li><a href="#">Новости</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Предложить помещение</a></li>
+                        </ul>
+                    </div>
+                    <!-- footer_item -->
+                    <div class="footer_item">
+                        <p class="footer_item_name">Контакты</p>
+                        <ul class="footer_list">
+                            <li><a href="tel:+73433114235">+7 (343) 311-42-35</a></li>
+                            <li><a href="mailto:info@yourcompany.ru">info@yourcompany.ru</a></li>
+                            <li><a href="#">г. Екатеринбург, <br>ул. Турбинная, д. 40 Г</a></li>
+                            <li><a href="#">г. Екатеринбург, ул. <br> Луганская, д. 59 к1</a></li>
+                            <li><a href="#">Принимаем звонки и заявки <br> с 9:00 до 21:00 (ежедневно)</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div class="footer_bottom_desc">
-                    Все цены, указанные на сайте приведены как справочная информация и не являются публичной
-                    офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации и могут
-                    быть изменены в любое время без предупреждения.
+                <!-- footer_bottom -->
+                <div class="footer_bottom">
+                    <p class="policy_title">Политика обработки данных</p>
+                    <div class="payment_types">
+                        <p class="payment_desc">В наших автосервисах возможна оплата по картам</p>
+                        <div class="payment_block">
+                            <!-- payment_type -->
+                            <a href="#" class="payment_type">
+                                <img src="./assets/images/icons/mastercard.svg" alt="mastercard-image">
+                            </a>
+                            <!-- payment_type -->
+                            <a href="#" class="payment_type">
+                                <img src="./assets/images/icons/visa.svg" alt="visa-image">
+                            </a>
+                            <!-- payment_type -->
+                            <a href="#" class="payment_type">
+                                <img src="./assets/images/icons/mir.svg" alt="mir-image">
+                            </a>
+                            <!-- payment_type -->
+                            <a href="#" class="payment_type">
+                                <img src="./assets/images/icons/xalva.svg" alt="xalva-image">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="footer_bottom_desc">
+                        Все цены, указанные на сайте приведены как справочная информация и не являются публичной
+                        офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации и могут
+                        быть изменены в любое время без предупреждения.
+                    </p>
                 </div>
             </div>
-        </div>
         </footer>
 
         <div class="modal_back"></div>
 
         <div class="call_modal">
-        <span class="close_modal2">
-            <svg width="29.000000" height="29.000000" viewBox="0 0 29 29" fill="none"
-                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <path
-                    d="M2.66 -0.17C1.88 -0.95 0.61 -0.95 -0.17 -0.17C-0.95 0.61 -0.95 1.88 -0.17 2.66L11.16 14L-0.17 25.33C-0.95 26.11 -0.95 27.38 -0.17 28.16C0.61 28.94 1.88 28.94 2.66 28.16L14 16.83L25.33 28.16C26.11 28.94 27.38 28.94 28.16 28.16C28.94 27.38 28.94 26.11 28.16 25.33L16.83 14L28.16 2.66C28.94 1.88 28.94 0.61 28.16 -0.17C27.38 -0.95 26.11 -0.95 25.33 -0.17L14 11.16L2.66 -0.17Z"
-                    fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
-            </svg>
-        </span>
-        <form class="consultation">
-            <h3>Закажите <br> обратный звонок</h3>
-            <p class="text_2">Введите имя и номер телефона и наш <br> менеджер свяжется с Вами в течение 15 минут
-            </p>
-            <div class="form_actions">
-                <input type="text" placeholder="Ваше имя">
-                <input type="tel" placeholder="Номер телефона">
-                <button class="main_btn">Перезвонить мне</button>
-            </div>
-            <p class="consult_desc">Нажимая на кнопку «Получить консультацию» вы соглашаетесь с <a
-                    href="#">политикой обработки персональных данных</a></p>
-        </form>
+            <span class="close_modal2">
+                <svg width="29.000000" height="29.000000" viewBox="0 0 29 29" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M2.66 -0.17C1.88 -0.95 0.61 -0.95 -0.17 -0.17C-0.95 0.61 -0.95 1.88 -0.17 2.66L11.16 14L-0.17 25.33C-0.95 26.11 -0.95 27.38 -0.17 28.16C0.61 28.94 1.88 28.94 2.66 28.16L14 16.83L25.33 28.16C26.11 28.94 27.38 28.94 28.16 28.16C28.94 27.38 28.94 26.11 28.16 25.33L16.83 14L28.16 2.66C28.94 1.88 28.94 0.61 28.16 -0.17C27.38 -0.95 26.11 -0.95 25.33 -0.17L14 11.16L2.66 -0.17Z"
+                        fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
+                </svg>
+            </span>
+            <form class="consultation">
+                <h3>Закажите <br> обратный звонок</h3>
+                <p class="text_2">Введите имя и номер телефона и наш <br> менеджер свяжется с Вами в течение 15 минут
+                </p>
+                <div class="form_actions">
+                    <input type="text" placeholder="Ваше имя">
+                    <input type="tel" placeholder="Номер телефона">
+                    <button class="main_btn">Перезвонить мне</button>
+                </div>
+                <p class="consult_desc">Нажимая на кнопку «Получить консультацию» вы соглашаетесь с <a
+                        href="#">политикой обработки персональных данных</a></p>
+            </form>
         </div>
 
         <ul class="online">
-            <img class="close_online" src="assets/images/icons/close_icon.png" alt="close_icon">
+            <li class="close_online">
+                <img src="assets/images/icons/close_icon.png" alt="close_icon">
+            </li>
             <li><a href="#">Позвонить <img src="assets/images/icons/right_arrow2.png" alt="right-arrow"></a></li>
             <li><a href="#">Оставить заявку <img src="assets/images/icons/right_arrow2.png" alt="right-arrow"></a></li>
             <li><a href="#">Рассчитать стоимость <img src="assets/images/icons/right_arrow2.png" alt="right-arrow"></a></li>
@@ -482,10 +498,18 @@
             </li>
         </ul>
         <div class="help">
-            <img src="assets/images/icons/help4.png" alt="help">
+            <img src="assets/images/icons/help1.png" alt="help">
         </div>
 
         <div class="information">
+            <span class="close_modal2">
+                <svg width="29.000000" height="29.000000" viewBox="0 0 29 29" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M2.66 -0.17C1.88 -0.95 0.61 -0.95 -0.17 -0.17C-0.95 0.61 -0.95 1.88 -0.17 2.66L11.16 14L-0.17 25.33C-0.95 26.11 -0.95 27.38 -0.17 28.16C0.61 28.94 1.88 28.94 2.66 28.16L14 16.83L25.33 28.16C26.11 28.94 27.38 28.94 28.16 28.16C28.94 27.38 28.94 26.11 28.16 25.33L16.83 14L28.16 2.66C28.94 1.88 28.94 0.61 28.16 -0.17C27.38 -0.95 26.11 -0.95 25.33 -0.17L14 11.16L2.66 -0.17Z"
+                        fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
+                </svg>
+            </span>
             <img src="assets/images/items_photo.png" alt="additional information">
             <article class="more_texts">
                 <h2 class="title">Заголовок</h2>

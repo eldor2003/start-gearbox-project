@@ -3,10 +3,13 @@ $(document).ready(function () {
 	// quiz opener
 	$("#quiz_open").on("click", function (e) {
 		e.preventDefault();
-		$(".quiz_wrapper").addClass("active");
-		$(".quiz_block").addClass("active");
+		
 	});
 
+	if ($(window).width()<769){
+		$(".quiz_wrapper").addClass("active");
+		$(".quiz_block").addClass("active");
+	}
 	// quiz swiper
 	if ($(".quiz_swiper").length > 0) {
 		const quiz_swiper = new Swiper(".quiz_swiper", {
@@ -23,6 +26,18 @@ $(document).ready(function () {
 				nextEl: ".quiz_right_btn",
 				prevEl: ".quiz_left_btn",
 			},
+			breakpoints: {
+				// when window width is >= 0px
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
+				// when window width is >= 640px
+				577: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+				},
+			}
 		});
 		quiz_swiper.on("slideChange", function (e) {
 			if (e.activeIndex == "0") {
@@ -104,19 +119,15 @@ $(document).ready(function () {
 				nextEl: ".gallery_next",
 				prevEl: ".gallery_prev",
 			},
-			// pagination: {
-			// 	el: ".swiper-pagination",
-			// },
-			// Responsive breakpoints
 			breakpoints: {
-				// when window width is >= 320px
-				320: {
-					slidesPerView: 1.8,
-					spaceBetween: 15,
+				// when window width is >= 0px
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 20,
 				},
 				// when window width is >= 640px
 				577: {
-					slidesPerView: 2.5,
+					slidesPerView: 1.5,
 					spaceBetween: 20,
 				},
 				767: {
@@ -158,12 +169,12 @@ $(document).ready(function () {
 
 			// Responsive breakpoints
 			breakpoints: {
-				320: {
-					slidesPerView: 1.8,
-					spaceBetween: 15,
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 20,
 				},
 				577: {
-					slidesPerView: 2.5,
+					slidesPerView: 1.5,
 					spaceBetween: 20,
 				},
 				767: {
@@ -188,6 +199,21 @@ $(document).ready(function () {
 
 	$(".open_menu").click(function () {
 		$(this).parent().toggleClass("active");
+		$(this).parent().siblings().removeClass('active')
+		$(this).parent().siblings().find('*').removeClass('active')
+		$(this).parent().find('*').removeClass('active')
+	});
+	$(".open_menu").siblings('a').click(function (e) {
+		e.preventDefault()
+		$(this).parent().toggleClass("active");
+		$(this).parent().siblings().removeClass('active')
+		$(this).parent().siblings().find('*').removeClass('active')
+		$(this).parent().find('*').removeClass('active')
+	});
+
+	$(".open_inner").siblings('div').click(function () {
+		$(this).parent().toggleClass("active");
+		$(this).parent().siblings().removeClass('active')
 	});
 
 	$(".open_inner").click(function () {
@@ -219,7 +245,7 @@ $(document).ready(function () {
 
 	$(".close_modal, .close_modal2").click(function () {
 		$(".modal_back").removeClass("active");
-		$(".service_modal, .call_modal").removeClass("active");
+		$(".service_modal, .call_modal, .information ").removeClass("active");
 	});
 
 	$(".modal_back").click(function () {
@@ -258,6 +284,20 @@ $(document).ready(function () {
 			slidesPerView: 4,
 			freeMode: true,
 			watchSlidesProgress: true,
+			breakpoints:{
+				0:{
+					slidesPerView: 1,
+					spaceBetween: 18,
+				},
+				768:{
+					slidesPerView: 3,
+					spaceBetween: 18,
+				},
+				992:{
+					slidesPerView: 4,
+					spaceBetween: 18,
+				},
+			},
 		  });
 		  var swiper2 = new Swiper(".swiper_block .mySwiper2", {
 			spaceBetween: 10,
@@ -271,15 +311,42 @@ $(document).ready(function () {
 		  });
 	}
 
-	if($('.work_swiper').length > 0){
-		var swiper = new Swiper(".work_swiper", {
-			spaceBetween: 28,
-			slidesPerView: 3,
-			navigation: {
-				nextEl: ".news_row .gallery_next",
-				prevEl: ".news_row .gallery_prev",
-			},
-		});
+	if(screen.width < 768 && $('.work_swiper').length > 0){
+		const breakpoint = screen.width;
+    
+        const breakpoinChekker = function(){
+          if(breakpoint < 768){
+            if(swiper !== undefined) swiper.destroy(true, true);
+            return;
+          }
+          else if(breakpoint >= 768){
+            return enableSwiper();
+          }
+        };
+		const enableSwiper = function(){
+			swiper = new Swiper(".work_swiper", {
+				spaceBetween: 28,
+				slidesPerView: 3,
+				navigation: {
+					nextEl: ".news_row .gallery_next",
+					prevEl: ".news_row .gallery_prev",
+				},
+				breakpoints:{
+					0: {
+						slidesPerView: 1,
+						spaceBetween: 20,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 28,
+					},
+					992: {
+						slidesPerView: 3,
+						spaceBetween: 28,
+					}
+				}
+			});
+		}
 	}
 
 	$('.help').click(function(){
@@ -298,4 +365,39 @@ $(document).ready(function () {
 		$('.information').addClass('active')
 		$(".modal_back").addClass("active");
 	})
+
+	$('.hamburger').click(function(){
+		$('.header_bottom').toggleClass('active')
+	})
+
+	if(screen.width < 768 && $('.swiper3').length > 0){
+		
+		const breakpoint = screen.width;
+    
+        const breakpoinChekker = function(){
+          if(breakpoint > 768){
+            if(swiper !== undefined) swiper.destroy(true, true);
+            return;
+          }
+          else if(breakpoint <= 768){
+            return enableSwiper();
+          }
+        };
+
+        const enableSwiper = function(){
+			console.log(screen.width);
+          const swiper3 = new Swiper('.swiper3', {
+            navigation: {
+              nextEl: '.swiper3 .gallery_next',
+              prevEl: '.swiper3 .gallery_prev',
+            },
+            spaceBetween: 20,
+            slidesPerView: 1,
+          })
+    
+        }    
+    
+        breakpoinChekker()
+
+	}
 });

@@ -47,7 +47,7 @@
                         </a>
                     </div>
                     <div class="social">
-                        Мы онлайн
+                        <span>Мы онлайн</span>
                         <a href="#">
                             <img src="assets/images/icons/Telegram.svg" alt="telegram">
                         </a>
@@ -58,13 +58,21 @@
                             <img src="assets/images/icons/Viber.svg" alt="viber">
                         </a>
                     </div>
-                    <a href="tel:+73433114235" class="phone_number">
-                        <img src="assets/images/icons/phone_anim.svg" alt="phone">
-                        <div>
-                            <span>+7 (343) 311-42-35</span>
-                            <p>без выходных: с 9:00 до 21:00</p>
+                    <div class="header_right">
+                        <a href="tel:+73433114235" class="phone_number">
+                            <img class="mobile_icon" src="assets/images/icons/Phone_icon.png" alt="phone">
+                            <img class="desctop_icon" src="assets/images/icons/phone_anim.svg" alt="phone">
+                            <div>
+                                <span>+7 (343) 311-42-35</span>
+                                <p>без выходных: с 9:00 до 21:00</p>
+                            </div>
+                        </a>
+                        <div class="hamburger">
+                            <svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">	
+                                <path d="M24 0C10.74 0 0 10.74 0 24C0 37.25 10.74 48 24 48C37.25 48 48 37.25 48 24C48 10.74 37.25 0 24 0ZM35.02 34.34L12.97 34.34L12.97 30.89L35.02 30.89L35.02 34.34ZM35.02 25.72L12.97 25.72L12.97 22.27L35.02 22.27L35.02 25.72ZM35.02 17.1L12.97 17.1L12.97 13.66L35.02 13.66L35.02 17.1Z" fill="#DB2A1D" fill-opacity="1.000000"/>
+                            </svg>
                         </div>
-                    </a>
+                    </div>
                 </div>
                 <div class="header_bottom">
                     <nav>
@@ -314,9 +322,15 @@
                         <a href="#" class="nav_item">Акции и новости</a>
                         <a href="#" class="nav_item">Контакты</a>
                     </nav>
-                    <div class="to_call">
-                        Заказать звонок
-                        <img src="assets/images/icons/tel_icon.svg" alt="phone">
+                    <div class="header_bottom_right">
+                        <div class="phone_number">
+                            <a href="tel:+73433114235">+7 (343) 311-42-35</a>
+                            <p>без выходных: с 9:00 до 21:00</p>
+                        </div>
+                        <div class="to_call">
+                            Заказать звонок
+                            <img src="assets/images/icons/tel_icon.svg" alt="phone">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -499,7 +513,7 @@
                         <form class="quiz_form" id="diagnostic_form">
                             <input type="text" name="name" placeholder="Ваше имя">
                             <input type="tel" name="tel" placeholder="Номер телефона">
-                            <button type="submit">Записаться на бесплатную диагностику</button>
+                            <button type="submit">Записаться <span>на бесплатную диагностику</span></button>
                             <p class="form_rule">
                                 Нажимая на кнопку «Получить расчет стоимости ремонта» вы соглашаетесь
                                 <a href="#"> с политикой обработки персональных данных</a>
@@ -518,7 +532,7 @@
 
             <div class="container">
                 <div class="otziv_title">
-                    <h2 class="title">Независимые отзывы наших клиентов</h1>
+                    <h2 class="title">Независимые отзывы наших клиентов</h2>
                 </div>
                 <div class="otziv_rate_block">
                     <!-- rate_item -->
@@ -736,7 +750,7 @@
         <section class="car_service">
             <div class="car_service_wrapper">
                 <div class="container">
-                    <h2 class="title">Исправный автомобиль за 6 шагов</h1>
+                    <h2 class="title">Исправный автомобиль за 6 шагов</h2>
                         <div class="car_service_block">
                             <div class="car_left car_item_wrapper">
                                 <!-- car_service_item -->
@@ -887,6 +901,148 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="car_service_block2">
+                            <!-- car_service_item -->
+                            <div class="car_service_item">
+                                <div class="square_block">
+                                    <span class="square active"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </div>
+                                <div class="square_number_img">
+                                    <img src="./assets/images/icons/service_car1.png" alt="">
+                                </div>
+                                <p class="car_service_name">
+                                    Обращение к нам
+                                </p>
+                                <p class="car_service_desc">
+                                    Вы оставляете заявку или звоните нам. Наш менеджер проконсультирует Вас по
+                                    стоимости
+                                    работ и
+                                    запчастей или запишет на бесплатную диагностику.
+                                </p>
+                                <p class="car_service_bottom">
+                                    Для записи звоните по телефону: <a href="tel:+73433114235">+7 (343)
+                                        311-42-35</a>
+                                    или
+                                    закажите обратный звонок.
+                                </p>
+                            </div>
+                            <!-- car_service_item -->
+                            <div class="car_service_item">
+                                <div class="square_block">
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </div>
+                                <div class="square_number_img">
+                                    <img src="./assets/images/icons/service_car2.png" alt="">
+                                </div>
+                                <p class="car_service_name">
+                                    Знакомство и диагностика
+                                </p>
+                                <p class="car_service_desc">
+                                    Вы приезжаете к нам. Мы проводим осмотр авто или делаем диагностику. Работ с
+                                    автомобилем
+                                    начинаем в течении 15 минут после приезда.
+                                </p>
+                            </div>
+                            <!-- car_service_item -->
+                            <div class="car_service_item">
+                                <div class="square_block">
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </div>
+                                <div class="square_number_img">
+                                    <img src="./assets/images/icons/service_car3.png" alt="">
+                                </div>
+                                <p class="car_service_name">
+                                    Согласование списка работ и стоимости
+                                </p>
+                                <p class="car_service_desc">
+                                    После диагностики согласовываем список работ и стоимость. Стоимость остается
+                                    неизменной.
+                                </p>
+                            </div>
+                            <!-- car_service_item -->
+                            <div class="car_service_item">
+                                <div class="square_block">
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square"></span>
+                                    <span class="square"></span>
+                                </div>
+                                <div class="square_number_img">
+                                    <img src="./assets/images/icons/service_car4.png" alt="">
+                                </div>
+                                <p class="car_service_name">
+                                    Выполняем работы
+                                </p>
+                                <p class="car_service_desc">
+                                    Выполняем ремонт, диагностику или техническое обслуживание автомобиля. Если в
+                                    ходе
+                                    ремонта
+                                    требуются дополнительные работы, то наш менеджер свяжется и согласует их с Вами.
+                                </p>
+                            </div>
+                            <!-- car_service_item -->
+                            <div class="car_service_item">
+                                <div class="square_block">
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square"></span>
+                                </div>
+                                <div class="square_number_img">
+                                    <img src="./assets/images/icons/service_car5.png" alt="">
+                                </div>
+                                <p class="car_service_name">
+                                    Производим контроль качества
+                                </p>
+                                <p class="car_service_desc">
+                                    Проверяем все дважды. Делаем выходную диагностику.
+                                </p>
+                            </div>     
+                            <!-- car_service_item -->
+                            <div class="car_service_item">
+                                <div class="square_block">
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                    <span class="square active"></span>
+                                </div>
+                                <div class="square_number_img">
+                                    <img src="./assets/images/icons/service_car6.png" alt="">
+                                </div>
+                                <p class="car_service_name">
+                                    Возвращаем исправный автомобиль с гарантией
+                                </p>
+                                <p class="car_service_desc">
+                                    После того, как полностью проверили работоспособность автомобиля мы его
+                                    возвращем.
+                                    Выдаются
+                                    гарантийные документы от 3 до 18 месяцев. Также даем рекомендации по
+                                    обслуживанию и
+                                    уходу.
+                                </p>
+                            </div>
+                        </div>
                 </div>
             </div>
         </section>
@@ -925,7 +1081,7 @@
         <!-- gallery section -->
         <section class="gallery">
             <div class="gallery_title">
-                <h2 class="title">Фотогалерея сервисного центра</h1>
+                <h2 class="title">Фотогалерея сервисного центра</h2>
             </div>
             <div class="gallery_block">
                 <div class="swiper gallery_swiper">
@@ -1069,7 +1225,7 @@
         <!-- Faq question -->
         <section class="faq">
             <div class="container">
-                <h2 class="title">Отвечаем на частые вопросы</h1>
+                <h2 class="title">Отвечаем на частые вопросы</h2>
                     <div class="faq_block">
                         <div class="faq_left faq_item_wrapper">
                             <!-- faq_item -->
@@ -1401,7 +1557,7 @@
                                             <form class="quiz_form">
                                                 <input type="text" name="name" placeholder="Ваше имя">
                                                 <input type="tel" name="tel" placeholder="Номер телефона">
-                                                <button type="submit">Получить расчет стоимости ремонта</button>
+                                                <button type="submit"><span>Получить</span> расчет стоимости <span>ремонта</span></button>
                                                 <p class="form_rule">
                                                     Нажимая на кнопку «Получить расчет стоимости ремонта» вы соглашаетесь
                                                     <a href="#"> с политикой обработки персональных данных</a>
@@ -1435,7 +1591,7 @@
         <!-- repair section -->
         <section class="repair">
             <div class="container">
-                <h2 class="title">Цены на ремонт АКПП</h1>
+                <h2 class="title">Цены на ремонт АКПП</h2>
                     <div class="repair_block">
                         <table class="repair_table">
                             <thead>
@@ -1537,7 +1693,7 @@
         <section class="payment_option">
             <div class="payment_option_wrapper">
                 <div class="container">
-                    <h2 class="title">Варианты оплаты</h1>
+                    <h2 class="title">Варианты оплаты</h2>
                         <div class="payment_option_block">
                             <!-- payment_item -->
                             <div class="payment_item">
@@ -1572,7 +1728,7 @@
         <section class="employees">
             <div class="employees_wrap">
                 <div class="container">
-                    <h2 class="title">Наши сотрудники</h1>
+                    <h2 class="title">Наши сотрудники</h2>
                         <div class="employee_block">
                             <!-- employee_item -->
                             <div class="employee_item">
@@ -1611,7 +1767,6 @@
             </div>
         </section>
 
-        <!-- workers section -->
         <section class="workers">
             <div class="container">
                 <div class="workers_block">
@@ -1643,7 +1798,7 @@
                 </div>
             </div>
             <div class="partner_wrapper">
-                <h2 class="title">Наши партнеры</h1>
+                <h2 class="title">Наши партнеры</h2>
                 <div class="partner_block">
 
                     <div class="partner_swiper">
@@ -1800,12 +1955,6 @@
                             </div>
                         </div>
                         <div class="partner_row partner_row2">
-                            <div class="partner_item">
-                                <div class="partner_img">
-                                    <img src="./assets/images/partner_logo.png" alt="partner_logo">
-                                </div>
-                                <p class="partner_logo_name">LOGO COMPANY</p>
-                            </div>
 
                             <div class="partner_item">
                                 <div class="partner_img">
@@ -1848,6 +1997,14 @@
                                 </div>
                                 <p class="partner_logo_name">LOGO COMPANY</p>
                             </div>
+
+                            <div class="partner_item">
+                                <div class="partner_img">
+                                    <img src="./assets/images/partner_logo.png" alt="partner_logo">
+                                </div>
+                                <p class="partner_logo_name">LOGO COMPANY</p>
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="partner_row3 partner_swiper">
@@ -2139,11 +2296,11 @@
                             </a>
                         </div>
                     </div>
-                    <div class="footer_bottom_desc">
+                    <p class="footer_bottom_desc">
                         Все цены, указанные на сайте приведены как справочная информация и не являются публичной
                         офертой, определяемой положениями статьи 437 Гражданского кодекса Российской Федерации и могут
                         быть изменены в любое время без предупреждения.
-                    </div>
+                    </p>
                 </div>
             </div>
         </footer>
@@ -2174,7 +2331,9 @@
         </div>
 
         <ul class="online">
-            <img class="close_online" src="assets/images/icons/close_icon.png" alt="close_icon">
+            <li class="close_online">
+                <img src="assets/images/icons/close_icon.png" alt="close_icon">
+            </li>
             <li><a href="#">Позвонить <img src="assets/images/icons/right_arrow2.png" alt="right-arrow"></a></li>
             <li><a href="#">Оставить заявку <img src="assets/images/icons/right_arrow2.png" alt="right-arrow"></a></li>
             <li><a href="#">Рассчитать стоимость <img src="assets/images/icons/right_arrow2.png" alt="right-arrow"></a></li>
@@ -2185,10 +2344,18 @@
             </li>
         </ul>
         <div class="help">
-            <img src="assets/images/icons/help3.png" alt="help">
+            <img src="assets/images/icons/help1.png" alt="help">
         </div>
 
         <div class="information">
+            <span class="close_modal2">
+                <svg width="29.000000" height="29.000000" viewBox="0 0 29 29" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path
+                        d="M2.66 -0.17C1.88 -0.95 0.61 -0.95 -0.17 -0.17C-0.95 0.61 -0.95 1.88 -0.17 2.66L11.16 14L-0.17 25.33C-0.95 26.11 -0.95 27.38 -0.17 28.16C0.61 28.94 1.88 28.94 2.66 28.16L14 16.83L25.33 28.16C26.11 28.94 27.38 28.94 28.16 28.16C28.94 27.38 28.94 26.11 28.16 25.33L16.83 14L28.16 2.66C28.94 1.88 28.94 0.61 28.16 -0.17C27.38 -0.95 26.11 -0.95 25.33 -0.17L14 11.16L2.66 -0.17Z"
+                        fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
+                </svg>
+            </span>
             <img src="assets/images/items_photo.png" alt="additional information">
             <article class="more_texts">
                 <h2 class="title">Заголовок</h2>
@@ -2209,7 +2376,6 @@
     <script src="./assets/libs/swiper-bundle.min.js"></script>
     <!-- JS -->
     <script src="./assets/js/scripts.js"></script>
-
 </body>
 
 </html>
