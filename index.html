@@ -9,6 +9,11 @@
     <meta name="keywords" content="автосервис , VAG  , по ремонту VAG , Марки группы VAG">
     <meta name="author" content="Eldor Qulsoatov">
     <link rel="canonical" href="https://eldorjon-start-gearbox-project.netlify.app/">
+    <meta property="og:title" content="Start Gearbox project">
+    <meta property="og:description" content="Специализированный автосервис VAG в Екатеринбурге , Услуги и стоимость по ремонту VAG , Марки группы VAG">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com/page">
+    <meta property="og:type" content="https://eldorjon-start-gearbox-project.netlify.app/">
     <!-- Fonts -->
     <link rel="stylesheet" href="./assets/fonts/Manrope/fonts.css">
     <!-- swiper -->
@@ -27,25 +32,25 @@
         <!-- header -->
         <header class="header">
             <div class="container">
-                <div class="header_top">
+                <div class="header_top" itemscope itemtype="http://schema.org/WPHeader">
                     <a href="#" class="brand_logo">
-                        <img src="assets/images/icons/Logo.svg" alt="logo">
+                        <img src="assets/images/icons/Logo.svg" alt="logo" itemprop="logo">
                     </a>
-                    <div class="address">
+                    <div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                         <a href="#">
                             <span>
                                 <img src="assets/images/icons/location.svg" alt="location">
                             </span>
-                            Эльмаш: ул. Турбинная 40Г
+                            <span itemprop="streetAddress">Эльмаш: ул. Турбинная 40Г</span>
                         </a>
                         <a href="#">
                             <span>
                                 <img src="assets/images/icons/location.svg" alt="location">
                             </span>
-                            Автовокзал: ул. Луганская 59/1v
+                            <span itemprop="streetAddress">Автовокзал: ул. Луганская 59/1v</span>
                         </a>
                     </div>
-                    <div class="social">
+                    <div class="social" itemprop="sameAs">
                         <span>Мы онлайн</span>
                         <a href="#">
                             <img src="assets/images/icons/Telegram.svg" alt="telegram">
@@ -58,7 +63,7 @@
                         </a>
                     </div>
                     <div class="header_right">
-                        <a href="tel:+73433114235" class="phone_number">
+                        <a href="tel:+73433114235" class="phone_number" itemprop="telephone">
                             <img class="mobile_icon" src="assets/images/icons/Phone_icon.png" alt="phone">
                             <img class="desctop_icon" src="assets/images/icons/phone_anim.svg" alt="phone">
                             <div>
@@ -68,11 +73,12 @@
                         </a>
                         <div class="hamburger">
                             <svg width="48.000000" height="48.000000" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">	
-                                <path d="M24 0C10.74 0 0 10.74 0 24C0 37.25 10.74 48 24 48C37.25 48 48 37.25 48 24C48 10.74 37.25 0 24 0ZM35.02 34.34L12.97 34.34L12.97 30.89L35.02 30.89L35.02 34.34ZM35.02 25.72L12.97 25.72L12.97 22.27L35.02 22.27L35.02 25.72ZM35.02 17.1L12.97 17.1L12.97 13.66L35.02 13.66L35.02 17.1Z" fill="#DB2A1D" fill-opacity="1.000000"/>
+                                <path d="M24 0C10.74 0 0 10.74 0 24C0 37.25 10.74 48 24 48C37.25 48 48 37.25 48 24C48 10.74 37.25 0 24 0ZM35.02 34.34L12.97 34.34L12.97 30.89L35.02 30.89L35.02 34.34ZM35.02 25.72L12.97 25.72L12.97 22.27L35.02 22.27L35.02 25.72ZM35.02 17.1L12.97 17.1L12.97 13.66L35.02 13.66L35.02 17.1Z" fill="#DB2A1D" fill-opacity="1.000000"></path>
                             </svg>
                         </div>
                     </div>
                 </div>
+                
                 <div class="header_bottom">
                     <nav>
                         <div class="nav_item">
@@ -2449,19 +2455,19 @@
         </section>
         
         <!-- otziv_section -->
-        <section class="otziv">
+        <section class="otziv" itemscope itemtype="http://schema.org/Review">
 
             <div class="container">
                 <div class="otziv_title">
-                    <h2 class="title">Независимые отзывы наших клиентов</h2>
+                    <h2 class="title" itemprop="name">Независимые отзывы наших клиентов</h2>
                 </div>
                 <div class="otziv_rate_block">
                     <!-- rate_item -->
-                    <div class="rate_item">
+                    <div class="rate_item" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                         <div class="rate_logo">
                             <img src="./assets/images/otziv_yandex.png" alt="Yandex Logo">
                         </div>
-                        <p class="rate_number">4.5 из 5</p>
+                        <p class="rate_number" itemprop="ratingValue">4.5 из 5</p>
                         <div class="star_block">
                             <img src="./assets/images/icons/otziv_star.svg" alt="" class="star_img">
                             <img src="./assets/images/icons/otziv_star.svg" alt="" class="star_img">
@@ -2472,11 +2478,11 @@
                     </div>
 
                     <!-- rate_item -->
-                    <div class="rate_item">
+                    <div class="rate_item" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                         <div class="rate_logo">
                             <img src="./assets/images/otziv_google.png" alt="Yandex Logo">
                         </div>
-                        <p class="rate_number">4.3 из 5</p>
+                        <p class="rate_number" itemprop="ratingValue">4.5 из 5</p>
                         <div class="star_block">
                             <img src="./assets/images/icons/otziv_star.svg" alt="" class="star_img">
                             <img src="./assets/images/icons/otziv_star.svg" alt="" class="star_img">
@@ -2487,11 +2493,11 @@
                     </div>
 
                     <!-- rate_item -->
-                    <div class="rate_item">
+                    <div class="rate_item" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                         <div class="rate_logo">
                             <img src="./assets/images/otziv_flask.png" alt="Yandex Logo">
                         </div>
-                        <p class="rate_number">4.3 из 5</p>
+                        <p class="rate_number" itemprop="ratingValue">4.5 из 5</p>
                         <div class="star_block">
                             <img src="./assets/images/icons/otziv_star.svg" alt="" class="star_img">
                             <img src="./assets/images/icons/otziv_star.svg" alt="" class="star_img">
@@ -2502,11 +2508,11 @@
                     </div>
 
                     <!-- rate_item -->
-                    <div class="rate_item">
+                    <div class="rate_item" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
                         <div class="rate_logo">
                             <img src="./assets/images/otziv_2GIS.png" alt="Yandex Logo">
                         </div>
-                        <p class="rate_number">4.1 из 5</p>
+                        <p class="rate_number" itemprop="ratingValue">4.5 из 5</p>
                         <div class="star_block">
                             <img src="./assets/images/icons/otziv_star.svg" alt="" class="star_img">
                             <img src="./assets/images/icons/otziv_star.svg" alt="" class="star_img">
@@ -3000,41 +3006,46 @@
         </section>
 
         <!-- gallery section -->
-        <section class="gallery">
+        <section class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
             <div class="gallery_title">
                 <h2 class="title">Фотогалерея сервисного центра</h2>
             </div>
             <div class="gallery_block">
                 <div class="swiper gallery_swiper">
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper" itemprop="hasPart">
                         <!-- swiper-slide -->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                             <div class="gaallery_img">
-                                <img src="./assets/images/gallery1.png" alt="gallery-image">
+                                <img src="./assets/images/gallery1.png" alt="gallery-image" itemprop="contentUrl">
+                                <meta itemprop="caption" content="Описание первого изображения">
                             </div>
                         </div>
                         <!-- swiper-slide -->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                             <div class="gaallery_img">
-                                <img src="./assets/images/gallery2.png" alt="gallery-image">
+                                <img src="./assets/images/gallery2.png" alt="gallery-image" itemprop="contentUrl">
+                                <meta itemprop="caption" content="Описание первого изображения">
                             </div>
                         </div>
                         <!-- swiper-slide -->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                             <div class="gaallery_img">
-                                <img src="./assets/images/gallery3.png" alt="gallery-image">
+                                <img src="./assets/images/gallery3.png" alt="gallery-image" itemprop="contentUrl">
+                                <meta itemprop="caption" content="Описание первого изображения">
                             </div>
                         </div>
                         <!-- swiper-slide -->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                             <div class="gaallery_img">
-                                <img src="./assets/images/gallery4.png" alt="gallery-image">
+                                <img src="./assets/images/gallery4.png" alt="gallery-image" itemprop="contentUrl">
+                                <meta itemprop="caption" content="Описание первого изображения">
                             </div>
                         </div>
                         <!-- swiper-slide -->
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
                             <div class="gaallery_img">
-                                <img src="./assets/images/gallery5.png" alt="gallery-image">
+                                <img src="./assets/images/gallery6.png" alt="gallery-image" itemprop="contentUrl">
+                                <meta itemprop="caption" content="Описание первого изображения">
                             </div>
                         </div>
                     </div>
@@ -4067,17 +4078,17 @@
         </section>
 
         <!-- contact section -->
-        <section class="contact">
+        <section class="contact" itemscope itemtype="http://schema.org/Organization">
             <div class="contact_wrapper">
                 <div class="container">
                     <h1 class="contact_title">Свяжитесь с нами</h1>
-                    <p class="contact_number">
+                    <p class="contact_number" itemprop="telephone">
                         <a href="tel:+73433114235">+7 (343) 311-42-35</a>
                     </p>
                     <p class="contact_work_time">
                         Принимаем звонки и заявки с 9:00 до 21:00 (ежедневно)
                     </p>
-                    <div class="footer_socials">
+                    <div class="footer_socials" itemprop="sameAs">
                         <!-- social_item -->
                         <a href="#" class="social_item">
                             <img src="./assets/images/icons/Telegram.svg" alt="telegram-image">
@@ -4091,14 +4102,14 @@
                             <img src="./assets/images/icons/Viber.svg" alt="viber-image">
                         </a>
                     </div>
-                    <div class="contact_map_block">
+                    <div class="contact_map_block" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
                         <!-- map_item -->
                         <div class="map_item">
                             <div class="map_top">
                                 <div class="map_img">
                                     <img src="./assets/images/icons/location.svg" alt="location-icon">
                                 </div>
-                                <p class="map_location">
+                                <p class="map_location" itemprop="streetAddress">
                                     г. Екатеринбург, ул. Турбинная, д. 40 Г
                                 </p>
                             </div>
@@ -4112,7 +4123,7 @@
                                 <div class="map_img">
                                     <img src="./assets/images/icons/location.svg" alt="location-icon">
                                 </div>
-                                <p class="map_location">
+                                <p class="map_location" itemprop="streetAddress">
                                     г. Екатеринбург, ул. Турбинная, д. 40 Г
                                 </p>
                             </div>
@@ -4124,20 +4135,21 @@
                 </div>
             </div>
         </section>
+        
 
         <!-- footer -->
-        <footer>
+        <footer itemscope itemtype="http://schema.org/WPFooter">
             <div class="container">
                 <div class="footer_block">
                     <!-- footer_item -->
-                    <div class="footer_item">
+                    <div class="footer_item" itemprop="author" itemscope itemtype="http://schema.org/Organization">
                         <a href="#" class="footer_logo">
                             <img src="./assets/images/footer_logo.png" alt="logo-image">
                         </a>
                         <p class="footer_desc">
-                            Специализированный автосервис VAG в Екатеринбурге
+                            <span itemprop="name">Специализированный автосервис VAG в Екатеринбурге</span>
                         </p>
-                        <div class="footer_socials">
+                        <div class="footer_socials" itemprop="sameAs">
                             <!-- social_item -->
                             <a href="#" class="social_item">
                                 <img src="./assets/images/icons/Telegram.svg" alt="telegram-image">
@@ -4166,7 +4178,7 @@
                             <li><a href="#">Ремонт кондиционера</a></li>
                         </ul>
                     </div>
-
+        
                     <!-- footer_item -->
                     <div class="footer_item">
                         <p class="footer_item_name">Компания</p>
@@ -4181,14 +4193,14 @@
                         </ul>
                     </div>
                     <!-- footer_item -->
-                    <div class="footer_item">
+                    <div class="footer_item" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
                         <p class="footer_item_name">Контакты</p>
                         <ul class="footer_list">
-                            <li><a href="tel:+73433114235">+7 (343) 311-42-35</a></li>
-                            <li><a href="mailto:info@yourcompany.ru">info@yourcompany.ru</a></li>
-                            <li><a href="#">г. Екатеринбург, <br>ул. Турбинная, д. 40 Г</a></li>
-                            <li><a href="#">г. Екатеринбург, ул. <br> Луганская, д. 59 к1</a></li>
-                            <li><a href="#">Принимаем звонки и заявки <br> с 9:00 до 21:00 (ежедневно)</a></li>
+                            <li><a href="tel:+73433114235" itemprop="telephone">+7 (343) 311-42-35</a></li>
+                            <li><a href="mailto:info@yourcompany.ru" itemprop="email">info@yourcompany.ru</a></li>
+                            <li><span itemprop="address">г. Екатеринбург, <br>ул. Турбинная, д. 40 Г</span></li>
+                            <li><span itemprop="address">г. Екатеринбург, ул. <br> Луганская, д. 59 к1</span></li>
+                            <li><span itemprop="openingHours">Принимаем звонки и заявки <br> с 9:00 до 21:00 (ежедневно)</span></li>
                         </ul>
                     </div>
                 </div>
@@ -4224,6 +4236,7 @@
                 </div>
             </div>
         </footer>
+        
 
         <div class="modal_back"></div>
 

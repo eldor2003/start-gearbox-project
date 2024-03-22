@@ -751,7 +751,7 @@ header .address a {
   font-weight: 400;
   color: #060525;
 }
-header .address span {
+header .address span:has(img) {
   width: 28px;
   height: 28px;
   display: flex;
@@ -760,7 +760,7 @@ header .address span {
   border: 1px dashed #d6dfed;
   border-radius: 50%;
 }
-header .address span img {
+header .address span:has(img) img {
   width: 15px;
   height: 20px;
 }
@@ -4497,11 +4497,14 @@ footer .footer_list {
   flex-direction: column;
   gap: 8px;
 }
-footer .footer_list li a {
+footer .footer_list li {
   color: rgb(6, 5, 37);
   font-size: 16px;
   font-weight: 400;
   line-height: 135%;
+}
+footer .footer_list li a {
+  color: rgb(6, 5, 37);
 }
 footer .footer_bottom {
   display: flex;

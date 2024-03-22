@@ -716,7 +716,7 @@ header {
 			font-weight: 400;
 			color: #060525;
 		}
-		span {
+		span:has(img) {
 			width: 28px;
 			height: 28px;
 			display: flex;
@@ -4531,11 +4531,14 @@ footer {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		li a {
+		li{
 			color: rgb(6, 5, 37);
 			font-size: 16px;
 			font-weight: 400;
 			line-height: 135%;
+			a{
+				color: rgb(6, 5, 37);
+			}
 		}
 	}
 	.footer_bottom {
