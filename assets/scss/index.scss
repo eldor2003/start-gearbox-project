@@ -507,10 +507,6 @@ body:has(.modal_back.active) {
 		scale: 0;
 		opacity: 0;
 	}
-	@media (max-width: 576px){
-		width: 50px;
-		height: 50px;
-	}
 }
 .online{
 	display: flex;
@@ -891,6 +887,16 @@ header {
 			&::after {
 				display: none;
 			}
+			.inner_menu{
+				top: unset;
+				bottom: -19px;
+			}
+		}
+		&:nth-last-child(2){
+			.inner_menu{
+				top: unset;
+				bottom: 0;
+			}
 		}
 		img:first-child {
 			width: 88px;
@@ -1214,6 +1220,10 @@ header {
 					line-height: 100%;
 				}
 			}
+		}
+		header .menus_list li:last-child .inner_menu {
+			top: unset;
+			bottom: 0;
 		}
 	}
 	@media (max-width: 576px){
@@ -2792,10 +2802,10 @@ header {
 			rgba(240, 243, 248, 0) 100%
 		);
 	}
+	.gaallery_img img{
+		width: 100%;
+	}
 	@media (max-width: 1200px) {
-		.gaallery_img img{
-			width: 100%;
-		}
 	}
 	@media (max-width: 768px){
 		.swiper_blur{
@@ -2922,7 +2932,8 @@ header {
 				width: 100%;
 				padding: 30px 44px 20px 44px;
 				.stamp_img{
-					height: 215px;
+					height: 0;
+					padding: 100% 0 0 0;
 				}
 				img{
 					max-width: 250px;
@@ -2931,14 +2942,19 @@ header {
 			}
 		}
 		.stamps_row .stamp_img {
-			height: 110px;
-			padding: 0;
+			height: 0;
+			padding: 100% 0 0 0;
+			position: relative;
 		}
 		.stamps_row .stamp_img img{
+			position: absolute;
 			max-width: 70px;
 			max-height: 70px;
 			width: auto;
 			height: auto;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
 		}
 	}
 }

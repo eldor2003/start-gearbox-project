@@ -260,7 +260,7 @@ $(document).ready(function () {
 	});
 
 	// tel mask
-	const element = document.querySelectorAll(".form_actions input[type='tel']");
+	const element = document.querySelectorAll("input[type='tel']");
 	element.forEach((item) => {
 		const maskOptions = {
 			mask: "+{7} 000-000-0000",
@@ -310,21 +310,23 @@ $(document).ready(function () {
 			},
 		  });
 	}
+	
+	if(window.screen.width > 768 && $('.work_swiper').length > 0){
+		const breakpoint = window.screen.width;
 
-	if(screen.width < 768 && $('.work_swiper').length > 0){
-		const breakpoint = screen.width;
-    
         const breakpoinChekker = function(){
           if(breakpoint < 768){
             if(swiper !== undefined) swiper.destroy(true, true);
             return;
           }
           else if(breakpoint >= 768){
+			console.log(breakpoint);
             return enableSwiper();
           }
         };
 		const enableSwiper = function(){
-			swiper = new Swiper(".work_swiper", {
+
+			const swiper = new Swiper(".work_swiper", {
 				spaceBetween: 28,
 				slidesPerView: 3,
 				navigation: {
@@ -347,6 +349,8 @@ $(document).ready(function () {
 				}
 			});
 		}
+
+		breakpoinChekker()
 	}
 
 	$('.help').click(function(){
@@ -385,7 +389,6 @@ $(document).ready(function () {
         };
 
         const enableSwiper = function(){
-			console.log(screen.width);
           const swiper3 = new Swiper('.swiper3', {
             navigation: {
               nextEl: '.swiper3 .gallery_next',
@@ -400,4 +403,13 @@ $(document).ready(function () {
         breakpoinChekker()
 
 	}
+	// if(screen.width < 768){
+	// 	array = document.querySelectorAll('.stamp_img')
+		
+	// 	array.forEach((item) => {
+	// 		console.log(item)
+	// 	});
+	// 	// width = $('.stamp_img').css('width')
+	// 	// $('.stamp_img').css('height', width)
+	// }
 });

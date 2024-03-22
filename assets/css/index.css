@@ -529,12 +529,6 @@ body:has(.modal_back.active) {
   scale: 0;
   opacity: 0;
 }
-@media (max-width: 576px) {
-  .help {
-    width: 50px;
-    height: 50px;
-  }
-}
 
 .online {
   display: flex;
@@ -928,6 +922,14 @@ header .menus_list li:last-child {
 header .menus_list li:last-child::after {
   display: none;
 }
+header .menus_list li:last-child .inner_menu {
+  top: unset;
+  bottom: -19px;
+}
+header .menus_list li:nth-last-child(2) .inner_menu {
+  top: unset;
+  bottom: 0;
+}
 header .menus_list li img:first-child {
   width: 88px;
   height: 48px;
@@ -1237,6 +1239,10 @@ header .hamburger {
     font-size: 12px;
     font-weight: 400;
     line-height: 100%;
+  }
+  header header .menus_list li:last-child .inner_menu {
+    top: unset;
+    bottom: 0;
   }
 }
 .hero {
@@ -2785,10 +2791,8 @@ header .hamburger {
   height: 100%;
   background: linear-gradient(90deg, rgb(240, 243, 248), rgba(240, 243, 248, 0.5) 49%, rgba(240, 243, 248, 0) 100%);
 }
-@media (max-width: 1200px) {
-  .gallery .gaallery_img img {
-    width: 100%;
-  }
+.gallery .gaallery_img img {
+  width: 100%;
 }
 @media (max-width: 768px) {
   .gallery .swiper_blur {
@@ -2921,21 +2925,27 @@ header .hamburger {
     padding: 30px 44px 20px 44px;
   }
   .stamps .stamps_row .stamp_item.with_title .stamp_img {
-    height: 215px;
+    height: 0;
+    padding: 100% 0 0 0;
   }
   .stamps .stamps_row .stamp_item.with_title img {
     max-width: 250px;
     max-height: 120px;
   }
   .stamps .stamps_row .stamp_img {
-    height: 110px;
-    padding: 0;
+    height: 0;
+    padding: 100% 0 0 0;
+    position: relative;
   }
   .stamps .stamps_row .stamp_img img {
+    position: absolute;
     max-width: 70px;
     max-height: 70px;
     width: auto;
     height: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
