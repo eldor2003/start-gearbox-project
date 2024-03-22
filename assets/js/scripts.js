@@ -263,7 +263,7 @@ $(document).ready(function () {
 	const element = document.querySelectorAll("input[type='tel']");
 	element.forEach((item) => {
 		const maskOptions = {
-			mask: "+{7} 000-000-0000",
+			mask: "+{0} 000-000-0000",
 		};
 		const mask = IMask(item, maskOptions);
 	});
