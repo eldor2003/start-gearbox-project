@@ -797,7 +797,7 @@ header .address a {
   font-weight: 400;
   color: #060525;
 }
-header .address span {
+header .address span:has(img) {
   width: 28px;
   height: 28px;
   display: flex;
@@ -806,7 +806,7 @@ header .address span {
   border: 1px dashed #d6dfed;
   border-radius: 50%;
 }
-header .address span img {
+header .address span:has(img) img {
   width: 15px;
   height: 20px;
 }
@@ -933,7 +933,7 @@ header .nav_item .menus_list {
   border-radius: 20px;
   background-color: #fff;
   transform: translateY(20px);
-  width: 1160px;
+  width: auto;
   opacity: 0;
   visibility: hidden;
   z-index: 2;
@@ -946,6 +946,9 @@ header .nav_item .menus_list .menu {
   border-right: 1px solid #d6dfed;
   border-radius: 20px;
 }
+header .nav_item .menus_list:has(.inner_menu) {
+  width: 1160px;
+}
 header .nav_item:has(img) {
   padding: 9px 6.5px 9px 14.5px;
 }
@@ -955,6 +958,7 @@ header .menus_list li {
   align-items: center;
   padding: 18px 0;
   position: relative;
+  gap: 20px;
 }
 header .menus_list li:first-child {
   padding: 0 0 18px 0;
@@ -1000,6 +1004,10 @@ header .menus_list li .inner_menu {
 }
 header .menus_list li .inner_menu li {
   padding: 30px 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #060525;
 }
 header .menus_list li .inner_menu li:last-child::after {
   display: block;
@@ -1017,6 +1025,16 @@ header .menus_list li:hover .inner_menu {
   transform: translate(100%, 0);
   opacity: 1;
   visibility: visible;
+}
+header .menus_list li a {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #060525;
+  transition: 0.3s all ease;
+}
+header .menus_list li a:hover {
+  color: #9CADC9;
 }
 header .to_call {
   display: flex;
@@ -1108,7 +1126,7 @@ header .hamburger {
   header .nav_item .menus_list {
     top: calc(100% + 5px);
   }
-  header .nav_item .menus_list {
+  header .nav_item .menus_list:has(.inner_menu) {
     width: 721px;
   }
   header .nav_item .menus_list .menu {
@@ -1196,6 +1214,9 @@ header .hamburger {
   header .nav_item .menus_list img {
     display: none;
   }
+  header .nav_item .menus_list:has(.inner_menu) {
+    width: auto;
+  }
   header .nav_item .menus_list .menu {
     padding: 0;
     border: none;
@@ -1206,6 +1227,7 @@ header .hamburger {
     justify-content: center;
     flex-direction: column;
     padding: 10px 0;
+    gap: 0;
   }
   header .nav_item .menus_list .menu li::after {
     display: none;
@@ -1229,6 +1251,9 @@ header .hamburger {
     border-radius: 15px;
     background-color: #F0F3F8;
     width: 100%;
+  }
+  header .menus_list li .inner_menu li {
+    font-size: 14px;
   }
   header .menus_list li .inner_menu::after {
     position: absolute;
@@ -1263,6 +1288,7 @@ header .hamburger {
   header .menus_list li a {
     font-weight: 600;
     line-height: 120%;
+    font-size: 16px;
   }
   header .menus_list .inner_menu a {
     font-weight: 500;

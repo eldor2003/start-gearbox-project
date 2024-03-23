@@ -243,7 +243,12 @@ $(document).ready(function () {
 		$(this).parent().next().slideToggle(300)
 	})
 
-	$(".service_item .main_btn").click(function () {
+	$(".menu .open_inner ").click(function () {
+		$(".modal_back").addClass("active");
+		$(".service_modal").addClass("active");
+		$(".call_modal").removeClass("active");
+	});
+	$(".menu .open_inner ").siblings('div').find('a').click(function () {
 		$(".modal_back").addClass("active");
 		$(".service_modal").addClass("active");
 		$(".call_modal").removeClass("active");
@@ -409,5 +414,10 @@ $(document).ready(function () {
         breakpoinChekker()
 
 	}
+
+	$('.service_modal .service_header svg').click(function(){
+		$(this).toggleClass('rotate')
+		$('.services_list:first-child').slideToggle(300)
+	})
 	
 });
