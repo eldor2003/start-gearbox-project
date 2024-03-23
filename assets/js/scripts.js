@@ -8,6 +8,10 @@ $(document).ready(function () {
 			$(".quiz_block").addClass("active");
 		}
 	});
+	if (window.screen.width<769){
+		$(".quiz_wrapper").addClass("active");
+		$(".quiz_block").addClass("active");
+	}
 	
 	// quiz swiper
 	if ($(".quiz_swiper").length > 0) {

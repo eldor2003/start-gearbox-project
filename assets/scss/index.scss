@@ -1718,6 +1718,10 @@ header {
 		}
 		.cta .cta_title {
 			margin: 0 0 48px 0;
+			font-size: 30px;
+			a{
+				display: block;
+			}
 		}
 		.cta .cta_desc{
 			width: auto;
@@ -1767,6 +1771,9 @@ header {
 		.section_top .section_title{
 			font-size: 32px;
     		letter-spacing: -1px;
+		}
+		.cta .cta_title a{
+			display: inline;
 		}
 		.section_top .section_desc {
 			font-size: 13px;
@@ -2696,6 +2703,12 @@ header {
 			background-color: transparent;
 			border-radius: 0;
 			padding: 60px 0 80px 0;
+		}
+		.mulfunction_title{
+			font-size: 32px;
+		}
+		.mulfunction_top{
+			gap: 16px;
 		}
 		.mulfunction_block{
 			gap: 20px;
@@ -4022,6 +4035,7 @@ header {
 		margin-bottom: 4px;
 		img{
 			width: 100%;
+			border-radius: 20px;
 		}
 	}
 	.employ_body {

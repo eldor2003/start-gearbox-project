@@ -1738,6 +1738,10 @@ header .hamburger {
   }
   .services .cta .cta_title {
     margin: 0 0 48px 0;
+    font-size: 30px;
+  }
+  .services .cta .cta_title a {
+    display: block;
   }
   .services .cta .cta_desc {
     width: auto;
@@ -1787,6 +1791,9 @@ header .hamburger {
   .services .section_top .section_title {
     font-size: 32px;
     letter-spacing: -1px;
+  }
+  .services .cta .cta_title a {
+    display: inline;
   }
   .services .section_top .section_desc {
     font-size: 13px;
@@ -2693,6 +2700,12 @@ header .hamburger {
     background-color: transparent;
     border-radius: 0;
     padding: 60px 0 80px 0;
+  }
+  .mulfunction .mulfunction_title {
+    font-size: 32px;
+  }
+  .mulfunction .mulfunction_top {
+    gap: 16px;
   }
   .mulfunction .mulfunction_block {
     gap: 20px;
@@ -3995,6 +4008,7 @@ header .hamburger {
 }
 .employees .employ_img img {
   width: 100%;
+  border-radius: 20px;
 }
 .employees .employ_body {
   padding: 28px;
