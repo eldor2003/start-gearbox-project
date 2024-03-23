@@ -517,16 +517,27 @@ body:has(.modal_back.active) {
 
 .help {
   display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   right: 28px;
   bottom: 28px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   z-index: 1;
   transition: 0.3s all ease;
   border-radius: 50%;
+  background-color: #DB2A1D;
   cursor: pointer;
 }
 .help img {
-  width: 100%;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s all ease;
 }
 .help:hover {
   scale: 0.95;
@@ -535,6 +546,23 @@ body:has(.modal_back.active) {
 .help.hidde {
   scale: 0;
   opacity: 0;
+}
+@media (max-width: 768px) {
+  .help {
+    width: 60px;
+    height: 60px;
+  }
+  .help img {
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .help {
+    width: 50px;
+    height: 50px;
+    right: 14px;
+    bottom: 14px;
+  }
 }
 
 .online {
@@ -1923,16 +1951,8 @@ header .hamburger {
   align-items: center;
   gap: 24px;
   position: relative;
-}
-.services_list div:has(.price)::after {
-  position: absolute;
-  content: "";
-  width: 1px;
-  height: 40px;
-  background-color: #f0f3f8;
-  left: -28px;
-  top: 50%;
-  transform: translate(0, -50%);
+  border-left: 1px solid #f0f3f8;
+  padding-left: 16px;
 }
 .services_list .price {
   font-size: 14px;
@@ -1968,9 +1988,7 @@ header .hamburger {
   .services_list div:has(.price) {
     flex-direction: column;
     width: 100%;
-  }
-  .services_list div:has(.price)::after {
-    display: none;
+    border-left: none;
   }
 }
 @media (max-width: 576px) {
