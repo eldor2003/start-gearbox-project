@@ -2378,7 +2378,7 @@ header {
 		}
 		.square_number_img{
 			background: linear-gradient(180.00deg, rgb(255, 255, 255),rgba(255, 255, 255, 0) 100%);
-			margin: 0 0 10px 0;
+			margin: -14px 0 10px 0;
 		}
 		.square_number_img img {
 			width: 60%;
@@ -2397,6 +2397,9 @@ header {
 		}
 		.car_service_block2{
 			gap: 20px;
+		}
+		.square_block span.active{
+			display: none;
 		}
 	}
 }
