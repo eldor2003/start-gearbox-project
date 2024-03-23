@@ -2465,7 +2465,7 @@ header .hamburger {
   transition: all ease-in 0.1s;
 }
 .quiz .quiz_block.active {
-  background-image: url(../images/quiz_active_img.png);
+  background-image: url(../images/quiz_active_img.webp);
   background-position: bottom;
 }
 .quiz .quiz_block.active .quiz_img {

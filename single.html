@@ -337,10 +337,19 @@
 
         <section class="single">
             <div class="container">
-                <ul class="breadcrumbs">
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">Диагностика VAG</a></li>
-                    <li>Комплексная диагностика VAG</li>
+                <ul class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <a href="#" itemprop="item"><span itemprop="name">Главная</span></a>
+                      <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <a href="#" itemprop="item"><span itemprop="name">Диагностика VAG</span></a>
+                      <meta itemprop="position" content="2" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <span itemprop="name">Комплексная диагностика VAG</span>
+                      <meta itemprop="position" content="3" />
+                    </li>
                 </ul>
                 <div class="section_top">
                     <h2 class="section_title">Здесь будет название раздела</h2>
@@ -348,7 +357,7 @@
                         vitae mauris, erat. Molestie lobortis nullam risus magna pellentesque. Neque platea fermentum,
                         turpis nulla habitasse ut nulla lectus.</p>
                 </div>
-                <img src="assets/images/items_photo.png" alt="single_main" class="single_main">
+                <img src="assets/images/items_photo.webp" alt="single_main" class="single_main">
                 <article>
                     <h2 class="block_title">Заголовок</h2>
                     <div class="block_descriptions">
@@ -540,7 +549,7 @@
                         fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
                 </svg>
             </span>
-            <img src="assets/images/items_photo.png" alt="additional information">
+            <img src="assets/images/items_photo.webp" alt="additional information">
             <article class="more_texts">
                 <h2 class="title">Заголовок</h2>
                 <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla in vitae mauris,

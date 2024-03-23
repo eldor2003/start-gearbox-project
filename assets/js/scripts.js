@@ -3,13 +3,12 @@ $(document).ready(function () {
 	// quiz opener
 	$("#quiz_open").on("click", function (e) {
 		e.preventDefault();
-		
+		if (window.screen.width>769){
+			$(".quiz_wrapper").addClass("active");
+			$(".quiz_block").addClass("active");
+		}
 	});
-
-	if ($(window).width()<769){
-		$(".quiz_wrapper").addClass("active");
-		$(".quiz_block").addClass("active");
-	}
+	
 	// quiz swiper
 	if ($(".quiz_swiper").length > 0) {
 		const quiz_swiper = new Swiper(".quiz_swiper", {

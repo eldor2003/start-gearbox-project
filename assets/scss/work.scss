@@ -2463,7 +2463,7 @@ header {
 		position: relative;
 		transition: all ease-in 0.1s;
 		&.active {
-			background-image: url(../images/quiz_active_img.png);
+			background-image: url(../images/quiz_active_img.webp);
 			background-position: bottom;
 			.quiz_img{
 				position: absolute;

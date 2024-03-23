@@ -338,9 +338,15 @@
 
         <section class="reviews">
             <div class="container">
-                <ul class="breadcrumbs">
-                    <li><a href="#">Главная</a></li>
-                    <li>Отзывы</li>
+                <ul class="breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <a href="#" itemprop="item"><span itemprop="name">Главная</span></a>
+                      <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                      <span itemprop="name">Отзывы</span>
+                      <meta itemprop="position" content="2" />
+                    </li>
                 </ul>
                 <h2 class="section_title">Отзывы клиентов</h2>
                 <div class="swiper swiper3">
@@ -350,7 +356,7 @@
                             <div class="otziv_top">
                                 <div class="otziv_profile">
                                     <div class="otziv_avatar">
-                                        <img src="./assets/images/otziv_avatar.png" alt="otziv-avatar">
+                                        <img src="./assets/images/otziv_avatar.webp" alt="otziv-avatar">
                                     </div>
                                     <div class="star_details">
                                         <p class="avatar_name">Алексей Иванов</p>
@@ -388,7 +394,7 @@
                             <div class="otziv_top">
                                 <div class="otziv_profile">
                                     <div class="otziv_avatar">
-                                        <img src="./assets/images/otziv_avatar.png" alt="otziv-avatar">
+                                        <img src="./assets/images/otziv_avatar.webp" alt="otziv-avatar">
                                     </div>
                                     <div class="star_details">
                                         <p class="avatar_name">Алексей Иванов</p>
@@ -426,7 +432,7 @@
                             <div class="otziv_top">
                                 <div class="otziv_profile">
                                     <div class="otziv_avatar">
-                                        <img src="./assets/images/otziv_avatar.png" alt="otziv-avatar">
+                                        <img src="./assets/images/otziv_avatar.webp" alt="otziv-avatar">
                                     </div>
                                     <div class="star_details">
                                         <p class="avatar_name">Алексей Иванов</p>
@@ -567,7 +573,7 @@
                                 </p>
                             </div>
                             <div class="map_location_img">
-                                <img src="./assets/images/contact_map.png" alt="">
+                                <img src="./assets/images/contact_map.webp" alt="">
                             </div>
                         </div>
                         <!-- map_item -->
@@ -581,7 +587,7 @@
                                 </p>
                             </div>
                             <div class="map_location_img">
-                                <img src="./assets/images/contact_map.png" alt="">
+                                <img src="./assets/images/contact_map.webp" alt="">
                             </div>
                         </div>
                     </div>
@@ -741,7 +747,7 @@
                         fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
                 </svg>
             </span>
-            <img src="assets/images/items_photo.png" alt="additional information">
+            <img src="assets/images/items_photo.webp" alt="additional information">
             <article class="more_texts">
                 <h2 class="title">Заголовок</h2>
                 <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nulla in vitae mauris,
