@@ -1651,11 +1651,20 @@ header .hamburger {
   align-items: center;
   cursor: pointer;
 }
-.otziv .otziv_btn span {
+.otziv .otziv_btn span, .otziv .otziv_btn p {
   color: rgb(156, 173, 201);
   font-size: 16px;
   font-weight: 600;
   line-height: 145%;
+}
+.otziv .otziv_btn p {
+  display: none;
+}
+.otziv .otziv_btn.active p {
+  display: block;
+}
+.otziv .otziv_btn.active span {
+  display: none;
 }
 .otziv .swiper-slide-next .otziv_swiper_item,
 .otziv .swiper-slide-prev .otziv_swiper_item {

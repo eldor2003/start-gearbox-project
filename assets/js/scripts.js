@@ -272,6 +272,7 @@ $(document).ready(function () {
 	});
 
 	$('.otziv_btn').click(function(){
+		$(this).toggleClass('active')
 		$(this).siblings('.otziv_description').toggleClass('show')
 	})
 

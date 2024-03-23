@@ -1293,11 +1293,20 @@ header .hamburger {
   align-items: center;
   cursor: pointer;
 }
-.reviews .otziv_btn span {
+.reviews .otziv_btn span, .reviews .otziv_btn p {
   color: rgb(156, 173, 201);
   font-size: 16px;
   font-weight: 600;
   line-height: 145%;
+}
+.reviews .otziv_btn p {
+  display: none;
+}
+.reviews .otziv_btn.active p {
+  display: block;
+}
+.reviews .otziv_btn.active span {
+  display: none;
 }
 @media (max-width: 992px) {
   .reviews .reviews_row {
