@@ -59,8 +59,11 @@ $(document).ready(function () {
 			}
 			$(".quiz_form button").on("click", function (e) {
 				e.preventDefault();
-				$(".quiz_wrapper").removeClass("active");
-				$(".quiz_block").removeClass("active");
+				if (window.screen.width>769){
+					$(".quiz_wrapper").removeClass("active");
+					$(".quiz_block").removeClass("active");
+				}
+				
 				quiz_swiper.slideTo(0);
 			});
 		});
