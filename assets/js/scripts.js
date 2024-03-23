@@ -319,7 +319,6 @@ $(document).ready(function () {
             return;
           }
           else if(breakpoint >= 768){
-			console.log(breakpoint);
             return enableSwiper();
           }
         };
@@ -373,7 +372,7 @@ $(document).ready(function () {
 		$('.header_bottom').toggleClass('active')
 	})
 
-	if(screen.width < 768 && $('.swiper3').length > 0){
+	if(window.screen.width < 768 && $('.swiper3').length > 0){
 		
 		const breakpoint = screen.width;
     
@@ -402,13 +401,5 @@ $(document).ready(function () {
         breakpoinChekker()
 
 	}
-	// if(screen.width < 768){
-	// 	array = document.querySelectorAll('.stamp_img')
-		
-	// 	array.forEach((item) => {
-	// 		console.log(item)
-	// 	});
-	// 	// width = $('.stamp_img').css('width')
-	// 	// $('.stamp_img').css('height', width)
-	// }
+	
 });

@@ -1212,6 +1212,7 @@ header .hamburger {
     bottom: 0;
   }
 }
+
 .reviews {
   padding: 18px 0 100px 0;
   background-color: #f0f3f8;
@@ -1316,6 +1317,9 @@ header .hamburger {
   }
 }
 @media (max-width: 576px) {
+  .reviews {
+    padding: 20px 0 80px 0;
+  }
   .reviews .section_title {
     font-size: 28px;
     margin: 0 0 30px 0;
