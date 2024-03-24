@@ -12,6 +12,15 @@ body {
   color: #060525;
 }
 
+.preloader {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  z-index: 100;
+}
+
 body:has(.modal_back.active) {
   overflow: hidden;
 }
@@ -388,68 +397,22 @@ body:has(.modal_back.active) {
   opacity: 0.3;
 }
 
-.call_modal {
-  opacity: 0;
-  visibility: hidden;
-  scale: 0.9;
-  transition: 0.3s all ease;
+.modal_back {
   position: fixed;
-  top: 46%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 20px;
+  background-color: #2e3548;
+  opacity: 0;
+  transition: 0.2s all ease;
   z-index: 3;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
 }
-.call_modal.active {
-  opacity: 1;
+.modal_back.active {
   visibility: visible;
-  top: 50%;
-  scale: 1;
-}
-.call_modal::after {
-  position: absolute;
-  content: "";
-  width: 160px;
-  height: 160px;
-  top: -80px;
-  right: -80px;
-  border-radius: 50%;
-  background-color: #3a4259;
-  z-index: 1;
-}
-.call_modal .close_modal2 {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  z-index: 2;
-  scale: 0.7;
-  cursor: pointer;
-}
-@media (max-width: 576px) {
-  .call_modal {
-    width: 90%;
-  }
-  .call_modal .consultation {
-    width: 100%;
-    padding: 20px;
-  }
-  .call_modal .consultation h3 {
-    font-size: 28px;
-  }
-  .call_modal .consultation p br {
-    display: none;
-  }
-  .call_modal .close_modal2 {
-    right: 6px;
-    top: 6px;
-  }
-  .call_modal::after {
-    width: 100px;
-    height: 100px;
-    top: -50px;
-    right: -50px;
-  }
+  opacity: 0.3;
 }
 
 .service_modal {
@@ -721,6 +684,70 @@ body:has(.modal_back.active) {
   }
 }
 
+.call_modal {
+  opacity: 0;
+  visibility: hidden;
+  scale: 0.9;
+  transition: 0.3s all ease;
+  position: fixed;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  z-index: 3;
+  overflow: hidden;
+}
+.call_modal.active {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+  scale: 1;
+}
+.call_modal::after {
+  position: absolute;
+  content: "";
+  width: 160px;
+  height: 160px;
+  top: -80px;
+  right: -80px;
+  border-radius: 50%;
+  background-color: #3a4259;
+  z-index: 1;
+}
+.call_modal .close_modal2 {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  z-index: 2;
+  scale: 0.7;
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .call_modal {
+    width: 90%;
+  }
+  .call_modal .consultation {
+    width: 100%;
+    padding: 20px;
+  }
+  .call_modal .consultation h3 {
+    font-size: 28px;
+  }
+  .call_modal .consultation p br {
+    display: none;
+  }
+  .call_modal .close_modal2 {
+    right: 6px;
+    top: 6px;
+  }
+  .call_modal::after {
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: -50px;
+  }
+}
+
 .consultation {
   flex: 0 0 auto;
   width: 461px;
@@ -854,6 +881,23 @@ body:has(.modal_back.active) {
 .help.hidde {
   scale: 0;
   opacity: 0;
+}
+@media (max-width: 768px) {
+  .help {
+    width: 60px;
+    height: 60px;
+  }
+  .help img {
+    width: 50%;
+  }
+}
+@media (max-width: 576px) {
+  .help {
+    width: 50px;
+    height: 50px;
+    right: 14px;
+    bottom: 14px;
+  }
 }
 
 .online {
@@ -3583,6 +3627,7 @@ header .hamburger {
 }
 .employees .employ_img img {
   width: 100%;
+  border-radius: 20px;
 }
 .employees .employ_body {
   padding: 28px;

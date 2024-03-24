@@ -272,6 +272,10 @@ body:has(.modal_back.active) {
   border-radius: 50%;
   transform: rotate(90deg);
   flex: 0 0 auto;
+  cursor: pointer;
+}
+.service_modal .service_header:has(.rotate) {
+  margin: 0;
 }
 .service_modal .open_service_list {
   padding: 28px 0;
@@ -297,6 +301,9 @@ body:has(.modal_back.active) {
 }
 .service_modal .services_list li:last-child::after {
   display: none;
+}
+.service_modal svg.rotate {
+  transform: rotate(0deg);
 }
 @media (max-width: 992px) {
   .service_modal .close_modal {

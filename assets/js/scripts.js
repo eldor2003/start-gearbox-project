@@ -1,3 +1,6 @@
+window.addEventListener('load',function(){
+	this.document.querySelector('.preloader').remove()
+})
 document.addEventListener("DOMContentLoaded", function () {
 
 	var phoneInputs = document.querySelectorAll('input[data-tel-input]');
@@ -147,6 +150,7 @@ $(document).ready(function () {
 			$(".quiz_block").addClass("active");
 		}
 	});
+	
 	if (window.screen.width<769){
 		$(".quiz_wrapper").addClass("active");
 		$(".quiz_block").addClass("active");
@@ -215,37 +219,12 @@ $(document).ready(function () {
 		$(this).toggleClass("active");
 		$(this).find(".faq_arrow").toggleClass("active");
 		$(this).parent().find(".faq_body").slideToggle(400);
-		$(this)
-			.parent(".faq_item")
-			.prevAll(".faq_item")
-			.find(".faq_body")
-			.slideUp();
-		$(this)
-			.parent(".faq_item")
-			.prevAll(".faq_item")
-			.find(".faq_arrow")
-			.removeClass("active");
-		$(this)
-			.parent(".faq_item")
-			.nextAll(".faq_item")
-			.find(".faq_body")
-			.slideUp();
-		$(this)
-			.parent(".faq_item")
-			.nextAll(".faq_item")
-			.find(".faq_arrow")
-			.removeClass("active");
-
-		$(this)
-			.parent(".faq_item")
-			.prevAll(".faq_item")
-			.find(".faq_head")
-			.removeClass("active");
-		$(this)
-			.parent(".faq_item")
-			.nextAll(".faq_item")
-			.find(".faq_head")
-			.removeClass("active");
+		$(this).parent(".faq_item").prevAll(".faq_item").find(".faq_body").slideUp();
+		$(this).parent(".faq_item").prevAll(".faq_item").find(".faq_arrow").removeClass("active");
+		$(this).parent(".faq_item").nextAll(".faq_item").find(".faq_body").slideUp();
+		$(this).parent(".faq_item").nextAll(".faq_item").find(".faq_arrow").removeClass("active");
+		$(this).parent(".faq_item").prevAll(".faq_item").find(".faq_head").removeClass("active");
+		$(this).parent(".faq_item").nextAll(".faq_item").find(".faq_head").removeClass("active");
 	});
 
 	// gallery swiper
@@ -407,16 +386,6 @@ $(document).ready(function () {
 		$(".service_modal").removeClass("active");
 		$(".call_modal").addClass("active");
 		$(".modal_back").addClass("active");
-	});
-
-	// tel mask
-	const element = document.querySelectorAll("input[type='tel']");
-	
-	element.forEach((item) => {
-		const maskOptions = {
-			mask: "+{0} 000-000-0000",
-		};
-		const mask = IMask(item, maskOptions);
 	});
 
 	$('.otziv_btn').click(function(){
