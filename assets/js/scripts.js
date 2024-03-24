@@ -1,15 +1,161 @@
+window.addEventListener('load',function(){
+	this.document.querySelector('.preloader').remove()
+})
+document.addEventListener("DOMContentLoaded", function () {
+
+	var phoneInputs = document.querySelectorAll('input[data-tel-input]');
+
+	var getInputNumbersValue = function (input) {
+
+		// Return stripped input value — just numbers
+
+		return input.value.replace(/\D/g, '');
+
+	}
+
+	var onPhonePaste = function (e) {
+
+		var input = e.target,
+
+			inputNumbersValue = getInputNumbersValue(input);
+
+		var pasted = e.clipboardData || window.clipboardData;
+
+		if (pasted) {
+
+			var pastedText = pasted.getData('Text');
+
+			if (/\D/g.test(pastedText)) {
+
+				// Attempt to paste non-numeric symbol — remove all non-numeric symbols,
+
+				// formatting will be in onPhoneInput handler
+
+				input.value = inputNumbersValue;
+
+				return;
+
+			}
+
+		}
+
+	}
+
+	var onPhoneInput = function (e) {
+
+		var input = e.target,
+
+			inputNumbersValue = getInputNumbersValue(input),
+
+			selectionStart = input.selectionStart,
+
+			formattedInputValue = "";
+
+		if (!inputNumbersValue) {
+
+			return input.value = "";
+
+		}
+
+		if (input.value.length != selectionStart) {
+
+			// Editing in the middle of input, not last symbol
+
+			if (e.data && /\D/g.test(e.data)) {
+
+				// Attempt to input non-numeric symbol
+
+				input.value = inputNumbersValue;
+
+			}
+
+			return;
+
+		}
+
+		if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
+
+			if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
+
+			var firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
+
+			formattedInputValue = input.value = firstSymbols + " ";
+
+			if (inputNumbersValue.length > 1) {
+
+				formattedInputValue += '(' + inputNumbersValue.substring(1, 4);
+
+			}
+
+			if (inputNumbersValue.length >= 5) {
+
+				formattedInputValue += ') ' + inputNumbersValue.substring(4, 7);
+
+			}
+
+			if (inputNumbersValue.length >= 8) {
+
+				formattedInputValue += '-' + inputNumbersValue.substring(7, 9);
+
+			}
+
+			if (inputNumbersValue.length >= 10) {
+
+				formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
+
+			}
+
+		} else {
+
+			formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
+
+		}
+
+		input.value = formattedInputValue;
+
+	}
+
+	var onPhoneKeyDown = function (e) {
+
+		// Clear input after remove last symbol
+
+		var inputValue = e.target.value.replace(/\D/g, '');
+
+		if (e.keyCode == 8 && inputValue.length == 1) {
+
+			e.target.value = "";
+
+		}
+
+	}
+
+	for (var phoneInput of phoneInputs) {
+
+		phoneInput.addEventListener('keydown', onPhoneKeyDown);
+
+		phoneInput.addEventListener('input', onPhoneInput, false);
+
+		phoneInput.addEventListener('paste', onPhonePaste, false);
+
+	}
+
+})
 $(document).ready(function () {
 
 	// quiz opener
 	$("#quiz_open").on("click", function (e) {
 		e.preventDefault();
-		
+		if (window.screen.width>769){
+			$(".quiz_wrapper").addClass("active");
+			$(".quiz_block").addClass("active");
+		}
 	});
-
-	if ($(window).width()<769){
+	
+	if (window.screen.width<769){
 		$(".quiz_wrapper").addClass("active");
 		$(".quiz_block").addClass("active");
 	}
+	
 	// quiz swiper
 	if ($(".quiz_swiper").length > 0) {
 		const quiz_swiper = new Swiper(".quiz_swiper", {
@@ -56,8 +202,11 @@ $(document).ready(function () {
 			}
 			$(".quiz_form button").on("click", function (e) {
 				e.preventDefault();
-				$(".quiz_wrapper").removeClass("active");
-				$(".quiz_block").removeClass("active");
+				if (window.screen.width>769){
+					$(".quiz_wrapper").removeClass("active");
+					$(".quiz_block").removeClass("active");
+				}
+				
 				quiz_swiper.slideTo(0);
 			});
 		});
@@ -70,37 +219,12 @@ $(document).ready(function () {
 		$(this).toggleClass("active");
 		$(this).find(".faq_arrow").toggleClass("active");
 		$(this).parent().find(".faq_body").slideToggle(400);
-		$(this)
-			.parent(".faq_item")
-			.prevAll(".faq_item")
-			.find(".faq_body")
-			.slideUp();
-		$(this)
-			.parent(".faq_item")
-			.prevAll(".faq_item")
-			.find(".faq_arrow")
-			.removeClass("active");
-		$(this)
-			.parent(".faq_item")
-			.nextAll(".faq_item")
-			.find(".faq_body")
-			.slideUp();
-		$(this)
-			.parent(".faq_item")
-			.nextAll(".faq_item")
-			.find(".faq_arrow")
-			.removeClass("active");
-
-		$(this)
-			.parent(".faq_item")
-			.prevAll(".faq_item")
-			.find(".faq_head")
-			.removeClass("active");
-		$(this)
-			.parent(".faq_item")
-			.nextAll(".faq_item")
-			.find(".faq_head")
-			.removeClass("active");
+		$(this).parent(".faq_item").prevAll(".faq_item").find(".faq_body").slideUp();
+		$(this).parent(".faq_item").prevAll(".faq_item").find(".faq_arrow").removeClass("active");
+		$(this).parent(".faq_item").nextAll(".faq_item").find(".faq_body").slideUp();
+		$(this).parent(".faq_item").nextAll(".faq_item").find(".faq_arrow").removeClass("active");
+		$(this).parent(".faq_item").prevAll(".faq_item").find(".faq_head").removeClass("active");
+		$(this).parent(".faq_item").nextAll(".faq_item").find(".faq_head").removeClass("active");
 	});
 
 	// gallery swiper
@@ -237,7 +361,12 @@ $(document).ready(function () {
 		$(this).parent().next().slideToggle(300)
 	})
 
-	$(".service_item .main_btn").click(function () {
+	$(".menu .open_inner ").click(function () {
+		$(".modal_back").addClass("active");
+		$(".service_modal").addClass("active");
+		$(".call_modal").removeClass("active");
+	});
+	$(".menu .open_inner ").siblings('div').find('a').click(function () {
 		$(".modal_back").addClass("active");
 		$(".service_modal").addClass("active");
 		$(".call_modal").removeClass("active");
@@ -259,16 +388,8 @@ $(document).ready(function () {
 		$(".modal_back").addClass("active");
 	});
 
-	// tel mask
-	const element = document.querySelectorAll("input[type='tel']");
-	element.forEach((item) => {
-		const maskOptions = {
-			mask: "+{0} 000-000-0000",
-		};
-		const mask = IMask(item, maskOptions);
-	});
-
 	$('.otziv_btn').click(function(){
+		$(this).toggleClass('active')
 		$(this).siblings('.otziv_description').toggleClass('show')
 	})
 
@@ -320,7 +441,6 @@ $(document).ready(function () {
             return;
           }
           else if(breakpoint >= 768){
-			console.log(breakpoint);
             return enableSwiper();
           }
         };
@@ -374,7 +494,7 @@ $(document).ready(function () {
 		$('.header_bottom').toggleClass('active')
 	})
 
-	if(screen.width < 768 && $('.swiper3').length > 0){
+	if(window.screen.width < 768 && $('.swiper3').length > 0){
 		
 		const breakpoint = screen.width;
     
@@ -403,13 +523,25 @@ $(document).ready(function () {
         breakpoinChekker()
 
 	}
-	// if(screen.width < 768){
-	// 	array = document.querySelectorAll('.stamp_img')
-		
-	// 	array.forEach((item) => {
-	// 		console.log(item)
-	// 	});
-	// 	// width = $('.stamp_img').css('width')
-	// 	// $('.stamp_img').css('height', width)
-	// }
+
+	$('.service_modal .service_header svg').click(function(){
+		$(this).toggleClass('rotate')
+		$('.services_list:first-child').slideToggle(300)
+	})
+	
+	$('.help img:not(:first-child)').css('opacity','0')
+	arr = $('.help img')
+	i=1
+	
+	setInterval(function() {
+		$('.help img').css('opacity','0')
+		$(arr[i]).css('opacity', '1')
+		i++
+		if(i==4){
+			i=0
+		}
+	}, 10000);
+
+	
+
 });

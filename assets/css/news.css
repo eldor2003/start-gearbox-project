@@ -272,6 +272,10 @@ body:has(.modal_back.active) {
   border-radius: 50%;
   transform: rotate(90deg);
   flex: 0 0 auto;
+  cursor: pointer;
+}
+.service_modal .service_header:has(.rotate) {
+  margin: 0;
 }
 .service_modal .open_service_list {
   padding: 28px 0;
@@ -297,6 +301,9 @@ body:has(.modal_back.active) {
 }
 .service_modal .services_list li:last-child::after {
   display: none;
+}
+.service_modal svg.rotate {
+  transform: rotate(0deg);
 }
 @media (max-width: 992px) {
   .service_modal .close_modal {
@@ -330,6 +337,148 @@ body:has(.modal_back.active) {
   }
   .service_modal .service_top {
     height: 238px;
+  }
+}
+
+.services_list li {
+  padding: 18px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.services_list li::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: #f0f3f8;
+}
+.services_list .service_title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+.services_list div:has(.price) {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  border-left: 1px solid #f0f3f8;
+  padding-left: 16px;
+}
+.services_list .price {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: center;
+  width: 62px;
+}
+.services_list .main_btn {
+  justify-content: center;
+  padding: 13px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0%;
+}
+@media (max-width: 1200px) {
+  .services_list li {
+    padding: 18px;
+    gap: 3px;
+  }
+  .services_list div:has(.price) {
+    gap: 18px;
+  }
+  .services_list .main_btn {
+    padding: 13px 18px;
+  }
+}
+@media (max-width: 992px) {
+  .services_list li {
+    gap: 5px;
+    flex-direction: column;
+  }
+  .services_list div:has(.price) {
+    flex-direction: column;
+    width: 100%;
+    border-left: none;
+  }
+}
+@media (max-width: 576px) {
+  .services_list li {
+    padding: 20px;
+    gap: 10px;
+  }
+  .services_list .service_title {
+    font-size: 18px;
+  }
+  .services_list div:has(.price) {
+    gap: 20px;
+  }
+  .services_list .main_btn {
+    width: 100%;
+  }
+}
+
+.open_service_list {
+  padding: 28px 25px 25px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.open_service_list::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  left: 0;
+  bottom: 0;
+  background-color: #f0f3f8;
+}
+.open_service_list .service_title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -2%;
+}
+.open_service_list img {
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.open_service_list img.active {
+  rotate: 45deg;
+}
+.open_service_list + .services_list {
+  border-radius: 20px;
+  background-color: #f0f3f8;
+  padding: 0 28px;
+  margin: 28px 0 0;
+}
+.open_service_list + .services_list li {
+  padding: 18px 0;
+}
+.open_service_list + .services_list li::after {
+  background-color: #D6DFED;
+}
+.open_service_list + .services_list div:has(.price)::after {
+  background-color: #D6DFED;
+}
+@media (max-width: 1200px) {
+  .open_service_list + .services_list div:has(.price)::after {
+    left: -15px;
+  }
+}
+@media (max-width: 576px) {
+  .open_service_list {
+    padding: 20px;
+  }
+  .open_service_list img {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -501,16 +650,27 @@ body:has(.modal_back.active) {
 
 .help {
   display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   right: 28px;
   bottom: 28px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
   z-index: 1;
   transition: 0.3s all ease;
   border-radius: 50%;
+  background-color: #DB2A1D;
   cursor: pointer;
 }
 .help img {
-  width: 100%;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s all ease;
 }
 .help:hover {
   scale: 0.95;
@@ -742,7 +902,7 @@ header .address a {
   font-weight: 400;
   color: #060525;
 }
-header .address span {
+header .address span:has(img) {
   width: 28px;
   height: 28px;
   display: flex;
@@ -751,7 +911,7 @@ header .address span {
   border: 1px dashed #d6dfed;
   border-radius: 50%;
 }
-header .address span img {
+header .address span:has(img) img {
   width: 15px;
   height: 20px;
 }
@@ -878,7 +1038,7 @@ header .nav_item .menus_list {
   border-radius: 20px;
   background-color: #fff;
   transform: translateY(20px);
-  width: 1160px;
+  width: auto;
   opacity: 0;
   visibility: hidden;
   z-index: 2;
@@ -891,6 +1051,9 @@ header .nav_item .menus_list .menu {
   border-right: 1px solid #d6dfed;
   border-radius: 20px;
 }
+header .nav_item .menus_list:has(.inner_menu) {
+  width: 1160px;
+}
 header .nav_item:has(img) {
   padding: 9px 6.5px 9px 14.5px;
 }
@@ -900,6 +1063,7 @@ header .menus_list li {
   align-items: center;
   padding: 18px 0;
   position: relative;
+  gap: 20px;
 }
 header .menus_list li:first-child {
   padding: 0 0 18px 0;
@@ -945,6 +1109,10 @@ header .menus_list li .inner_menu {
 }
 header .menus_list li .inner_menu li {
   padding: 30px 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #060525;
 }
 header .menus_list li .inner_menu li:last-child::after {
   display: block;
@@ -962,6 +1130,16 @@ header .menus_list li:hover .inner_menu {
   transform: translate(100%, 0);
   opacity: 1;
   visibility: visible;
+}
+header .menus_list li a {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  color: #060525;
+  transition: 0.3s all ease;
+}
+header .menus_list li a:hover {
+  color: #9CADC9;
 }
 header .to_call {
   display: flex;
@@ -1053,7 +1231,7 @@ header .hamburger {
   header .nav_item .menus_list {
     top: calc(100% + 5px);
   }
-  header .nav_item .menus_list {
+  header .nav_item .menus_list:has(.inner_menu) {
     width: 721px;
   }
   header .nav_item .menus_list .menu {
@@ -1141,6 +1319,9 @@ header .hamburger {
   header .nav_item .menus_list img {
     display: none;
   }
+  header .nav_item .menus_list:has(.inner_menu) {
+    width: auto;
+  }
   header .nav_item .menus_list .menu {
     padding: 0;
     border: none;
@@ -1151,6 +1332,7 @@ header .hamburger {
     justify-content: center;
     flex-direction: column;
     padding: 10px 0;
+    gap: 0;
   }
   header .nav_item .menus_list .menu li::after {
     display: none;
@@ -1174,6 +1356,9 @@ header .hamburger {
     border-radius: 15px;
     background-color: #F0F3F8;
     width: 100%;
+  }
+  header .menus_list li .inner_menu li {
+    font-size: 14px;
   }
   header .menus_list li .inner_menu::after {
     position: absolute;
@@ -1208,6 +1393,7 @@ header .hamburger {
   header .menus_list li a {
     font-weight: 600;
     line-height: 120%;
+    font-size: 16px;
   }
   header .menus_list .inner_menu a {
     font-weight: 500;
@@ -1682,11 +1868,14 @@ footer .footer_list {
   flex-direction: column;
   gap: 8px;
 }
-footer .footer_list li a {
+footer .footer_list li {
   color: rgb(6, 5, 37);
   font-size: 16px;
   font-weight: 400;
   line-height: 135%;
+}
+footer .footer_list li a {
+  color: rgb(6, 5, 37);
 }
 footer .footer_bottom {
   display: flex;
